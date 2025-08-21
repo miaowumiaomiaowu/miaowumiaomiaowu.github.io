@@ -4,24 +4,18 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Bio
+  - name: 🏠 关于我
     url: /
     weight: 10
-  - name: Papers
-    url: /#papers
-    weight: 11
-  - name: Talks
-    url: /#talks
-    weight: 12
-  - name: News
-    url: /#news
-    weight: 13
-  - name: Experience
-    url: experience/
+  - name: 💼 项目作品
+    url: /project/
     weight: 20
-  - name: Projects
-    url: projects/
+  - name: 🛠️ 技术能力
+    url: /skills/
     weight: 30
-  - name: Teaching
-    url: teaching/
+  - name: 📋 经历成就
+    url: /experience/
     weight: 40
+  - name: 📧 联系方式
+    url: /#contact
+    weight: 50
