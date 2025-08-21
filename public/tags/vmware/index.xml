@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VMware | 韩嘉仪 - 个人技术网站</title>
+    <link>http://localhost:1313/tags/vmware/</link>
+      <atom:link href="http://localhost:1313/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <description>VMware</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_982c5d63a71b2961.png</url>
+      <title>VMware</title>
+      <link>http://localhost:1313/tags/vmware/</link>
+    </image>
+    
+    <item>
+      <title>🐘 Hadoop 分布式数据处理平台</title>
+      <link>http://localhost:1313/project/hadoop-distributed-data-processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/hadoop-distributed-data-processing/</guid>
+      <description>&lt;h1 id=&#34;-hadoop-分布式数据处理平台&#34;&gt;🐘 Hadoop 分布式数据处理平台&lt;/h1&gt;
+&lt;h2 id=&#34;项目概述&#34;&gt;项目概述&lt;/h2&gt;
+&lt;p&gt;本项目是&lt;strong&gt;个人完全独立实现&lt;/strong&gt;的大规模分布式数据处理系统，基于 Hadoop 生态系统构建。项目从零开始搭建分布式环境，实现了完整的数据存储、处理和分析流程，展现了在分布式系统设计和大数据处理方面的深度技术能力。&lt;/p&gt;
+&lt;h2 id=&#34;-系统架构&#34;&gt;🏗️ 系统架构&lt;/h2&gt;
+&lt;h3 id=&#34;分布式集群架构&#34;&gt;分布式集群架构&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph TB
+    subgraph &#34;VMware 虚拟化环境&#34;
+        subgraph &#34;Master Node (NameNode)&#34;
+            NN[NameNode&lt;br/&gt;元数据管理]
+            RM[ResourceManager&lt;br/&gt;资源调度]
+            SNN[SecondaryNameNode&lt;br/&gt;元数据备份]
+        end
+        
+        subgraph &#34;Worker Node 1&#34;
+            DN1[DataNode&lt;br/&gt;数据存储]
+            NM1[NodeManager&lt;br/&gt;任务执行]
+        end
+        
+        subgraph &#34;Worker Node 2&#34;
+            DN2[DataNode&lt;br/&gt;数据存储]
+            NM2[NodeManager&lt;br/&gt;任务执行]
+        end
+    end
+    
+    subgraph &#34;数据处理流程&#34;
+        INPUT[原始数据集]
+        HDFS[HDFS分布式存储]
+        MR[MapReduce处理]
+        OUTPUT[倒排索引结果]
+    end
+    
+    NN --&gt; DN1
+    NN --&gt; DN2
+    RM --&gt; NM1
+    RM --&gt; NM2
+    
+    INPUT --&gt; HDFS
+    HDFS --&gt; MR
+    MR --&gt; OUTPUT
+&lt;/div&gt;
+&lt;h2 id=&#34;-技术实现&#34;&gt;🔧 技术实现&lt;/h2&gt;
+&lt;h3 id=&#34;环境搭建&#34;&gt;环境搭建&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;虚拟化平台&lt;/strong&gt;: VMware Workstation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: CentOS 7.x (3个虚拟机实例)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络配置&lt;/strong&gt;: 静态IP配置，主机名解析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH免密登录&lt;/strong&gt;: 集群间无密码通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;核心组件配置&#34;&gt;核心组件配置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HDFS&lt;/strong&gt;: 分布式文件系统，副本因子为2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YARN&lt;/strong&gt;: 资源管理和作业调度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MapReduce&lt;/strong&gt;: 分布式计算框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hive&lt;/strong&gt;: 数据仓库工具（可选扩展）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关键技术点&#34;&gt;关键技术点&lt;/h3&gt;
+&lt;h4 id=&#34;1-集群部署与配置&#34;&gt;1. 集群部署与配置&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 主要配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- core-site.xml: 核心配置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- hdfs-site.xml: HDFS配置  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- yarn-site.xml: YARN配置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- mapred-site.xml: MapReduce配置
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-分布式存储实现&#34;&gt;2. 分布式存储实现&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据分块&lt;/strong&gt;: 128MB块大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;副本策略&lt;/strong&gt;: 跨节点数据冗余&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;负载均衡&lt;/strong&gt;: 自动数据分布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-mapreduce-倒排索引算法&#34;&gt;3. MapReduce 倒排索引算法&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Map阶段：文档分词和词频统计&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;InvertedIndexMapper&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Mapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LongWritable&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 文档分词处理&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 输出 &amp;lt;word, docId:frequency&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Reduce阶段：构建倒排索引&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;InvertedIndexReducer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Reducer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;reduce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Iterable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 聚合同一词汇的文档列表&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 输出 &amp;lt;word, [doc1:freq1, doc2:freq2, ...]&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-性能表现&#34;&gt;📊 性能表现&lt;/h2&gt;
+&lt;h3 id=&#34;处理能力&#34;&gt;处理能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据规模&lt;/strong&gt;: 处理GB级别文本数据集&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;处理速度&lt;/strong&gt;: 相比单机提升3-5倍&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;并发能力&lt;/strong&gt;: 支持多任务并行执行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容错性&lt;/strong&gt;: 节点故障自动恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web UI&lt;/strong&gt;: Hadoop管理界面监控&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志分析&lt;/strong&gt;: 详细的作业执行日志&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能指标&lt;/strong&gt;: CPU、内存、网络使用率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-项目亮点&#34;&gt;🎯 项目亮点&lt;/h2&gt;
+&lt;h3 id=&#34;技术深度&#34;&gt;技术深度&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;完整的分布式系统搭建&lt;/strong&gt;: 从虚拟机创建到集群配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;深度理解Hadoop生态&lt;/strong&gt;: HDFS、YARN、MapReduce原理与实践&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;算法实现能力&lt;/strong&gt;: 独立实现复杂的倒排索引算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统调优经验&lt;/strong&gt;: 参数调优和性能优化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;工程能力&#34;&gt;工程能力&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;环境管理&lt;/strong&gt;: Linux系统管理和网络配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;问题解决&lt;/strong&gt;: 集群部署中的各种技术难题&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文档编写&lt;/strong&gt;: 完整的部署和使用文档&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测试验证&lt;/strong&gt;: 全面的功能和性能测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-核心算法倒排索引&#34;&gt;🔍 核心算法：倒排索引&lt;/h2&gt;
+&lt;h3 id=&#34;算法原理&#34;&gt;算法原理&lt;/h3&gt;
+&lt;p&gt;倒排索引是信息检索系统的核心数据结构，将文档中的每个词汇映射到包含该词汇的文档列表。&lt;/p&gt;
+&lt;h3 id=&#34;实现流程&#34;&gt;实现流程&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;文档预处理&lt;/strong&gt;: 分词、去停用词、词干提取&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Map阶段&lt;/strong&gt;: 并行处理各文档，生成词汇-文档对&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shuffle阶段&lt;/strong&gt;: 按词汇分组，分发到不同Reducer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduce阶段&lt;/strong&gt;: 聚合生成最终倒排索引&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;优化策略&#34;&gt;优化策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内存优化&lt;/strong&gt;: 合理设置JVM参数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;I/O优化&lt;/strong&gt;: 压缩中间结果&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络优化&lt;/strong&gt;: 减少数据传输量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-学习成果&#34;&gt;📈 学习成果&lt;/h2&gt;
+&lt;p&gt;通过这个项目，我深入掌握了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式系统的设计原理和实现方法&lt;/li&gt;
+&lt;li&gt;Hadoop生态系统的核心组件和工作机制&lt;/li&gt;
+&lt;li&gt;大数据处理的算法设计和性能优化&lt;/li&gt;
+&lt;li&gt;Linux系统管理和集群运维技能&lt;/li&gt;
+&lt;li&gt;复杂技术问题的分析和解决能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个项目展现了我在大数据和分布式系统领域的技术深度，以及独立解决复杂技术问题的能力，为后续的企业级项目开发奠定了坚实基础。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

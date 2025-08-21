@@ -1,0 +1,2245 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: August 21, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.5.2" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="韩嘉仪" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="LeetCode 刷题统计扩展 项目概述 LeetCode 刷题统计扩展 是一个简洁高效的浏览器扩展，专为开发者设计，用于追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示，帮助用户构建持续学习的编程习惯，提升算法能力。
+开发者: 韩嘉仪 (miaowumiaomiaowu) 技术栈: JavaScript &#43; HTML &#43; CSS 项目类型: 浏览器扩展 许可证: MIT License GitHub: miaowumiaomiaowu/leetcode-counter-extention 核心特性 📊 智能数据统计 实时刷题追踪 自动识别: 无需手动操作，自动检测 LeetCode 题目完成状态 实时更新: 即时记录每道题目的解题时间和完成状态 多维度统计: 按难度、标签、时间等维度进行数据分析 详细进度记录 解题历史: 完整记录每次刷题的时间戳和题目信息 完成率统计: 分类统计简单、中等、困难题目的完成情况 连续刷题天数: 追踪学习连续性，激励持续学习 📈 可视化数据展示 直观图表分析 进度条显示: 清晰展示各难度题目的完成进度 趋势图表: 展示刷题频率和学习趋势变化 热力图: 可视化每日刷题活跃度分布 个性化面板 简洁界面: 优雅的弹窗设计，不干扰正常刷题流程 快速预览: 一键查看关键统计数据和学习成果 自定义设置: 根据个人喜好调整显示内容和样式 🎯 学习助手功能 智能提醒系统 学习目标: 设置每日/每周刷题目标，保持学习节奏 温和提醒: 非侵入式提醒，鼓励持续学习 成就系统: 解锁各种学习里程碑，增强成就感 数据导出与分享 数据备份: 支持学习数据的导出和备份 进度分享: 生成精美的学习报告图片，分享学习成果 跨设备同步: 通过云同步保持多设备数据一致 技术架构 前端技术栈 核心技术: - Vanilla JavaScript (73.6%) - 核心逻辑实现 - CSS3 (18.8%) - 样式设计和动画效果 - HTML5 (7.6%) - 页面结构和扩展界面 浏览器扩展技术: - Chrome Extensions API - Content Scripts 内容脚本 - Background Scripts 后台脚本 - Storage API 本地存储 - Popup 弹窗界面 扩展架构设计 Manifest 配置 { &#34;manifest_version&#34;: 3, &#34;name&#34;: &#34;LeetCode 刷题统计&#34;, &#34;version&#34;: &#34;1.0.0&#34;, &#34;permissions&#34;: [ &#34;storage&#34;, &#34;activeTab&#34; ], &#34;content_scripts&#34;: [ { &#34;matches&#34;: [&#34;*://leetcode.com/*&#34;, &#34;*://leetcode.cn/*&#34;], &#34;js&#34;: [&#34;content.js&#34;] } ], &#34;action&#34;: { &#34;default_popup&#34;: &#34;popup.html&#34; } } 核心模块 Content Script: 页面内容监听和数据采集 Background Script: 后台数据处理和状态管理 Popup Interface: 用户交互界面和数据展示 Storage Manager: 本地数据存储和管理 数据处理流程 页面监听: Content Script 监听 LeetCode 页面变化 状态识别: 自动识别题目完成状态和相关信息 数据存储: 将解题记录存储到浏览器本地存储 实时更新: 更新统计数据和可视化图表 用户展示: 通过 Popup 界面展示统计结果 功能模块详解 🔍 智能页面监听 DOM 变化检测: 实时监听页面元素变化 题目状态识别: 自动识别题目是否已完成 多语言支持: 同时支持 LeetCode 国际版和中文版 📊 数据统计引擎 多维度分析: 按难度、标签、时间等维度统计 趋势计算: 计算学习趋势和进步速度 目标跟踪: 追踪个人学习目标完成情况 🎨 用户界面设计 响应式设计: 适配不同屏幕尺寸和分辨率 暗色模式: 支持明暗主题切换 动画效果: 流畅的过渡动画和交互反馈 安装与使用 安装步骤 # 1. 克隆项目到本地 git clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git # 2. 在 Chrome 浏览器中打开扩展管理页面 chrome://extensions/ # 3. 开启开发者模式 # 4. 点击&#34;加载已解压的扩展程序&#34;，选择项目文件夹 使用指南 访问 LeetCode: 在 LeetCode 网站正常刷题 自动统计: 扩展会自动记录您的刷题进度 查看统计: 点击浏览器扩展图标查看详细统计 设置目标: 在设置页面配置个人学习目标 项目亮点 💡 创新特性 零干扰设计: 完全不影响正常的 LeetCode 使用体验 智能识别: 无需手动标记，自动识别题目完成状态 可视化友好: 直观的图表展示，让数据说话 轻量高效: 占用资源少，响应速度快 🛡️ 隐私保护 本地存储: 所有数据存储在用户本地，不上传服务器 最小权限: 仅请求必要的浏览器权限 透明开源: 代码完全开源，用户可自主审查 🔧 开发优势 模块化设计: 清晰的代码结构，易于维护和扩展 兼容性强: 支持主流 Chromium 内核浏览器 性能优化: 高效的数据处理和 DOM 操作 技术实现细节 Content Script 核心逻辑 // 监听页面变化，自动检测题目完成状态 class LeetCodeTracker { constructor() { this.initializeTracker(); } initializeTracker() { // 初始化页面监听器 this.observePageChanges(); this.detectProblemCompletion(); } observePageChanges() { // 使用 MutationObserver 监听 DOM 变化 const observer = new MutationObserver(() =&gt; { this.checkProblemStatus(); }); observer.observe(document.body, { childList: true, subtree: true }); } } 数据可视化实现 // 生成统计图表 class StatsVisualizer { generateProgressChart(data) { // 使用 Canvas 或 SVG 生成进度图表 return this.createChartElement(data); } updateDashboard(stats) { // 更新统计面板显示 this.renderProgressBars(stats); this.updateTrendChart(stats); } } 项目结构 leetcode-counter-extention/ ├── manifest.json # 扩展配置文件 ├── popup.html # 弹窗界面 ├── popup.js # 弹窗逻辑 ├── popup.css # 弹窗样式 ├── content.js # 内容脚本 ├── background.js # 后台脚本 ├── options.html # 设置页面 ├── options.js # 设置逻辑 ├── assets/ # 静态资源 │ ├── icons/ # 扩展图标 │ └── images/ # 界面图片 ├── scripts/ # 工具脚本 └── docs/ # 项目文档 开发理念 LeetCode 刷题统计扩展 的开发遵循以下核心理念：
+" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/leetcode-counter-extension/leetcode_counter_extension_documentation/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+  
+    
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/main.css">
+    
+  
+
+
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu_c545d605fbaba839.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_b7aec86dcb688f0.png" />
+
+  <link rel="canonical" href="http://localhost:1313/project/leetcode-counter-extension/leetcode_counter_extension_documentation/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="Hugo Academic CV Theme" />
+  <meta property="og:url" content="http://localhost:1313/project/leetcode-counter-extension/leetcode_counter_extension_documentation/" />
+  <meta property="og:title" content="Hugo Academic CV Theme" />
+  <meta property="og:description" content="LeetCode 刷题统计扩展
+项目概述
+LeetCode 刷题统计扩展 是一个简洁高效的浏览器扩展，专为开发者设计，用于追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示，帮助用户构建持续学习的编程习惯，提升算法能力。
+
+开发者: 韩嘉仪 (miaowumiaomiaowu)
+技术栈: JavaScript &#43; HTML &#43; CSS
+项目类型: 浏览器扩展
+许可证: MIT License
+GitHub: miaowumiaomiaowu/leetcode-counter-extention
+
+核心特性
+📊 智能数据统计
+实时刷题追踪
+
+自动识别: 无需手动操作，自动检测 LeetCode 题目完成状态
+实时更新: 即时记录每道题目的解题时间和完成状态
+多维度统计: 按难度、标签、时间等维度进行数据分析
+
+详细进度记录
+
+解题历史: 完整记录每次刷题的时间戳和题目信息
+完成率统计: 分类统计简单、中等、困难题目的完成情况
+连续刷题天数: 追踪学习连续性，激励持续学习
+
+📈 可视化数据展示
+直观图表分析
+
+进度条显示: 清晰展示各难度题目的完成进度
+趋势图表: 展示刷题频率和学习趋势变化
+热力图: 可视化每日刷题活跃度分布
+
+个性化面板
+
+简洁界面: 优雅的弹窗设计，不干扰正常刷题流程
+快速预览: 一键查看关键统计数据和学习成果
+自定义设置: 根据个人喜好调整显示内容和样式
+
+🎯 学习助手功能
+智能提醒系统
+
+学习目标: 设置每日/每周刷题目标，保持学习节奏
+温和提醒: 非侵入式提醒，鼓励持续学习
+成就系统: 解锁各种学习里程碑，增强成就感
+
+数据导出与分享
+
+数据备份: 支持学习数据的导出和备份
+进度分享: 生成精美的学习报告图片，分享学习成果
+跨设备同步: 通过云同步保持多设备数据一致
+
+技术架构
+前端技术栈
+核心技术:
+- Vanilla JavaScript (73.6%) - 核心逻辑实现
+- CSS3 (18.8%) - 样式设计和动画效果
+- HTML5 (7.6%) - 页面结构和扩展界面
+
+浏览器扩展技术:
+- Chrome Extensions API
+- Content Scripts 内容脚本
+- Background Scripts 后台脚本
+- Storage API 本地存储
+- Popup 弹窗界面
+扩展架构设计
+Manifest 配置
+{
+  &#34;manifest_version&#34;: 3,
+  &#34;name&#34;: &#34;LeetCode 刷题统计&#34;,
+  &#34;version&#34;: &#34;1.0.0&#34;,
+  &#34;permissions&#34;: [
+    &#34;storage&#34;,
+    &#34;activeTab&#34;
+  ],
+  &#34;content_scripts&#34;: [
+    {
+      &#34;matches&#34;: [&#34;*://leetcode.com/*&#34;, &#34;*://leetcode.cn/*&#34;],
+      &#34;js&#34;: [&#34;content.js&#34;]
+    }
+  ],
+  &#34;action&#34;: {
+    &#34;default_popup&#34;: &#34;popup.html&#34;
+  }
+}
+核心模块
+
+Content Script: 页面内容监听和数据采集
+Background Script: 后台数据处理和状态管理
+Popup Interface: 用户交互界面和数据展示
+Storage Manager: 本地数据存储和管理
+
+数据处理流程
+
+页面监听: Content Script 监听 LeetCode 页面变化
+状态识别: 自动识别题目完成状态和相关信息
+数据存储: 将解题记录存储到浏览器本地存储
+实时更新: 更新统计数据和可视化图表
+用户展示: 通过 Popup 界面展示统计结果
+
+功能模块详解
+🔍 智能页面监听
+
+DOM 变化检测: 实时监听页面元素变化
+题目状态识别: 自动识别题目是否已完成
+多语言支持: 同时支持 LeetCode 国际版和中文版
+
+📊 数据统计引擎
+
+多维度分析: 按难度、标签、时间等维度统计
+趋势计算: 计算学习趋势和进步速度
+目标跟踪: 追踪个人学习目标完成情况
+
+🎨 用户界面设计
+
+响应式设计: 适配不同屏幕尺寸和分辨率
+暗色模式: 支持明暗主题切换
+动画效果: 流畅的过渡动画和交互反馈
+
+安装与使用
+安装步骤
+# 1. 克隆项目到本地
+git clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git
+
+# 2. 在 Chrome 浏览器中打开扩展管理页面
+chrome://extensions/
+
+# 3. 开启开发者模式
+
+# 4. 点击&#34;加载已解压的扩展程序&#34;，选择项目文件夹
+使用指南
+
+访问 LeetCode: 在 LeetCode 网站正常刷题
+自动统计: 扩展会自动记录您的刷题进度
+查看统计: 点击浏览器扩展图标查看详细统计
+设置目标: 在设置页面配置个人学习目标
+
+项目亮点
+💡 创新特性
+
+零干扰设计: 完全不影响正常的 LeetCode 使用体验
+智能识别: 无需手动标记，自动识别题目完成状态
+可视化友好: 直观的图表展示，让数据说话
+轻量高效: 占用资源少，响应速度快
+
+🛡️ 隐私保护
+
+本地存储: 所有数据存储在用户本地，不上传服务器
+最小权限: 仅请求必要的浏览器权限
+透明开源: 代码完全开源，用户可自主审查
+
+🔧 开发优势
+
+模块化设计: 清晰的代码结构，易于维护和扩展
+兼容性强: 支持主流 Chromium 内核浏览器
+性能优化: 高效的数据处理和 DOM 操作
+
+技术实现细节
+Content Script 核心逻辑
+// 监听页面变化，自动检测题目完成状态
+class LeetCodeTracker {
+  constructor() {
+    this.initializeTracker();
+  }
+  
+  initializeTracker() {
+    // 初始化页面监听器
+    this.observePageChanges();
+    this.detectProblemCompletion();
+  }
+  
+  observePageChanges() {
+    // 使用 MutationObserver 监听 DOM 变化
+    const observer = new MutationObserver(() =&gt; {
+      this.checkProblemStatus();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+}
+数据可视化实现
+// 生成统计图表
+class StatsVisualizer {
+  generateProgressChart(data) {
+    // 使用 Canvas 或 SVG 生成进度图表
+    return this.createChartElement(data);
+  }
+  
+  updateDashboard(stats) {
+    // 更新统计面板显示
+    this.renderProgressBars(stats);
+    this.updateTrendChart(stats);
+  }
+}
+项目结构
+leetcode-counter-extention/
+├── manifest.json           # 扩展配置文件
+├── popup.html             # 弹窗界面
+├── popup.js               # 弹窗逻辑
+├── popup.css              # 弹窗样式
+├── content.js             # 内容脚本
+├── background.js          # 后台脚本
+├── options.html           # 设置页面
+├── options.js             # 设置逻辑
+├── assets/                # 静态资源
+│   ├── icons/            # 扩展图标
+│   └── images/           # 界面图片
+├── scripts/              # 工具脚本
+└── docs/                 # 项目文档
+开发理念
+LeetCode 刷题统计扩展 的开发遵循以下核心理念：" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" />
+    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" /><meta property="og:locale" content="en-us" />
+  
+    
+    
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/project/leetcode-counter-extension/leetcode_counter_extension_documentation/"
+  },
+  "headline": "",
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "韩嘉仪"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo Academic CV Theme",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/media/icon_hu_a6282450d1fd5f43.png"
+    }
+  },
+  "description": "\u003ch1 id=\"leetcode-刷题统计扩展\"\u003eLeetCode 刷题统计扩展\u003c/h1\u003e\n\u003ch2 id=\"项目概述\"\u003e项目概述\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eLeetCode 刷题统计扩展\u003c/strong\u003e 是一个简洁高效的浏览器扩展，专为开发者设计，用于追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示，帮助用户构建持续学习的编程习惯，提升算法能力。\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e开发者\u003c/strong\u003e: 韩嘉仪 (miaowumiaomiaowu)\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e技术栈\u003c/strong\u003e: JavaScript + HTML + CSS\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e项目类型\u003c/strong\u003e: 浏览器扩展\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e许可证\u003c/strong\u003e: MIT License\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eGitHub\u003c/strong\u003e: \u003ca href=\"https://github.com/miaowumiaomiaowu/leetcode-counter-extention\" target=\"_blank\" rel=\"noopener\"\u003emiaowumiaomiaowu/leetcode-counter-extention\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"核心特性\"\u003e核心特性\u003c/h2\u003e\n\u003ch3 id=\"-智能数据统计\"\u003e📊 智能数据统计\u003c/h3\u003e\n\u003ch4 id=\"实时刷题追踪\"\u003e实时刷题追踪\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e自动识别\u003c/strong\u003e: 无需手动操作，自动检测 LeetCode 题目完成状态\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e实时更新\u003c/strong\u003e: 即时记录每道题目的解题时间和完成状态\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e多维度统计\u003c/strong\u003e: 按难度、标签、时间等维度进行数据分析\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"详细进度记录\"\u003e详细进度记录\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e解题历史\u003c/strong\u003e: 完整记录每次刷题的时间戳和题目信息\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e完成率统计\u003c/strong\u003e: 分类统计简单、中等、困难题目的完成情况\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e连续刷题天数\u003c/strong\u003e: 追踪学习连续性，激励持续学习\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-可视化数据展示\"\u003e📈 可视化数据展示\u003c/h3\u003e\n\u003ch4 id=\"直观图表分析\"\u003e直观图表分析\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e进度条显示\u003c/strong\u003e: 清晰展示各难度题目的完成进度\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e趋势图表\u003c/strong\u003e: 展示刷题频率和学习趋势变化\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e热力图\u003c/strong\u003e: 可视化每日刷题活跃度分布\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"个性化面板\"\u003e个性化面板\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e简洁界面\u003c/strong\u003e: 优雅的弹窗设计，不干扰正常刷题流程\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e快速预览\u003c/strong\u003e: 一键查看关键统计数据和学习成果\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e自定义设置\u003c/strong\u003e: 根据个人喜好调整显示内容和样式\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-学习助手功能\"\u003e🎯 学习助手功能\u003c/h3\u003e\n\u003ch4 id=\"智能提醒系统\"\u003e智能提醒系统\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e学习目标\u003c/strong\u003e: 设置每日/每周刷题目标，保持学习节奏\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e温和提醒\u003c/strong\u003e: 非侵入式提醒，鼓励持续学习\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e成就系统\u003c/strong\u003e: 解锁各种学习里程碑，增强成就感\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"数据导出与分享\"\u003e数据导出与分享\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e数据备份\u003c/strong\u003e: 支持学习数据的导出和备份\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e进度分享\u003c/strong\u003e: 生成精美的学习报告图片，分享学习成果\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e跨设备同步\u003c/strong\u003e: 通过云同步保持多设备数据一致\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"技术架构\"\u003e技术架构\u003c/h2\u003e\n\u003ch3 id=\"前端技术栈\"\u003e前端技术栈\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-javascript\" data-lang=\"javascript\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nx\"\u003e核心技术\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eVanilla\u003c/span\u003e \u003cspan class=\"nx\"\u003eJavaScript\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mf\"\u003e73.6\u003c/span\u003e\u003cspan class=\"o\"\u003e%\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003e核心逻辑实现\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eCSS3\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mf\"\u003e18.8\u003c/span\u003e\u003cspan class=\"o\"\u003e%\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003e样式设计和动画效果\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eHTML5\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mf\"\u003e7.6\u003c/span\u003e\u003cspan class=\"o\"\u003e%\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003e页面结构和扩展界面\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nx\"\u003e浏览器扩展技术\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eChrome\u003c/span\u003e \u003cspan class=\"nx\"\u003eExtensions\u003c/span\u003e \u003cspan class=\"nx\"\u003eAPI\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eContent\u003c/span\u003e \u003cspan class=\"nx\"\u003eScripts\u003c/span\u003e \u003cspan class=\"nx\"\u003e内容脚本\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eBackground\u003c/span\u003e \u003cspan class=\"nx\"\u003eScripts\u003c/span\u003e \u003cspan class=\"nx\"\u003e后台脚本\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003eStorage\u003c/span\u003e \u003cspan class=\"nx\"\u003eAPI\u003c/span\u003e \u003cspan class=\"nx\"\u003e本地存储\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e \u003cspan class=\"nx\"\u003ePopup\u003c/span\u003e \u003cspan class=\"nx\"\u003e弹窗界面\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"扩展架构设计\"\u003e扩展架构设计\u003c/h3\u003e\n\u003ch4 id=\"manifest-配置\"\u003eManifest 配置\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-json\" data-lang=\"json\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;manifest_version\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;name\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;LeetCode 刷题统计\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;version\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;1.0.0\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;permissions\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;storage\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;activeTab\u0026#34;\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e],\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;content_scripts\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e      \u003cspan class=\"nt\"\u003e\u0026#34;matches\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\u0026#34;*://leetcode.com/*\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;*://leetcode.cn/*\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e],\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e      \u003cspan class=\"nt\"\u003e\u0026#34;js\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\u0026#34;content.js\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e],\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nt\"\u003e\u0026#34;action\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"nt\"\u003e\u0026#34;default_popup\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;popup.html\u0026#34;\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch4 id=\"核心模块\"\u003e核心模块\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eContent Script\u003c/strong\u003e: 页面内容监听和数据采集\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eBackground Script\u003c/strong\u003e: 后台数据处理和状态管理\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePopup Interface\u003c/strong\u003e: 用户交互界面和数据展示\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStorage Manager\u003c/strong\u003e: 本地数据存储和管理\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"数据处理流程\"\u003e数据处理流程\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003e页面监听\u003c/strong\u003e: Content Script 监听 LeetCode 页面变化\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e状态识别\u003c/strong\u003e: 自动识别题目完成状态和相关信息\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e数据存储\u003c/strong\u003e: 将解题记录存储到浏览器本地存储\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e实时更新\u003c/strong\u003e: 更新统计数据和可视化图表\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e用户展示\u003c/strong\u003e: 通过 Popup 界面展示统计结果\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"功能模块详解\"\u003e功能模块详解\u003c/h2\u003e\n\u003ch3 id=\"-智能页面监听\"\u003e🔍 智能页面监听\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eDOM 变化检测\u003c/strong\u003e: 实时监听页面元素变化\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e题目状态识别\u003c/strong\u003e: 自动识别题目是否已完成\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e多语言支持\u003c/strong\u003e: 同时支持 LeetCode 国际版和中文版\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-数据统计引擎\"\u003e📊 数据统计引擎\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e多维度分析\u003c/strong\u003e: 按难度、标签、时间等维度统计\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e趋势计算\u003c/strong\u003e: 计算学习趋势和进步速度\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e目标跟踪\u003c/strong\u003e: 追踪个人学习目标完成情况\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-用户界面设计\"\u003e🎨 用户界面设计\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e响应式设计\u003c/strong\u003e: 适配不同屏幕尺寸和分辨率\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e暗色模式\u003c/strong\u003e: 支持明暗主题切换\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e动画效果\u003c/strong\u003e: 流畅的过渡动画和交互反馈\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"安装与使用\"\u003e安装与使用\u003c/h2\u003e\n\u003ch3 id=\"安装步骤\"\u003e安装步骤\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 1. 克隆项目到本地\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003egit clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 2. 在 Chrome 浏览器中打开扩展管理页面\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003echrome://extensions/\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 3. 开启开发者模式\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 4. 点击\u0026#34;加载已解压的扩展程序\u0026#34;，选择项目文件夹\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"使用指南\"\u003e使用指南\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003e访问 LeetCode\u003c/strong\u003e: 在 LeetCode 网站正常刷题\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e自动统计\u003c/strong\u003e: 扩展会自动记录您的刷题进度\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e查看统计\u003c/strong\u003e: 点击浏览器扩展图标查看详细统计\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e设置目标\u003c/strong\u003e: 在设置页面配置个人学习目标\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"项目亮点\"\u003e项目亮点\u003c/h2\u003e\n\u003ch3 id=\"-创新特性\"\u003e💡 创新特性\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003e零干扰设计\u003c/strong\u003e: 完全不影响正常的 LeetCode 使用体验\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e智能识别\u003c/strong\u003e: 无需手动标记，自动识别题目完成状态\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e可视化友好\u003c/strong\u003e: 直观的图表展示，让数据说话\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e轻量高效\u003c/strong\u003e: 占用资源少，响应速度快\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3 id=\"-隐私保护\"\u003e🛡️ 隐私保护\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e本地存储\u003c/strong\u003e: 所有数据存储在用户本地，不上传服务器\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e最小权限\u003c/strong\u003e: 仅请求必要的浏览器权限\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e透明开源\u003c/strong\u003e: 代码完全开源，用户可自主审查\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-开发优势\"\u003e🔧 开发优势\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e模块化设计\u003c/strong\u003e: 清晰的代码结构，易于维护和扩展\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e兼容性强\u003c/strong\u003e: 支持主流 Chromium 内核浏览器\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e性能优化\u003c/strong\u003e: 高效的数据处理和 DOM 操作\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"技术实现细节\"\u003e技术实现细节\u003c/h2\u003e\n\u003ch3 id=\"content-script-核心逻辑\"\u003eContent Script 核心逻辑\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-javascript\" data-lang=\"javascript\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// 监听页面变化，自动检测题目完成状态\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"kr\"\u003eclass\u003c/span\u003e \u003cspan class=\"nx\"\u003eLeetCodeTracker\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nx\"\u003econstructor\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003einitializeTracker\u003c/span\u003e\u003cspan class=\"p\"\u003e();\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nx\"\u003einitializeTracker\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"c1\"\u003e// 初始化页面监听器\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e    \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003eobservePageChanges\u003c/span\u003e\u003cspan class=\"p\"\u003e();\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003edetectProblemCompletion\u003c/span\u003e\u003cspan class=\"p\"\u003e();\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nx\"\u003eobservePageChanges\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"c1\"\u003e// 使用 MutationObserver 监听 DOM 变化\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e    \u003cspan class=\"kr\"\u003econst\u003c/span\u003e \u003cspan class=\"nx\"\u003eobserver\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"k\"\u003enew\u003c/span\u003e \u003cspan class=\"nx\"\u003eMutationObserver\u003c/span\u003e\u003cspan class=\"p\"\u003e(()\u003c/span\u003e \u003cspan class=\"p\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e      \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003echeckProblemStatus\u003c/span\u003e\u003cspan class=\"p\"\u003e();\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"p\"\u003e});\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"nx\"\u003eobserver\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003eobserve\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003edocument\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003ebody\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e \u003cspan class=\"nx\"\u003echildList\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"kc\"\u003etrue\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"nx\"\u003esubtree\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"kc\"\u003etrue\u003c/span\u003e \u003cspan class=\"p\"\u003e});\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"数据可视化实现\"\u003e数据可视化实现\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-javascript\" data-lang=\"javascript\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// 生成统计图表\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"kr\"\u003eclass\u003c/span\u003e \u003cspan class=\"nx\"\u003eStatsVisualizer\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nx\"\u003egenerateProgressChart\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003edata\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"c1\"\u003e// 使用 Canvas 或 SVG 生成进度图表\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e    \u003cspan class=\"k\"\u003ereturn\u003c/span\u003e \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003ecreateChartElement\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003edata\u003c/span\u003e\u003cspan class=\"p\"\u003e);\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"nx\"\u003eupdateDashboard\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003estats\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"c1\"\u003e// 更新统计面板显示\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e    \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003erenderProgressBars\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003estats\u003c/span\u003e\u003cspan class=\"p\"\u003e);\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"k\"\u003ethis\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003eupdateTrendChart\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003estats\u003c/span\u003e\u003cspan class=\"p\"\u003e);\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch2 id=\"项目结构\"\u003e项目结构\u003c/h2\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003eleetcode-counter-extention/\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── manifest.json           # 扩展配置文件\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── popup.html             # 弹窗界面\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── popup.js               # 弹窗逻辑\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── popup.css              # 弹窗样式\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── content.js             # 内容脚本\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── background.js          # 后台脚本\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── options.html           # 设置页面\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── options.js             # 设置逻辑\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── assets/                # 静态资源\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e│   ├── icons/            # 扩展图标\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e│   └── images/           # 界面图片\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── scripts/              # 工具脚本\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e└── docs/                 # 项目文档\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch2 id=\"开发理念\"\u003e开发理念\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eLeetCode 刷题统计扩展\u003c/strong\u003e 的开发遵循以下核心理念：\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  <title>Hugo Academic CV Theme</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+<script>
+  
+  let searchWrapper = null;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
+  });
+
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
+
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
+
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
+
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-start">
+    <div class="order-0 h-full">
+      
+      <a class="navbar-brand" href="/" title="Hugo Academic CV Theme">
+        Your Name
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-start
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#papers"
+        >Papers</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#talks"
+        >Talks</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#news"
+        >News</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/projects/"
+        >Projects</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/teaching/"
+        >Teaching</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="toggle search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        data-search-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="block dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="hidden dark:block">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+
+
+
+
+<div class="mx-auto flex max-w-screen-xl">
+  
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/"
+    
+  >Recent &amp; Upcoming Talks
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/example/"
+    
+  >Example Talk
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/projects/"
+    
+  >Projects
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/"
+    
+  >Blog
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/get-started/"
+    
+  >🎉 Easily create your own simple yet highly customizable blog
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/second-brain/"
+    
+  >🧠 Sharpen your thinking with a second brain
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/data-visualization/"
+    
+  >📈 Communicate your results effectively with the best data visualizations
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/teach-courses/"
+    
+  >👩🏼‍🏫 Teach academic courses
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/project-management/"
+    
+  >✅ Manage your projects
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/"
+    
+  >Projects
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pandas/"
+    
+  >Pandas
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pytorch/"
+    
+  >PyTorch
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/scikit/"
+    
+  >scikit-learn
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/health-platform/"
+    
+  >index
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/project/leetcode-counter-extension/leetcode_counter_extension_documentation/"
+    
+  >LeetCode_Counter_Extension_Documentation
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0"
+                class="hb-docs-link"
+              >项目概述</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7"
+                class="hb-docs-link"
+              >核心特性</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84"
+                class="hb-docs-link"
+              >技术架构</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97%e8%af%a6%e8%a7%a3"
+                class="hb-docs-link"
+              >功能模块详解</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8"
+                class="hb-docs-link"
+              >安装与使用</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9"
+                class="hb-docs-link"
+              >项目亮点</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%8a%80%e6%9c%af%e5%ae%9e%e7%8e%b0%e7%bb%86%e8%8a%82"
+                class="hb-docs-link"
+              >技术实现细节</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84"
+                class="hb-docs-link"
+              >项目结构</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%bc%80%e5%8f%91%e7%90%86%e5%bf%b5"
+                class="hb-docs-link"
+              >开发理念</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96"
+                class="hb-docs-link"
+              >性能优化</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%9c%aa%e6%9d%a5%e8%a7%84%e5%88%92"
+                class="hb-docs-link"
+              >未来规划</a>
+            </li>
+          <li>
+              <a
+                href="#%e8%b4%a1%e7%8c%ae%e6%8c%87%e5%8d%97"
+                class="hb-docs-link"
+              >贡献指南</a>
+            </li>
+          <li>
+              <a
+                href="#%e7%89%88%e6%9c%ac%e5%8e%86%e5%8f%b2"
+                class="hb-docs-link"
+              >版本历史</a>
+            </li>
+          </ul>
+  
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/experience/"
+    
+  >Experience
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/"
+    
+  >Teaching
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/js/"
+    
+  >Learn JavaScript
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/python/"
+    
+  >Learn Python
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/"
+    
+  >Publications
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/preprint/"
+    
+  >An example preprint / working paper
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/journal-article/"
+    
+  >An example journal article
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/conference-paper/"
+    
+  >An example conference paper
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0">项目概述</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7">核心特性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%99%ba%e8%83%bd%e6%95%b0%e6%8d%ae%e7%bb%9f%e8%ae%a1">📊 智能数据统计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%9e%e6%97%b6%e5%88%b7%e9%a2%98%e8%bf%bd%e8%b8%aa">实时刷题追踪</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%af%a6%e7%bb%86%e8%bf%9b%e5%ba%a6%e8%ae%b0%e5%bd%95">详细进度记录</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%8f%af%e8%a7%86%e5%8c%96%e6%95%b0%e6%8d%ae%e5%b1%95%e7%a4%ba">📈 可视化数据展示</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%b4%e8%a7%82%e5%9b%be%e8%a1%a8%e5%88%86%e6%9e%90">直观图表分析</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%aa%e6%80%a7%e5%8c%96%e9%9d%a2%e6%9d%bf">个性化面板</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%ad%a6%e4%b9%a0%e5%8a%a9%e6%89%8b%e5%8a%9f%e8%83%bd">🎯 学习助手功能</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%99%ba%e8%83%bd%e6%8f%90%e9%86%92%e7%b3%bb%e7%bb%9f">智能提醒系统</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e5%af%bc%e5%87%ba%e4%b8%8e%e5%88%86%e4%ba%ab">数据导出与分享</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84">技术架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%89%8d%e7%ab%af%e6%8a%80%e6%9c%af%e6%a0%88">前端技术栈</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%89%a9%e5%b1%95%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1">扩展架构设计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#manifest-%e9%85%8d%e7%bd%ae">Manifest 配置</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e6%a8%a1%e5%9d%97">核心模块</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86%e6%b5%81%e7%a8%8b">数据处理流程</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97%e8%af%a6%e8%a7%a3">功能模块详解</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%99%ba%e8%83%bd%e9%a1%b5%e9%9d%a2%e7%9b%91%e5%90%ac">🔍 智能页面监听</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%95%b0%e6%8d%ae%e7%bb%9f%e8%ae%a1%e5%bc%95%e6%93%8e">📊 数据统计引擎</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e8%ae%be%e8%ae%a1">🎨 用户界面设计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8">安装与使用</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%89%e8%a3%85%e6%ad%a5%e9%aa%a4">安装步骤</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97">使用指南</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9">项目亮点</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%88%9b%e6%96%b0%e7%89%b9%e6%80%a7">💡 创新特性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4">🛡️ 隐私保护</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%bc%80%e5%8f%91%e4%bc%98%e5%8a%bf">🔧 开发优势</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e5%ae%9e%e7%8e%b0%e7%bb%86%e8%8a%82">技术实现细节</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#content-script-%e6%a0%b8%e5%bf%83%e9%80%bb%e8%be%91">Content Script 核心逻辑</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96%e5%ae%9e%e7%8e%b0">数据可视化实现</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84">项目结构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%bc%80%e5%8f%91%e7%90%86%e5%bf%b5">开发理念</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96">性能优化</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9c%aa%e6%9d%a5%e8%a7%84%e5%88%92">未来规划</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%b4%a1%e7%8c%ae%e6%8c%87%e5%8d%97">贡献指南</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%89%88%e6%9c%ac%e5%8e%86%e5%8f%b2">版本历史</a>
+      </li></ul>
+
+  
+  
+    
+    
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"></h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+        
+
+        
+        
+
+        
+        <span class="mx-1">·</span>
+        <span class="mx-1">
+          3 min read
+        </span>
+        
+        </div>
+
+        <div class="mt-3">
+          
+
+
+
+
+        </div>
+      </div>
+
+
+
+      
+      
+      
+
+      
+      
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+        <h1 id="leetcode-刷题统计扩展">LeetCode 刷题统计扩展</h1>
+<h2 id="项目概述">项目概述</h2>
+<p><strong>LeetCode 刷题统计扩展</strong> 是一个简洁高效的浏览器扩展，专为开发者设计，用于追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示，帮助用户构建持续学习的编程习惯，提升算法能力。</p>
+<ul>
+<li><strong>开发者</strong>: 韩嘉仪 (miaowumiaomiaowu)</li>
+<li><strong>技术栈</strong>: JavaScript + HTML + CSS</li>
+<li><strong>项目类型</strong>: 浏览器扩展</li>
+<li><strong>许可证</strong>: MIT License</li>
+<li><strong>GitHub</strong>: <a href="https://github.com/miaowumiaomiaowu/leetcode-counter-extention" target="_blank" rel="noopener">miaowumiaomiaowu/leetcode-counter-extention</a></li>
+</ul>
+<h2 id="核心特性">核心特性</h2>
+<h3 id="-智能数据统计">📊 智能数据统计</h3>
+<h4 id="实时刷题追踪">实时刷题追踪</h4>
+<ul>
+<li><strong>自动识别</strong>: 无需手动操作，自动检测 LeetCode 题目完成状态</li>
+<li><strong>实时更新</strong>: 即时记录每道题目的解题时间和完成状态</li>
+<li><strong>多维度统计</strong>: 按难度、标签、时间等维度进行数据分析</li>
+</ul>
+<h4 id="详细进度记录">详细进度记录</h4>
+<ul>
+<li><strong>解题历史</strong>: 完整记录每次刷题的时间戳和题目信息</li>
+<li><strong>完成率统计</strong>: 分类统计简单、中等、困难题目的完成情况</li>
+<li><strong>连续刷题天数</strong>: 追踪学习连续性，激励持续学习</li>
+</ul>
+<h3 id="-可视化数据展示">📈 可视化数据展示</h3>
+<h4 id="直观图表分析">直观图表分析</h4>
+<ul>
+<li><strong>进度条显示</strong>: 清晰展示各难度题目的完成进度</li>
+<li><strong>趋势图表</strong>: 展示刷题频率和学习趋势变化</li>
+<li><strong>热力图</strong>: 可视化每日刷题活跃度分布</li>
+</ul>
+<h4 id="个性化面板">个性化面板</h4>
+<ul>
+<li><strong>简洁界面</strong>: 优雅的弹窗设计，不干扰正常刷题流程</li>
+<li><strong>快速预览</strong>: 一键查看关键统计数据和学习成果</li>
+<li><strong>自定义设置</strong>: 根据个人喜好调整显示内容和样式</li>
+</ul>
+<h3 id="-学习助手功能">🎯 学习助手功能</h3>
+<h4 id="智能提醒系统">智能提醒系统</h4>
+<ul>
+<li><strong>学习目标</strong>: 设置每日/每周刷题目标，保持学习节奏</li>
+<li><strong>温和提醒</strong>: 非侵入式提醒，鼓励持续学习</li>
+<li><strong>成就系统</strong>: 解锁各种学习里程碑，增强成就感</li>
+</ul>
+<h4 id="数据导出与分享">数据导出与分享</h4>
+<ul>
+<li><strong>数据备份</strong>: 支持学习数据的导出和备份</li>
+<li><strong>进度分享</strong>: 生成精美的学习报告图片，分享学习成果</li>
+<li><strong>跨设备同步</strong>: 通过云同步保持多设备数据一致</li>
+</ul>
+<h2 id="技术架构">技术架构</h2>
+<h3 id="前端技术栈">前端技术栈</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">核心技术</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Vanilla</span> <span class="nx">JavaScript</span> <span class="p">(</span><span class="mf">73.6</span><span class="o">%</span><span class="p">)</span> <span class="o">-</span> <span class="nx">核心逻辑实现</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">CSS3</span> <span class="p">(</span><span class="mf">18.8</span><span class="o">%</span><span class="p">)</span> <span class="o">-</span> <span class="nx">样式设计和动画效果</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">HTML5</span> <span class="p">(</span><span class="mf">7.6</span><span class="o">%</span><span class="p">)</span> <span class="o">-</span> <span class="nx">页面结构和扩展界面</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">浏览器扩展技术</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Chrome</span> <span class="nx">Extensions</span> <span class="nx">API</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Content</span> <span class="nx">Scripts</span> <span class="nx">内容脚本</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Background</span> <span class="nx">Scripts</span> <span class="nx">后台脚本</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Storage</span> <span class="nx">API</span> <span class="nx">本地存储</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">Popup</span> <span class="nx">弹窗界面</span>
+</span></span></code></pre></div><h3 id="扩展架构设计">扩展架构设计</h3>
+<h4 id="manifest-配置">Manifest 配置</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;manifest_version&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;LeetCode 刷题统计&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;permissions&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;storage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;activeTab&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;content_scripts&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;matches&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;*://leetcode.com/*&#34;</span><span class="p">,</span> <span class="s2">&#34;*://leetcode.cn/*&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;js&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;content.js&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;default_popup&#34;</span><span class="p">:</span> <span class="s2">&#34;popup.html&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="核心模块">核心模块</h4>
+<ul>
+<li><strong>Content Script</strong>: 页面内容监听和数据采集</li>
+<li><strong>Background Script</strong>: 后台数据处理和状态管理</li>
+<li><strong>Popup Interface</strong>: 用户交互界面和数据展示</li>
+<li><strong>Storage Manager</strong>: 本地数据存储和管理</li>
+</ul>
+<h3 id="数据处理流程">数据处理流程</h3>
+<ol>
+<li><strong>页面监听</strong>: Content Script 监听 LeetCode 页面变化</li>
+<li><strong>状态识别</strong>: 自动识别题目完成状态和相关信息</li>
+<li><strong>数据存储</strong>: 将解题记录存储到浏览器本地存储</li>
+<li><strong>实时更新</strong>: 更新统计数据和可视化图表</li>
+<li><strong>用户展示</strong>: 通过 Popup 界面展示统计结果</li>
+</ol>
+<h2 id="功能模块详解">功能模块详解</h2>
+<h3 id="-智能页面监听">🔍 智能页面监听</h3>
+<ul>
+<li><strong>DOM 变化检测</strong>: 实时监听页面元素变化</li>
+<li><strong>题目状态识别</strong>: 自动识别题目是否已完成</li>
+<li><strong>多语言支持</strong>: 同时支持 LeetCode 国际版和中文版</li>
+</ul>
+<h3 id="-数据统计引擎">📊 数据统计引擎</h3>
+<ul>
+<li><strong>多维度分析</strong>: 按难度、标签、时间等维度统计</li>
+<li><strong>趋势计算</strong>: 计算学习趋势和进步速度</li>
+<li><strong>目标跟踪</strong>: 追踪个人学习目标完成情况</li>
+</ul>
+<h3 id="-用户界面设计">🎨 用户界面设计</h3>
+<ul>
+<li><strong>响应式设计</strong>: 适配不同屏幕尺寸和分辨率</li>
+<li><strong>暗色模式</strong>: 支持明暗主题切换</li>
+<li><strong>动画效果</strong>: 流畅的过渡动画和交互反馈</li>
+</ul>
+<h2 id="安装与使用">安装与使用</h2>
+<h3 id="安装步骤">安装步骤</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 克隆项目到本地</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 在 Chrome 浏览器中打开扩展管理页面</span>
+</span></span><span class="line"><span class="cl">chrome://extensions/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 开启开发者模式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. 点击&#34;加载已解压的扩展程序&#34;，选择项目文件夹</span>
+</span></span></code></pre></div><h3 id="使用指南">使用指南</h3>
+<ol>
+<li><strong>访问 LeetCode</strong>: 在 LeetCode 网站正常刷题</li>
+<li><strong>自动统计</strong>: 扩展会自动记录您的刷题进度</li>
+<li><strong>查看统计</strong>: 点击浏览器扩展图标查看详细统计</li>
+<li><strong>设置目标</strong>: 在设置页面配置个人学习目标</li>
+</ol>
+<h2 id="项目亮点">项目亮点</h2>
+<h3 id="-创新特性">💡 创新特性</h3>
+<ol>
+<li><strong>零干扰设计</strong>: 完全不影响正常的 LeetCode 使用体验</li>
+<li><strong>智能识别</strong>: 无需手动标记，自动识别题目完成状态</li>
+<li><strong>可视化友好</strong>: 直观的图表展示，让数据说话</li>
+<li><strong>轻量高效</strong>: 占用资源少，响应速度快</li>
+</ol>
+<h3 id="-隐私保护">🛡️ 隐私保护</h3>
+<ul>
+<li><strong>本地存储</strong>: 所有数据存储在用户本地，不上传服务器</li>
+<li><strong>最小权限</strong>: 仅请求必要的浏览器权限</li>
+<li><strong>透明开源</strong>: 代码完全开源，用户可自主审查</li>
+</ul>
+<h3 id="-开发优势">🔧 开发优势</h3>
+<ul>
+<li><strong>模块化设计</strong>: 清晰的代码结构，易于维护和扩展</li>
+<li><strong>兼容性强</strong>: 支持主流 Chromium 内核浏览器</li>
+<li><strong>性能优化</strong>: 高效的数据处理和 DOM 操作</li>
+</ul>
+<h2 id="技术实现细节">技术实现细节</h2>
+<h3 id="content-script-核心逻辑">Content Script 核心逻辑</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 监听页面变化，自动检测题目完成状态
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">class</span> <span class="nx">LeetCodeTracker</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">initializeTracker</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">initializeTracker</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 初始化页面监听器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">observePageChanges</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">detectProblemCompletion</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">observePageChanges</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 MutationObserver 监听 DOM 变化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">checkProblemStatus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span> <span class="nx">childList</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">subtree</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="数据可视化实现">数据可视化实现</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 生成统计图表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">class</span> <span class="nx">StatsVisualizer</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">generateProgressChart</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 Canvas 或 SVG 生成进度图表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">createChartElement</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">updateDashboard</span><span class="p">(</span><span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 更新统计面板显示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">renderProgressBars</span><span class="p">(</span><span class="nx">stats</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">updateTrendChart</span><span class="p">(</span><span class="nx">stats</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="项目结构">项目结构</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">leetcode-counter-extention/
+</span></span><span class="line"><span class="cl">├── manifest.json           # 扩展配置文件
+</span></span><span class="line"><span class="cl">├── popup.html             # 弹窗界面
+</span></span><span class="line"><span class="cl">├── popup.js               # 弹窗逻辑
+</span></span><span class="line"><span class="cl">├── popup.css              # 弹窗样式
+</span></span><span class="line"><span class="cl">├── content.js             # 内容脚本
+</span></span><span class="line"><span class="cl">├── background.js          # 后台脚本
+</span></span><span class="line"><span class="cl">├── options.html           # 设置页面
+</span></span><span class="line"><span class="cl">├── options.js             # 设置逻辑
+</span></span><span class="line"><span class="cl">├── assets/                # 静态资源
+</span></span><span class="line"><span class="cl">│   ├── icons/            # 扩展图标
+</span></span><span class="line"><span class="cl">│   └── images/           # 界面图片
+</span></span><span class="line"><span class="cl">├── scripts/              # 工具脚本
+</span></span><span class="line"><span class="cl">└── docs/                 # 项目文档
+</span></span></code></pre></div><h2 id="开发理念">开发理念</h2>
+<p><strong>LeetCode 刷题统计扩展</strong> 的开发遵循以下核心理念：</p>
+<ol>
+<li><strong>用户体验优先</strong>: 零干扰设计，完全融入原生 LeetCode 体验</li>
+<li><strong>数据驱动学习</strong>: 通过可视化数据激励持续学习</li>
+<li><strong>隐私保护</strong>: 用户数据完全本地化，保护个人隐私</li>
+<li><strong>简洁高效</strong>: 功能专注，性能优化，轻量级设计</li>
+<li><strong>开放透明</strong>: 开源代码，社区驱动，持续改进</li>
+</ol>
+<h2 id="性能优化">性能优化</h2>
+<ul>
+<li><strong>懒加载</strong>: 按需加载功能模块，减少初始化时间</li>
+<li><strong>防抖处理</strong>: 优化页面监听频率，避免过度计算</li>
+<li><strong>缓存机制</strong>: 智能缓存计算结果，提升响应速度</li>
+<li><strong>异步处理</strong>: 非阻塞式数据处理，保持界面流畅</li>
+</ul>
+<h2 id="未来规划">未来规划</h2>
+<ul>
+<li><strong>多平台支持</strong>: 扩展到 Firefox、Safari 等其他浏览器</li>
+<li><strong>数据分析增强</strong>: 更深入的学习模式分析和建议</li>
+<li><strong>社交功能</strong>: 学习进度分享和好友对比功能</li>
+<li><strong>AI 推荐</strong>: 基于刷题历史推荐适合的题目</li>
+<li><strong>云同步</strong>: 可选的云端数据同步功能</li>
+<li><strong>移动端支持</strong>: 开发手机端配套应用</li>
+</ul>
+<h2 id="贡献指南">贡献指南</h2>
+<p>欢迎开发者参与项目改进：</p>
+<ol>
+<li>Fork 项目仓库</li>
+<li>创建功能分支 (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>提交更改 (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>推送到分支 (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>开启 Pull Request</li>
+</ol>
+<h2 id="版本历史">版本历史</h2>
+<ul>
+<li><strong>v1.0.0</strong> (2025-05): 初始版本发布
+<ul>
+<li>基础刷题统计功能</li>
+<li>简洁的数据可视化</li>
+<li>支持 Chrome 浏览器</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><em>这个项目体现了开发者对编程学习的热情和对用户体验的极致追求。通过技术手段帮助程序员建立更好的学习习惯，是技术服务生活的完美体现。</em></p>
+<p><strong>联系方式</strong>: <a href="https://github.com/miaowumiaomiaowu" target="_blank" rel="noopener">GitHub @miaowumiaomiaowu</a></p>
+<p><strong>项目地址</strong>: <a href="https://github.com/miaowumiaomiaowu/leetcode-counter-extention" target="_blank" rel="noopener">leetcode-counter-extention</a></p>
+
+      </div>
+
+      <div class="mt-16"></div>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        
+        <div class="max-w-prose print:hidden">
+  
+  
+
+  
+
+  
+<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2Fleetcode_counter_extension_documentation%2F&amp;text="
+    title="X"
+    aria-label="X"
+    id="share-link-x"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2Fleetcode_counter_extension_documentation%2F&amp;t="
+    title="Facebook"
+    aria-label="Facebook"
+    id="share-link-facebook"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="mailto:?subject=&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2Fleetcode_counter_extension_documentation%2F"
+    title="Email"
+    aria-label="Email"
+    id="share-link-email"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2Fleetcode_counter_extension_documentation%2F&amp;title="
+    title="LinkedIn"
+    aria-label="LinkedIn"
+    id="share-link-linkedin"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="whatsapp://send?text=%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2Fleetcode_counter_extension_documentation%2F"
+    title="WhatsApp"
+    aria-label="WhatsApp"
+    id="share-link-whatsapp"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+  </a>
+  
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+
+<div class="flex pt-12 pb-4">
+  
+    
+    
+    
+    <img
+      class="mr-4 h-24 w-24 rounded-full"
+      srcset="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp 96w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_550a8b5752d1ef53.webp 192w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_1fe548720015905c.webp 288w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_b374a8889da59928.webp 384w"
+      sizes="96px"
+      src="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp"
+      width="96"
+      height="96"
+      alt="韩嘉仪"
+      loading="lazy"
+      />
+  
+  <div class="place-self-center">
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Authors
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      <span class="inline-block">
+        <a href="http://localhost:1313/" class="no-underline">
+        韩嘉仪
+        </a>
+      </span><span class="text-sm font-normal text-gray-600 dark:text-gray-400 ml-1 inline-block">(she/her)</span></div>
+
+    
+    <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
+    22级 计算机科学与技术专业（徐特立英才班）学生
+    </div>
+    
+
+
+    
+
+    <div class="text-2xl sm:text-lg pt-1">
+
+      
+<div class="flex flex-wrap text-neutral-500 dark:text-neutral-300">
+  
+    
+    
+    
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="mailto:1285622496@qq.com"
+      
+      aria-label="At-Symbol"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://github.com/miaowumiaomiaowu"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Brands/Github"
+    ><svg style="height: 1em;" fill="currentColor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg></a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/project/health-platform/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            ></span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Jan 1, 0001
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+</div>
+
+      </div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+<div id="hb-notification-container" class="fixed top-20 right-4 z-[9999] pointer-events-none" aria-live="polite" aria-atomic="true"></div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,2586 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: August 21, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.5.2" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="韩嘉仪" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="🌊 金融实时流处理与AI预测系统 Financial Real-Time Stream Processing Pipeline 面向真实交易环境打造的企业级金融实时流处理与AI预测系统
+🎯 项目概述 本项目是一个完整的金融科技解决方案，专为真实交易环境设计。系统通过微服务架构实现了数据采集、实时流处理、AI预测和可视化监控的完整闭环，拒绝模拟数据，坚持使用真实市场数据进行预测和分析。
+🔥 核心特色 🚀 真实数据驱动: 集成yfinance、akshare等真实API数据源 🤖 企业级AI预测: 基于ml_training训练的真实模型，非随机模拟 ⚡ 高性能流处理: 毫秒级WebSocket实时数据推送 🏗️ 微服务架构: 8个核心服务，支持独立扩展和部署 📊 全栈可观测性: Prometheus &#43; Grafana监控体系 🎨 现代化界面: React &#43; TypeScript前端仪表盘 🏗️ 系统架构 核心服务架构图 ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ │ Frontend │ │ API Gateway │ │ AI Service │ │ (React &#43; TS) │◄───┤ (FastAPI) │◄───┤ (ML Models) │ │ :3000 │ │ :8000 │ │ :8002 │ └─────────────────┘ └─────────────────┘ └─────────────────┘ │ ┌────────┴────────┐ ▼ ▼ ┌─────────────────┐ ┌─────────────────┐ │ Streaming Svc │ │ Data Collector │ │ (aiohttp) │ │ (FastAPI) │ │ :8004 │ │ :8003 │ └─────────────────┘ └─────────────────┘ │ ┌──────────┴──────────┐ ▼ ▼ ┌─────────────┐ ┌─────────────┐ │ Kafka │ │ Redis │ │ :9092 │ │ :6379 │ └─────────────┘ └─────────────┘ 🧩 服务组件详解 服务名称 端口 技术栈 职责 API Gateway 8000 FastAPI HTTP/WebSocket网关，业务路由聚合 AI Service 8002 FastAPI &#43; ML 真实训练模型推理服务 Streaming Service 8004 aiohttp 实时流处理与消息推送 Data Collector 8003 FastAPI 实时/批量数据采集 Risk Management - Python 风控与审计模块 Frontend 3000 React &#43; Vite 用户界面与数据可视化 Monitoring 3001 Grafana 系统监控与告警 ✨ 核心功能 🔄 实时数据流处理 统一消息格式: {type, data, timestamp, version} envelope协议 多源数据融合: yfinance、akshare、自定义API 毫秒级延迟: WebSocket实时推送 容错机制: 自动故障转移和数据回退策略 🤖 AI预测引擎 真实模型: 基于RESSET数据离线训练的生产级模型 多策略预测: 技术分析、基本面分析、情感分析 实时推理: 支持秒级预测响应 模型版本管理: 支持A/B测试和模型热更新 📊 监控与可观测性 系统健康: /api/v2/system/* 健康检查端点 业务指标: 实时交易量、预测准确率、系统延迟 告警机制: 基于Prometheus的智能告警 性能分析: 详细的链路追踪和性能分析 🔐 企业级特性 内部鉴权: JWT &#43; 内部服务认证 数据安全: 端到端加密和敏感数据脱敏 高可用: 多实例部署和负载均衡 扩展性: 容器化部署，支持K8s编排 🛠️ 技术栈 后端技术 # 核心框架 FastAPI # API网关和服务框架 aiohttp # 异步Web服务 uvicorn # ASGI服务器 # AI/ML栈 scikit-learn # 机器学习算法 pandas # 数据处理 numpy # 数值计算 joblib # 模型序列化 # 数据层 PostgreSQL # 关系型数据库 Redis # 缓存和会话存储 Apache Kafka # 消息队列 前端技术 // 核心框架 React 18 // UI框架 TypeScript // 类型安全 Vite // 构建工具 // UI组件 Ant Design // 组件库（浅色主题） Chart.js // 数据可视化 WebSocket API // 实时通信 基础设施 # 容器化 Docker # 容器技术 Docker Compose # 编排工具 # 监控体系 Prometheus # 指标收集 Grafana # 可视化面板 Nginx # 反向代理 # 数据库管理 Alembic # 数据库迁移 SQLAlchemy # ORM框架 🚀 快速开始 环境要求 Python 3.11&#43; Node.js 16&#43; Docker &amp; Docker Compose 8GB&#43; RAM推荐 一键启动 # 1. 克隆项目 git clone https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline.git cd Financial-Real-Time-Stream-Processing-Pipeline # 2. 环境配置 cp .env.template .env # 编辑 .env 文件配置数据库和API密钥 # 3. 快速启动（推荐） python quick_start.py --mode all # 或者分步启动 python scripts/start_docker.py # 启动基础设施 python scripts/start_backend.py # 启动后端服务 python scripts/start_frontend.py # 启动前端服务 Docker生产部署 # 生产环境部署 docker-compose -f docker-compose.production.yml up -d # 国内用户加速 docker-compose -f docker-compose.cn-mirror.yml up -d 📡 API文档 REST API端点 系统监控 GET /api/v2/system/health # 健康检查 GET /api/v2/system/status # 系统状态 GET /api/v2/system/metrics # 系统指标 AI预测服务 POST /api/v2/ai/predict # 实时预测 GET /api/v2/ai/models # 模型列表 POST /api/v2/ai/train # 模型训练 数据服务 GET /api/v2/data/stocks # 股票数据 GET /api/v2/data/realtime # 实时行情 POST /api/v2/data/collect # 数据采集 WebSocket端点 实时数据流 // 连接实时数据流 const ws = new WebSocket(&#39;ws://localhost:8000/ws/realtime&#39;); // 消息格式 { &#34;type&#34;: &#34;stock_price&#34;, &#34;data&#34;: { &#34;symbol&#34;: &#34;AAPL&#34;, &#34;price&#34;: 150.25, &#34;change&#34;: 1.25, &#34;volume&#34;: 1000000 }, &#34;timestamp&#34;: &#34;2024-01-01T12:00:00Z&#34;, &#34;version&#34;: &#34;1.0&#34; } 内部广播API # 向所有WebSocket客户端广播消息 curl -X POST http://localhost:8000/api/internal/ws-broadcast \ -H &#34;Content-Type: application/json&#34; \ -H &#34;Authorization: Bearer &lt;internal_token&gt;&#34; \ -d &#39;{&#34;type&#34;: &#34;alert&#34;, &#34;data&#34;: {&#34;message&#34;: &#34;系统维护通知&#34;}}&#39; 📊 数据流架构 数据采集策略 外部API数据源 (优先级1) ├── yfinance API # 美股数据 ├── akshare API # A股数据 └── 自定义API # 其他金融数据 ↓ 故障转移机制 历史训练数据 (优先级2) └── RESSET数据集 # 仅当所有API失效时使用 数据处理管道 原始数据 → 清洗过滤 → 特征工程 → 模型预测 → 结果推送 ↓ ↓ ↓ ↓ ↓ 验证格式 去噪异常 技术指标 AI推理 WebSocket 🔧 配置指南 环境变量配置 # 数据库配置 DATABASE_URL=postgresql://user:pass@localhost:5432/financial_db REDIS_URL=redis://localhost:6379 # API密钥 ALPHA_VANTAGE_API_KEY=your_api_key POLYGON_API_KEY=your_polygon_key # 服务配置 API_SERVICE_PORT=8000 AI_SERVICE_PORT=8002 STREAMING_SERVICE_PORT=8004 # 安全配置 JWT_SECRET_KEY=your-secret-key INTERNAL_API_TOKEN=your-internal-token 模型配置 # ml_training/config.py MODEL_CONFIG = { &#34;prediction_horizon&#34;: &#34;1h&#34;, # 预测时间窗口 &#34;feature_window&#34;: &#34;24h&#34;, # 特征时间窗口 &#34;retrain_interval&#34;: &#34;7d&#34;, # 重训练间隔 &#34;confidence_threshold&#34;: 0.75, # 置信度阈值 } 📈 监控面板 Grafana仪表盘 访问 http://localhost:3001 查看系统监控面板：
+" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/financial-real-time-stream-processing-pipeline/financial-real-time-stream-processing-pipeline-documentation/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+  
+    
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/main.css">
+    
+  
+
+
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu_c545d605fbaba839.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_b7aec86dcb688f0.png" />
+
+  <link rel="canonical" href="http://localhost:1313/project/financial-real-time-stream-processing-pipeline/financial-real-time-stream-processing-pipeline-documentation/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="Hugo Academic CV Theme" />
+  <meta property="og:url" content="http://localhost:1313/project/financial-real-time-stream-processing-pipeline/financial-real-time-stream-processing-pipeline-documentation/" />
+  <meta property="og:title" content="Hugo Academic CV Theme" />
+  <meta property="og:description" content="🌊 金融实时流处理与AI预测系统
+Financial Real-Time Stream Processing Pipeline
+
+面向真实交易环境打造的企业级金融实时流处理与AI预测系统
+
+🎯 项目概述
+本项目是一个完整的金融科技解决方案，专为真实交易环境设计。系统通过微服务架构实现了数据采集、实时流处理、AI预测和可视化监控的完整闭环，拒绝模拟数据，坚持使用真实市场数据进行预测和分析。
+🔥 核心特色
+
+🚀 真实数据驱动: 集成yfinance、akshare等真实API数据源
+🤖 企业级AI预测: 基于ml_training训练的真实模型，非随机模拟
+⚡ 高性能流处理: 毫秒级WebSocket实时数据推送
+🏗️ 微服务架构: 8个核心服务，支持独立扩展和部署
+📊 全栈可观测性: Prometheus &#43; Grafana监控体系
+🎨 现代化界面: React &#43; TypeScript前端仪表盘
+
+
+🏗️ 系统架构
+核心服务架构图
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend      │    │   API Gateway   │    │  AI Service     │
+│  (React &#43; TS)   │◄───┤   (FastAPI)     │◄───┤   (ML Models)   │
+│     :3000       │    │     :8000       │    │     :8002       │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                │
+                       ┌────────┴────────┐
+                       ▼                 ▼
+            ┌─────────────────┐ ┌─────────────────┐
+            │ Streaming Svc   │ │ Data Collector  │
+            │   (aiohttp)     │ │   (FastAPI)     │
+            │     :8004       │ │     :8003       │
+            └─────────────────┘ └─────────────────┘
+                       │
+            ┌──────────┴──────────┐
+            ▼                     ▼
+    ┌─────────────┐      ┌─────────────┐
+    │   Kafka     │      │   Redis     │
+    │   :9092     │      │   :6379     │
+    └─────────────┘      └─────────────┘
+🧩 服务组件详解
+
+  
+      
+          服务名称
+          端口
+          技术栈
+          职责
+      
+  
+  
+      
+          API Gateway
+          8000
+          FastAPI
+          HTTP/WebSocket网关，业务路由聚合
+      
+      
+          AI Service
+          8002
+          FastAPI &#43; ML
+          真实训练模型推理服务
+      
+      
+          Streaming Service
+          8004
+          aiohttp
+          实时流处理与消息推送
+      
+      
+          Data Collector
+          8003
+          FastAPI
+          实时/批量数据采集
+      
+      
+          Risk Management
+          -
+          Python
+          风控与审计模块
+      
+      
+          Frontend
+          3000
+          React &#43; Vite
+          用户界面与数据可视化
+      
+      
+          Monitoring
+          3001
+          Grafana
+          系统监控与告警
+      
+  
+
+
+✨ 核心功能
+🔄 实时数据流处理
+
+统一消息格式: {type, data, timestamp, version} envelope协议
+多源数据融合: yfinance、akshare、自定义API
+毫秒级延迟: WebSocket实时推送
+容错机制: 自动故障转移和数据回退策略
+
+🤖 AI预测引擎
+
+真实模型: 基于RESSET数据离线训练的生产级模型
+多策略预测: 技术分析、基本面分析、情感分析
+实时推理: 支持秒级预测响应
+模型版本管理: 支持A/B测试和模型热更新
+
+📊 监控与可观测性
+
+系统健康: /api/v2/system/* 健康检查端点
+业务指标: 实时交易量、预测准确率、系统延迟
+告警机制: 基于Prometheus的智能告警
+性能分析: 详细的链路追踪和性能分析
+
+🔐 企业级特性
+
+内部鉴权: JWT &#43; 内部服务认证
+数据安全: 端到端加密和敏感数据脱敏
+高可用: 多实例部署和负载均衡
+扩展性: 容器化部署，支持K8s编排
+
+
+🛠️ 技术栈
+后端技术
+# 核心框架
+FastAPI         # API网关和服务框架
+aiohttp         # 异步Web服务
+uvicorn         # ASGI服务器
+
+# AI/ML栈
+scikit-learn    # 机器学习算法
+pandas          # 数据处理
+numpy           # 数值计算
+joblib          # 模型序列化
+
+# 数据层
+PostgreSQL      # 关系型数据库
+Redis           # 缓存和会话存储
+Apache Kafka    # 消息队列
+前端技术
+// 核心框架
+React 18        // UI框架
+TypeScript      // 类型安全
+Vite            // 构建工具
+
+// UI组件
+Ant Design      // 组件库（浅色主题）
+Chart.js        // 数据可视化
+WebSocket API   // 实时通信
+基础设施
+# 容器化
+Docker          # 容器技术
+Docker Compose  # 编排工具
+
+# 监控体系
+Prometheus      # 指标收集
+Grafana         # 可视化面板
+Nginx           # 反向代理
+
+# 数据库管理
+Alembic         # 数据库迁移
+SQLAlchemy      # ORM框架
+
+🚀 快速开始
+环境要求
+
+Python 3.11&#43;
+Node.js 16&#43;
+Docker &amp; Docker Compose
+8GB&#43; RAM推荐
+
+一键启动
+# 1. 克隆项目
+git clone https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline.git
+cd Financial-Real-Time-Stream-Processing-Pipeline
+
+# 2. 环境配置
+cp .env.template .env
+# 编辑 .env 文件配置数据库和API密钥
+
+# 3. 快速启动（推荐）
+python quick_start.py --mode all
+
+# 或者分步启动
+python scripts/start_docker.py      # 启动基础设施
+python scripts/start_backend.py     # 启动后端服务
+python scripts/start_frontend.py    # 启动前端服务
+Docker生产部署
+# 生产环境部署
+docker-compose -f docker-compose.production.yml up -d
+
+# 国内用户加速
+docker-compose -f docker-compose.cn-mirror.yml up -d
+
+📡 API文档
+REST API端点
+系统监控
+GET /api/v2/system/health      # 健康检查
+GET /api/v2/system/status      # 系统状态
+GET /api/v2/system/metrics     # 系统指标
+AI预测服务
+POST /api/v2/ai/predict        # 实时预测
+GET  /api/v2/ai/models         # 模型列表
+POST /api/v2/ai/train          # 模型训练
+数据服务
+GET  /api/v2/data/stocks       # 股票数据
+GET  /api/v2/data/realtime     # 实时行情
+POST /api/v2/data/collect      # 数据采集
+WebSocket端点
+实时数据流
+// 连接实时数据流
+const ws = new WebSocket(&#39;ws://localhost:8000/ws/realtime&#39;);
+
+// 消息格式
+{
+  &#34;type&#34;: &#34;stock_price&#34;,
+  &#34;data&#34;: {
+    &#34;symbol&#34;: &#34;AAPL&#34;,
+    &#34;price&#34;: 150.25,
+    &#34;change&#34;: 1.25,
+    &#34;volume&#34;: 1000000
+  },
+  &#34;timestamp&#34;: &#34;2024-01-01T12:00:00Z&#34;,
+  &#34;version&#34;: &#34;1.0&#34;
+}
+内部广播API
+# 向所有WebSocket客户端广播消息
+curl -X POST http://localhost:8000/api/internal/ws-broadcast \
+  -H &#34;Content-Type: application/json&#34; \
+  -H &#34;Authorization: Bearer &lt;internal_token&gt;&#34; \
+  -d &#39;{&#34;type&#34;: &#34;alert&#34;, &#34;data&#34;: {&#34;message&#34;: &#34;系统维护通知&#34;}}&#39;
+
+📊 数据流架构
+数据采集策略
+外部API数据源 (优先级1)
+├── yfinance API        # 美股数据
+├── akshare API        # A股数据
+└── 自定义API          # 其他金融数据
+
+↓ 故障转移机制
+
+历史训练数据 (优先级2)
+└── RESSET数据集       # 仅当所有API失效时使用
+数据处理管道
+原始数据 → 清洗过滤 → 特征工程 → 模型预测 → 结果推送
+    ↓         ↓         ↓         ↓         ↓
+  验证格式   去噪异常   技术指标   AI推理   WebSocket
+
+🔧 配置指南
+环境变量配置
+# 数据库配置
+DATABASE_URL=postgresql://user:pass@localhost:5432/financial_db
+REDIS_URL=redis://localhost:6379
+
+# API密钥
+ALPHA_VANTAGE_API_KEY=your_api_key
+POLYGON_API_KEY=your_polygon_key
+
+# 服务配置
+API_SERVICE_PORT=8000
+AI_SERVICE_PORT=8002
+STREAMING_SERVICE_PORT=8004
+
+# 安全配置
+JWT_SECRET_KEY=your-secret-key
+INTERNAL_API_TOKEN=your-internal-token
+模型配置
+# ml_training/config.py
+MODEL_CONFIG = {
+    &#34;prediction_horizon&#34;: &#34;1h&#34;,      # 预测时间窗口
+    &#34;feature_window&#34;: &#34;24h&#34;,         # 特征时间窗口
+    &#34;retrain_interval&#34;: &#34;7d&#34;,        # 重训练间隔
+    &#34;confidence_threshold&#34;: 0.75,     # 置信度阈值
+}
+
+📈 监控面板
+Grafana仪表盘
+访问 http://localhost:3001 查看系统监控面板：" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" />
+    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" /><meta property="og:locale" content="en-us" />
+  
+    
+    
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/project/financial-real-time-stream-processing-pipeline/financial-real-time-stream-processing-pipeline-documentation/"
+  },
+  "headline": "",
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "韩嘉仪"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo Academic CV Theme",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/media/icon_hu_a6282450d1fd5f43.png"
+    }
+  },
+  "description": "\u003ch1 id=\"-金融实时流处理与ai预测系统\"\u003e🌊 金融实时流处理与AI预测系统\u003c/h1\u003e\n\u003ch2 id=\"financial-real-time-stream-processing-pipeline\"\u003eFinancial Real-Time Stream Processing Pipeline\u003c/h2\u003e\n\u003cblockquote\u003e\n\u003cp\u003e面向真实交易环境打造的企业级金融实时流处理与AI预测系统\u003c/p\u003e\u003c/blockquote\u003e\n\u003chr\u003e\n\u003ch2 id=\"-项目概述\"\u003e🎯 项目概述\u003c/h2\u003e\n\u003cp\u003e本项目是一个完整的金融科技解决方案，专为真实交易环境设计。系统通过微服务架构实现了数据采集、实时流处理、AI预测和可视化监控的完整闭环，拒绝模拟数据，坚持使用真实市场数据进行预测和分析。\u003c/p\u003e\n\u003ch3 id=\"-核心特色\"\u003e🔥 核心特色\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e🚀 真实数据驱动\u003c/strong\u003e: 集成yfinance、akshare等真实API数据源\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e🤖 企业级AI预测\u003c/strong\u003e: 基于ml_training训练的真实模型，非随机模拟\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e⚡ 高性能流处理\u003c/strong\u003e: 毫秒级WebSocket实时数据推送\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e🏗️ 微服务架构\u003c/strong\u003e: 8个核心服务，支持独立扩展和部署\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e📊 全栈可观测性\u003c/strong\u003e: Prometheus + Grafana监控体系\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e🎨 现代化界面\u003c/strong\u003e: React + TypeScript前端仪表盘\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003ch2 id=\"-系统架构\"\u003e🏗️ 系统架构\u003c/h2\u003e\n\u003ch3 id=\"核心服务架构图\"\u003e核心服务架构图\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e│   Frontend      │    │   API Gateway   │    │  AI Service     │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e│  (React + TS)   │◄───┤   (FastAPI)     │◄───┤   (ML Models)   │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e│     :3000       │    │     :8000       │    │     :8002       │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e└─────────────────┘    └─────────────────┘    └─────────────────┘\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e                                │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e                       ┌────────┴────────┐\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e                       ▼                 ▼\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            ┌─────────────────┐ ┌─────────────────┐\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            │ Streaming Svc   │ │ Data Collector  │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            │   (aiohttp)     │ │   (FastAPI)     │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            │     :8004       │ │     :8003       │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            └─────────────────┘ └─────────────────┘\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e                       │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            ┌──────────┴──────────┐\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e            ▼                     ▼\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    ┌─────────────┐      ┌─────────────┐\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    │   Kafka     │      │   Redis     │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    │   :9092     │      │   :6379     │\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    └─────────────┘      └─────────────┘\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"-服务组件详解\"\u003e🧩 服务组件详解\u003c/h3\u003e\n\u003ctable\u003e\n  \u003cthead\u003e\n      \u003ctr\u003e\n          \u003cth\u003e服务名称\u003c/th\u003e\n          \u003cth\u003e端口\u003c/th\u003e\n          \u003cth\u003e技术栈\u003c/th\u003e\n          \u003cth\u003e职责\u003c/th\u003e\n      \u003c/tr\u003e\n  \u003c/thead\u003e\n  \u003ctbody\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eAPI Gateway\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e8000\u003c/td\u003e\n          \u003ctd\u003eFastAPI\u003c/td\u003e\n          \u003ctd\u003eHTTP/WebSocket网关，业务路由聚合\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eAI Service\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e8002\u003c/td\u003e\n          \u003ctd\u003eFastAPI + ML\u003c/td\u003e\n          \u003ctd\u003e真实训练模型推理服务\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eStreaming Service\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e8004\u003c/td\u003e\n          \u003ctd\u003eaiohttp\u003c/td\u003e\n          \u003ctd\u003e实时流处理与消息推送\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eData Collector\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e8003\u003c/td\u003e\n          \u003ctd\u003eFastAPI\u003c/td\u003e\n          \u003ctd\u003e实时/批量数据采集\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eRisk Management\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e-\u003c/td\u003e\n          \u003ctd\u003ePython\u003c/td\u003e\n          \u003ctd\u003e风控与审计模块\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eFrontend\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e3000\u003c/td\u003e\n          \u003ctd\u003eReact + Vite\u003c/td\u003e\n          \u003ctd\u003e用户界面与数据可视化\u003c/td\u003e\n      \u003c/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e\u003cstrong\u003eMonitoring\u003c/strong\u003e\u003c/td\u003e\n          \u003ctd\u003e3001\u003c/td\u003e\n          \u003ctd\u003eGrafana\u003c/td\u003e\n          \u003ctd\u003e系统监控与告警\u003c/td\u003e\n      \u003c/tr\u003e\n  \u003c/tbody\u003e\n\u003c/table\u003e\n\u003chr\u003e\n\u003ch2 id=\"-核心功能\"\u003e✨ 核心功能\u003c/h2\u003e\n\u003ch3 id=\"-实时数据流处理\"\u003e🔄 实时数据流处理\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e统一消息格式\u003c/strong\u003e: \u003ccode\u003e{type, data, timestamp, version}\u003c/code\u003e envelope协议\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e多源数据融合\u003c/strong\u003e: yfinance、akshare、自定义API\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e毫秒级延迟\u003c/strong\u003e: WebSocket实时推送\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e容错机制\u003c/strong\u003e: 自动故障转移和数据回退策略\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-ai预测引擎\"\u003e🤖 AI预测引擎\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e真实模型\u003c/strong\u003e: 基于RESSET数据离线训练的生产级模型\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e多策略预测\u003c/strong\u003e: 技术分析、基本面分析、情感分析\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e实时推理\u003c/strong\u003e: 支持秒级预测响应\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e模型版本管理\u003c/strong\u003e: 支持A/B测试和模型热更新\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-监控与可观测性\"\u003e📊 监控与可观测性\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e系统健康\u003c/strong\u003e: \u003ccode\u003e/api/v2/system/*\u003c/code\u003e 健康检查端点\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e业务指标\u003c/strong\u003e: 实时交易量、预测准确率、系统延迟\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e告警机制\u003c/strong\u003e: 基于Prometheus的智能告警\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e性能分析\u003c/strong\u003e: 详细的链路追踪和性能分析\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"-企业级特性\"\u003e🔐 企业级特性\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e内部鉴权\u003c/strong\u003e: JWT + 内部服务认证\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e数据安全\u003c/strong\u003e: 端到端加密和敏感数据脱敏\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e高可用\u003c/strong\u003e: 多实例部署和负载均衡\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e扩展性\u003c/strong\u003e: 容器化部署，支持K8s编排\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003ch2 id=\"-技术栈\"\u003e🛠️ 技术栈\u003c/h2\u003e\n\u003ch3 id=\"后端技术\"\u003e后端技术\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-python\" data-lang=\"python\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 核心框架\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003eFastAPI\u003c/span\u003e         \u003cspan class=\"c1\"\u003e# API网关和服务框架\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003eaiohttp\u003c/span\u003e         \u003cspan class=\"c1\"\u003e# 异步Web服务\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003euvicorn\u003c/span\u003e         \u003cspan class=\"c1\"\u003e# ASGI服务器\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# AI/ML栈\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003escikit\u003c/span\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e\u003cspan class=\"n\"\u003elearn\u003c/span\u003e    \u003cspan class=\"c1\"\u003e# 机器学习算法\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003epandas\u003c/span\u003e          \u003cspan class=\"c1\"\u003e# 数据处理\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003enumpy\u003c/span\u003e           \u003cspan class=\"c1\"\u003e# 数值计算\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003ejoblib\u003c/span\u003e          \u003cspan class=\"c1\"\u003e# 模型序列化\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 数据层\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003ePostgreSQL\u003c/span\u003e      \u003cspan class=\"c1\"\u003e# 关系型数据库\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003eRedis\u003c/span\u003e           \u003cspan class=\"c1\"\u003e# 缓存和会话存储\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003eApache\u003c/span\u003e \u003cspan class=\"n\"\u003eKafka\u003c/span\u003e    \u003cspan class=\"c1\"\u003e# 消息队列\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"前端技术\"\u003e前端技术\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-javascript\" data-lang=\"javascript\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// 核心框架\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eReact\u003c/span\u003e \u003cspan class=\"mi\"\u003e18\u003c/span\u003e        \u003cspan class=\"c1\"\u003e// UI框架\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eTypeScript\u003c/span\u003e      \u003cspan class=\"c1\"\u003e// 类型安全\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eVite\u003c/span\u003e            \u003cspan class=\"c1\"\u003e// 构建工具\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// UI组件\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eAnt\u003c/span\u003e \u003cspan class=\"nx\"\u003eDesign\u003c/span\u003e      \u003cspan class=\"c1\"\u003e// 组件库（浅色主题）\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eChart\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003ejs\u003c/span\u003e        \u003cspan class=\"c1\"\u003e// 数据可视化\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"nx\"\u003eWebSocket\u003c/span\u003e \u003cspan class=\"nx\"\u003eAPI\u003c/span\u003e   \u003cspan class=\"c1\"\u003e// 实时通信\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"基础设施\"\u003e基础设施\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-yaml\" data-lang=\"yaml\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c\"\u003e# 容器化\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eDocker         \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 容器技术\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eDocker Compose \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 编排工具\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"c\"\u003e# 监控体系\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003ePrometheus     \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 指标收集\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eGrafana        \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 可视化面板\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eNginx          \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 反向代理\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"c\"\u003e# 数据库管理\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eAlembic        \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# 数据库迁移\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"w\"\u003e\u003c/span\u003e\u003cspan class=\"l\"\u003eSQLAlchemy     \u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"c\"\u003e# ORM框架\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003chr\u003e\n\u003ch2 id=\"-快速开始\"\u003e🚀 快速开始\u003c/h2\u003e\n\u003ch3 id=\"环境要求\"\u003e环境要求\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003ePython 3.11+\u003c/li\u003e\n\u003cli\u003eNode.js 16+\u003c/li\u003e\n\u003cli\u003eDocker \u0026amp; Docker Compose\u003c/li\u003e\n\u003cli\u003e8GB+ RAM推荐\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"一键启动\"\u003e一键启动\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 1. 克隆项目\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003egit clone https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline.git\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nb\"\u003ecd\u003c/span\u003e Financial-Real-Time-Stream-Processing-Pipeline\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 2. 环境配置\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003ecp .env.template .env\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 编辑 .env 文件配置数据库和API密钥\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 3. 快速启动（推荐）\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython quick_start.py --mode all\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 或者分步启动\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython scripts/start_docker.py      \u003cspan class=\"c1\"\u003e# 启动基础设施\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython scripts/start_backend.py     \u003cspan class=\"c1\"\u003e# 启动后端服务\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython scripts/start_frontend.py    \u003cspan class=\"c1\"\u003e# 启动前端服务\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"docker生产部署\"\u003eDocker生产部署\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 生产环境部署\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003edocker-compose -f docker-compose.production.yml up -d\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 国内用户加速\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003edocker-compose -f docker-compose.cn-mirror.yml up -d\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003chr\u003e\n\u003ch2 id=\"-api文档\"\u003e📡 API文档\u003c/h2\u003e\n\u003ch3 id=\"rest-api端点\"\u003eREST API端点\u003c/h3\u003e\n\u003ch4 id=\"系统监控\"\u003e系统监控\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-http\" data-lang=\"http\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET /api/v2/system/health      # 健康检查\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET /api/v2/system/status      # 系统状态\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET /api/v2/system/metrics     # 系统指标\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch4 id=\"ai预测服务\"\u003eAI预测服务\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-http\" data-lang=\"http\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003ePOST /api/v2/ai/predict        # 实时预测\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET  /api/v2/ai/models         # 模型列表\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003ePOST /api/v2/ai/train          # 模型训练\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch4 id=\"数据服务\"\u003e数据服务\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-http\" data-lang=\"http\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET  /api/v2/data/stocks       # 股票数据\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003eGET  /api/v2/data/realtime     # 实时行情\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"err\"\u003ePOST /api/v2/data/collect      # 数据采集\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"websocket端点\"\u003eWebSocket端点\u003c/h3\u003e\n\u003ch4 id=\"实时数据流\"\u003e实时数据流\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-javascript\" data-lang=\"javascript\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// 连接实时数据流\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"kr\"\u003econst\u003c/span\u003e \u003cspan class=\"nx\"\u003ews\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"k\"\u003enew\u003c/span\u003e \u003cspan class=\"nx\"\u003eWebSocket\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s1\"\u003e\u0026#39;ws://localhost:8000/ws/realtime\u0026#39;\u003c/span\u003e\u003cspan class=\"p\"\u003e);\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e// 消息格式\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e\u003c/span\u003e\u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"s2\"\u003e\u0026#34;type\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;stock_price\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"s2\"\u003e\u0026#34;data\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;symbol\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;AAPL\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;price\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"mf\"\u003e150.25\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;change\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"mf\"\u003e1.25\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;volume\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"mi\"\u003e1000000\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"p\"\u003e},\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"s2\"\u003e\u0026#34;timestamp\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;2024-01-01T12:00:00Z\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  \u003cspan class=\"s2\"\u003e\u0026#34;version\u0026#34;\u003c/span\u003e\u003cspan class=\"o\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;1.0\u0026#34;\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch4 id=\"内部广播api\"\u003e内部广播API\u003c/h4\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 向所有WebSocket客户端广播消息\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003ecurl -X POST http://localhost:8000/api/internal/ws-broadcast \u003cspan class=\"se\"\u003e\\\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"se\"\u003e\u003c/span\u003e  -H \u003cspan class=\"s2\"\u003e\u0026#34;Content-Type: application/json\u0026#34;\u003c/span\u003e \u003cspan class=\"se\"\u003e\\\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"se\"\u003e\u003c/span\u003e  -H \u003cspan class=\"s2\"\u003e\u0026#34;Authorization: Bearer \u0026lt;internal_token\u0026gt;\u0026#34;\u003c/span\u003e \u003cspan class=\"se\"\u003e\\\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"se\"\u003e\u003c/span\u003e  -d \u003cspan class=\"s1\"\u003e\u0026#39;{\u0026#34;type\u0026#34;: \u0026#34;alert\u0026#34;, \u0026#34;data\u0026#34;: {\u0026#34;message\u0026#34;: \u0026#34;系统维护通知\u0026#34;}}\u0026#39;\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003chr\u003e\n\u003ch2 id=\"-数据流架构\"\u003e📊 数据流架构\u003c/h2\u003e\n\u003ch3 id=\"数据采集策略\"\u003e数据采集策略\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e外部API数据源 (优先级1)\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── yfinance API        # 美股数据\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e├── akshare API        # A股数据\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e└── 自定义API          # 其他金融数据\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e↓ 故障转移机制\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e历史训练数据 (优先级2)\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e└── RESSET数据集       # 仅当所有API失效时使用\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"数据处理管道\"\u003e数据处理管道\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e原始数据 → 清洗过滤 → 特征工程 → 模型预测 → 结果推送\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    ↓         ↓         ↓         ↓         ↓\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e  验证格式   去噪异常   技术指标   AI推理   WebSocket\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003chr\u003e\n\u003ch2 id=\"-配置指南\"\u003e🔧 配置指南\u003c/h2\u003e\n\u003ch3 id=\"环境变量配置\"\u003e环境变量配置\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 数据库配置\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eDATABASE_URL\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003epostgresql://user:pass@localhost:5432/financial_db\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eREDIS_URL\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003eredis://localhost:6379\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# API密钥\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eALPHA_VANTAGE_API_KEY\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003eyour_api_key\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003ePOLYGON_API_KEY\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003eyour_polygon_key\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 服务配置\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eAPI_SERVICE_PORT\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"m\"\u003e8000\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eAI_SERVICE_PORT\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"m\"\u003e8002\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eSTREAMING_SERVICE_PORT\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"m\"\u003e8004\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# 安全配置\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eJWT_SECRET_KEY\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003eyour-secret-key\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nv\"\u003eINTERNAL_API_TOKEN\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003eyour-internal-token\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"模型配置\"\u003e模型配置\u003c/h3\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-python\" data-lang=\"python\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"c1\"\u003e# ml_training/config.py\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"n\"\u003eMODEL_CONFIG\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;prediction_horizon\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;1h\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e      \u003cspan class=\"c1\"\u003e# 预测时间窗口\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;feature_window\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;24h\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e         \u003cspan class=\"c1\"\u003e# 特征时间窗口\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;retrain_interval\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"s2\"\u003e\u0026#34;7d\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e        \u003cspan class=\"c1\"\u003e# 重训练间隔\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e    \u003cspan class=\"s2\"\u003e\u0026#34;confidence_threshold\u0026#34;\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e \u003cspan class=\"mf\"\u003e0.75\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e     \u003cspan class=\"c1\"\u003e# 置信度阈值\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003chr\u003e\n\u003ch2 id=\"-监控面板\"\u003e📈 监控面板\u003c/h2\u003e\n\u003ch3 id=\"grafana仪表盘\"\u003eGrafana仪表盘\u003c/h3\u003e\n\u003cp\u003e访问 \u003ccode\u003ehttp://localhost:3001\u003c/code\u003e 查看系统监控面板：\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  <title>Hugo Academic CV Theme</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+<script>
+  
+  let searchWrapper = null;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
+  });
+
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
+
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
+
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
+
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-start">
+    <div class="order-0 h-full">
+      
+      <a class="navbar-brand" href="/" title="Hugo Academic CV Theme">
+        Your Name
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-start
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#papers"
+        >Papers</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#talks"
+        >Talks</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#news"
+        >News</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/projects/"
+        >Projects</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/teaching/"
+        >Teaching</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="toggle search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        data-search-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="block dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="hidden dark:block">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+
+
+
+
+<div class="mx-auto flex max-w-screen-xl">
+  
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/"
+    
+  >Recent &amp; Upcoming Talks
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/example/"
+    
+  >Example Talk
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/projects/"
+    
+  >Projects
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/"
+    
+  >Blog
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/get-started/"
+    
+  >🎉 Easily create your own simple yet highly customizable blog
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/second-brain/"
+    
+  >🧠 Sharpen your thinking with a second brain
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/data-visualization/"
+    
+  >📈 Communicate your results effectively with the best data visualizations
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/teach-courses/"
+    
+  >👩🏼‍🏫 Teach academic courses
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/project-management/"
+    
+  >✅ Manage your projects
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/"
+    
+  >Projects
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pandas/"
+    
+  >Pandas
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pytorch/"
+    
+  >PyTorch
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/scikit/"
+    
+  >scikit-learn
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/cuddle-cat/"
+    
+  >index
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/project/financial-real-time-stream-processing-pipeline/financial-real-time-stream-processing-pipeline-documentation/"
+    
+  >Financial-Real-Time-Stream-Processing-Pipeline-Documentation
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#financial-real-time-stream-processing-pipeline"
+                class="hb-docs-link"
+              >Financial Real-Time Stream Processing Pipeline</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0"
+                class="hb-docs-link"
+              >🎯 项目概述</a>
+            </li>
+          <li>
+              <a
+                href="#-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84"
+                class="hb-docs-link"
+              >🏗️ 系统架构</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd"
+                class="hb-docs-link"
+              >✨ 核心功能</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%8a%80%e6%9c%af%e6%a0%88"
+                class="hb-docs-link"
+              >🛠️ 技术栈</a>
+            </li>
+          <li>
+              <a
+                href="#-%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b"
+                class="hb-docs-link"
+              >🚀 快速开始</a>
+            </li>
+          <li>
+              <a
+                href="#-api%e6%96%87%e6%a1%a3"
+                class="hb-docs-link"
+              >📡 API文档</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%95%b0%e6%8d%ae%e6%b5%81%e6%9e%b6%e6%9e%84"
+                class="hb-docs-link"
+              >📊 数据流架构</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%85%8d%e7%bd%ae%e6%8c%87%e5%8d%97"
+                class="hb-docs-link"
+              >🔧 配置指南</a>
+            </li>
+          <li>
+              <a
+                href="#-%e7%9b%91%e6%8e%a7%e9%9d%a2%e6%9d%bf"
+                class="hb-docs-link"
+              >📈 监控面板</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%b5%8b%e8%af%95%e4%b8%8e%e8%b4%a8%e9%87%8f%e4%bf%9d%e8%af%81"
+                class="hb-docs-link"
+              >🧪 测试与质量保证</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%95%85%e9%9a%9c%e6%8e%92%e9%99%a4"
+                class="hb-docs-link"
+              >🚨 故障排除</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%83%a8%e7%bd%b2%e7%ad%96%e7%95%a5"
+                class="hb-docs-link"
+              >🔄 部署策略</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9"
+                class="hb-docs-link"
+              >📝 项目亮点</a>
+            </li>
+          <li>
+              <a
+                href="#-%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f"
+                class="hb-docs-link"
+              >📞 联系方式</a>
+            </li>
+          <li>
+              <a
+                href="#-%e8%87%b4%e8%b0%a2"
+                class="hb-docs-link"
+              >🎉 致谢</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/health-platform/"
+    
+  >index
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/leetcode-counter-extension/"
+    
+  >index
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/experience/"
+    
+  >Experience
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/"
+    
+  >Teaching
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/js/"
+    
+  >Learn JavaScript
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/python/"
+    
+  >Learn Python
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/"
+    
+  >Publications
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/preprint/"
+    
+  >An example preprint / working paper
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/journal-article/"
+    
+  >An example journal article
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/conference-paper/"
+    
+  >An example conference paper
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#financial-real-time-stream-processing-pipeline">Financial Real-Time Stream Processing Pipeline</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0">🎯 项目概述</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%a0%b8%e5%bf%83%e7%89%b9%e8%89%b2">🔥 核心特色</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84">🏗️ 系统架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e6%9c%8d%e5%8a%a1%e6%9e%b6%e6%9e%84%e5%9b%be">核心服务架构图</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%9c%8d%e5%8a%a1%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3">🧩 服务组件详解</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd">✨ 核心功能</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%ae%9e%e6%97%b6%e6%95%b0%e6%8d%ae%e6%b5%81%e5%a4%84%e7%90%86">🔄 实时数据流处理</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-ai%e9%a2%84%e6%b5%8b%e5%bc%95%e6%93%8e">🤖 AI预测引擎</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%9b%91%e6%8e%a7%e4%b8%8e%e5%8f%af%e8%a7%82%e6%b5%8b%e6%80%a7">📊 监控与可观测性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e4%bc%81%e4%b8%9a%e7%ba%a7%e7%89%b9%e6%80%a7">🔐 企业级特性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%8a%80%e6%9c%af%e6%a0%88">🛠️ 技术栈</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%90%8e%e7%ab%af%e6%8a%80%e6%9c%af">后端技术</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%89%8d%e7%ab%af%e6%8a%80%e6%9c%af">前端技术</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9f%ba%e7%a1%80%e8%ae%be%e6%96%bd">基础设施</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b">🚀 快速开始</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%8e%af%e5%a2%83%e8%a6%81%e6%b1%82">环境要求</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%80%e9%94%ae%e5%90%af%e5%8a%a8">一键启动</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#docker%e7%94%9f%e4%ba%a7%e9%83%a8%e7%bd%b2">Docker生产部署</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-api%e6%96%87%e6%a1%a3">📡 API文档</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#rest-api%e7%ab%af%e7%82%b9">REST API端点</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%b3%bb%e7%bb%9f%e7%9b%91%e6%8e%a7">系统监控</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#ai%e9%a2%84%e6%b5%8b%e6%9c%8d%e5%8a%a1">AI预测服务</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e6%9c%8d%e5%8a%a1">数据服务</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#websocket%e7%ab%af%e7%82%b9">WebSocket端点</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%9e%e6%97%b6%e6%95%b0%e6%8d%ae%e6%b5%81">实时数据流</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%86%85%e9%83%a8%e5%b9%bf%e6%92%adapi">内部广播API</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%95%b0%e6%8d%ae%e6%b5%81%e6%9e%b6%e6%9e%84">📊 数据流架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e9%87%87%e9%9b%86%e7%ad%96%e7%95%a5">数据采集策略</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86%e7%ae%a1%e9%81%93">数据处理管道</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%85%8d%e7%bd%ae%e6%8c%87%e5%8d%97">🔧 配置指南</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e9%85%8d%e7%bd%ae">环境变量配置</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a8%a1%e5%9e%8b%e9%85%8d%e7%bd%ae">模型配置</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%9b%91%e6%8e%a7%e9%9d%a2%e6%9d%bf">📈 监控面板</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#grafana%e4%bb%aa%e8%a1%a8%e7%9b%98">Grafana仪表盘</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%b3%bb%e7%bb%9f%e6%80%a7%e8%83%bd%e9%9d%a2%e6%9d%bf">系统性能面板</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%9a%e5%8a%a1%e6%8c%87%e6%a0%87%e9%9d%a2%e6%9d%bf">业务指标面板</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%91%8a%e8%ad%a6%e8%a7%84%e5%88%99">告警规则</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%b5%8b%e8%af%95%e4%b8%8e%e8%b4%a8%e9%87%8f%e4%bf%9d%e8%af%81">🧪 测试与质量保证</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%b5%8b%e8%af%95%e8%a6%86%e7%9b%96">测试覆盖</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%bb%a3%e7%a0%81%e8%b4%a8%e9%87%8f">代码质量</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%95%85%e9%9a%9c%e6%8e%92%e9%99%a4">🚨 故障排除</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">常见问题</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1-websocket%e8%bf%9e%e6%8e%a5%e5%a4%b1%e8%b4%a5">1. WebSocket连接失败</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2-ai%e9%a2%84%e6%b5%8b%e6%9c%8d%e5%8a%a1%e5%bc%82%e5%b8%b8">2. AI预测服务异常</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-%e6%95%b0%e6%8d%ae%e9%87%87%e9%9b%86%e4%b8%ad%e6%96%ad">3. 数据采集中断</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96%e5%bb%ba%e8%ae%ae">性能优化建议</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%83%a8%e7%bd%b2%e7%ad%96%e7%95%a5">🔄 部署策略</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83">开发环境</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%94%9f%e4%ba%a7%e7%8e%af%e5%a2%83">生产环境</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%89%a9%e5%b1%95%e6%80%a7%e8%80%83%e8%99%91">扩展性考虑</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9">📝 项目亮点</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0">🎯 技术创新</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%95%86%e4%b8%9a%e4%bb%b7%e5%80%bc">💼 商业价值</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5">🏆 最佳实践</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f">📞 联系方式</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e8%87%b4%e8%b0%a2">🎉 致谢</a>
+      </li></ul>
+
+  
+  
+    
+    
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"></h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+        
+
+        
+        
+
+        
+        <span class="mx-1">·</span>
+        <span class="mx-1">
+          4 min read
+        </span>
+        
+        </div>
+
+        <div class="mt-3">
+          
+
+
+
+
+        </div>
+      </div>
+
+
+
+      
+      
+      
+
+      
+      
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+        <h1 id="-金融实时流处理与ai预测系统">🌊 金融实时流处理与AI预测系统</h1>
+<h2 id="financial-real-time-stream-processing-pipeline">Financial Real-Time Stream Processing Pipeline</h2>
+<blockquote>
+<p>面向真实交易环境打造的企业级金融实时流处理与AI预测系统</p></blockquote>
+<hr>
+<h2 id="-项目概述">🎯 项目概述</h2>
+<p>本项目是一个完整的金融科技解决方案，专为真实交易环境设计。系统通过微服务架构实现了数据采集、实时流处理、AI预测和可视化监控的完整闭环，拒绝模拟数据，坚持使用真实市场数据进行预测和分析。</p>
+<h3 id="-核心特色">🔥 核心特色</h3>
+<ul>
+<li><strong>🚀 真实数据驱动</strong>: 集成yfinance、akshare等真实API数据源</li>
+<li><strong>🤖 企业级AI预测</strong>: 基于ml_training训练的真实模型，非随机模拟</li>
+<li><strong>⚡ 高性能流处理</strong>: 毫秒级WebSocket实时数据推送</li>
+<li><strong>🏗️ 微服务架构</strong>: 8个核心服务，支持独立扩展和部署</li>
+<li><strong>📊 全栈可观测性</strong>: Prometheus + Grafana监控体系</li>
+<li><strong>🎨 现代化界面</strong>: React + TypeScript前端仪表盘</li>
+</ul>
+<hr>
+<h2 id="-系统架构">🏗️ 系统架构</h2>
+<h3 id="核心服务架构图">核心服务架构图</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+</span></span><span class="line"><span class="cl">│   Frontend      │    │   API Gateway   │    │  AI Service     │
+</span></span><span class="line"><span class="cl">│  (React + TS)   │◄───┤   (FastAPI)     │◄───┤   (ML Models)   │
+</span></span><span class="line"><span class="cl">│     :3000       │    │     :8000       │    │     :8002       │
+</span></span><span class="line"><span class="cl">└─────────────────┘    └─────────────────┘    └─────────────────┘
+</span></span><span class="line"><span class="cl">                                │
+</span></span><span class="line"><span class="cl">                       ┌────────┴────────┐
+</span></span><span class="line"><span class="cl">                       ▼                 ▼
+</span></span><span class="line"><span class="cl">            ┌─────────────────┐ ┌─────────────────┐
+</span></span><span class="line"><span class="cl">            │ Streaming Svc   │ │ Data Collector  │
+</span></span><span class="line"><span class="cl">            │   (aiohttp)     │ │   (FastAPI)     │
+</span></span><span class="line"><span class="cl">            │     :8004       │ │     :8003       │
+</span></span><span class="line"><span class="cl">            └─────────────────┘ └─────────────────┘
+</span></span><span class="line"><span class="cl">                       │
+</span></span><span class="line"><span class="cl">            ┌──────────┴──────────┐
+</span></span><span class="line"><span class="cl">            ▼                     ▼
+</span></span><span class="line"><span class="cl">    ┌─────────────┐      ┌─────────────┐
+</span></span><span class="line"><span class="cl">    │   Kafka     │      │   Redis     │
+</span></span><span class="line"><span class="cl">    │   :9092     │      │   :6379     │
+</span></span><span class="line"><span class="cl">    └─────────────┘      └─────────────┘
+</span></span></code></pre></div><h3 id="-服务组件详解">🧩 服务组件详解</h3>
+<table>
+  <thead>
+      <tr>
+          <th>服务名称</th>
+          <th>端口</th>
+          <th>技术栈</th>
+          <th>职责</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>API Gateway</strong></td>
+          <td>8000</td>
+          <td>FastAPI</td>
+          <td>HTTP/WebSocket网关，业务路由聚合</td>
+      </tr>
+      <tr>
+          <td><strong>AI Service</strong></td>
+          <td>8002</td>
+          <td>FastAPI + ML</td>
+          <td>真实训练模型推理服务</td>
+      </tr>
+      <tr>
+          <td><strong>Streaming Service</strong></td>
+          <td>8004</td>
+          <td>aiohttp</td>
+          <td>实时流处理与消息推送</td>
+      </tr>
+      <tr>
+          <td><strong>Data Collector</strong></td>
+          <td>8003</td>
+          <td>FastAPI</td>
+          <td>实时/批量数据采集</td>
+      </tr>
+      <tr>
+          <td><strong>Risk Management</strong></td>
+          <td>-</td>
+          <td>Python</td>
+          <td>风控与审计模块</td>
+      </tr>
+      <tr>
+          <td><strong>Frontend</strong></td>
+          <td>3000</td>
+          <td>React + Vite</td>
+          <td>用户界面与数据可视化</td>
+      </tr>
+      <tr>
+          <td><strong>Monitoring</strong></td>
+          <td>3001</td>
+          <td>Grafana</td>
+          <td>系统监控与告警</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-核心功能">✨ 核心功能</h2>
+<h3 id="-实时数据流处理">🔄 实时数据流处理</h3>
+<ul>
+<li><strong>统一消息格式</strong>: <code>{type, data, timestamp, version}</code> envelope协议</li>
+<li><strong>多源数据融合</strong>: yfinance、akshare、自定义API</li>
+<li><strong>毫秒级延迟</strong>: WebSocket实时推送</li>
+<li><strong>容错机制</strong>: 自动故障转移和数据回退策略</li>
+</ul>
+<h3 id="-ai预测引擎">🤖 AI预测引擎</h3>
+<ul>
+<li><strong>真实模型</strong>: 基于RESSET数据离线训练的生产级模型</li>
+<li><strong>多策略预测</strong>: 技术分析、基本面分析、情感分析</li>
+<li><strong>实时推理</strong>: 支持秒级预测响应</li>
+<li><strong>模型版本管理</strong>: 支持A/B测试和模型热更新</li>
+</ul>
+<h3 id="-监控与可观测性">📊 监控与可观测性</h3>
+<ul>
+<li><strong>系统健康</strong>: <code>/api/v2/system/*</code> 健康检查端点</li>
+<li><strong>业务指标</strong>: 实时交易量、预测准确率、系统延迟</li>
+<li><strong>告警机制</strong>: 基于Prometheus的智能告警</li>
+<li><strong>性能分析</strong>: 详细的链路追踪和性能分析</li>
+</ul>
+<h3 id="-企业级特性">🔐 企业级特性</h3>
+<ul>
+<li><strong>内部鉴权</strong>: JWT + 内部服务认证</li>
+<li><strong>数据安全</strong>: 端到端加密和敏感数据脱敏</li>
+<li><strong>高可用</strong>: 多实例部署和负载均衡</li>
+<li><strong>扩展性</strong>: 容器化部署，支持K8s编排</li>
+</ul>
+<hr>
+<h2 id="-技术栈">🛠️ 技术栈</h2>
+<h3 id="后端技术">后端技术</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 核心框架</span>
+</span></span><span class="line"><span class="cl"><span class="n">FastAPI</span>         <span class="c1"># API网关和服务框架</span>
+</span></span><span class="line"><span class="cl"><span class="n">aiohttp</span>         <span class="c1"># 异步Web服务</span>
+</span></span><span class="line"><span class="cl"><span class="n">uvicorn</span>         <span class="c1"># ASGI服务器</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># AI/ML栈</span>
+</span></span><span class="line"><span class="cl"><span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>    <span class="c1"># 机器学习算法</span>
+</span></span><span class="line"><span class="cl"><span class="n">pandas</span>          <span class="c1"># 数据处理</span>
+</span></span><span class="line"><span class="cl"><span class="n">numpy</span>           <span class="c1"># 数值计算</span>
+</span></span><span class="line"><span class="cl"><span class="n">joblib</span>          <span class="c1"># 模型序列化</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 数据层</span>
+</span></span><span class="line"><span class="cl"><span class="n">PostgreSQL</span>      <span class="c1"># 关系型数据库</span>
+</span></span><span class="line"><span class="cl"><span class="n">Redis</span>           <span class="c1"># 缓存和会话存储</span>
+</span></span><span class="line"><span class="cl"><span class="n">Apache</span> <span class="n">Kafka</span>    <span class="c1"># 消息队列</span>
+</span></span></code></pre></div><h3 id="前端技术">前端技术</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 核心框架
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">React</span> <span class="mi">18</span>        <span class="c1">// UI框架
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">TypeScript</span>      <span class="c1">// 类型安全
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Vite</span>            <span class="c1">// 构建工具
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// UI组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Ant</span> <span class="nx">Design</span>      <span class="c1">// 组件库（浅色主题）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Chart</span><span class="p">.</span><span class="nx">js</span>        <span class="c1">// 数据可视化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">WebSocket</span> <span class="nx">API</span>   <span class="c1">// 实时通信
+</span></span></span></code></pre></div><h3 id="基础设施">基础设施</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 容器化</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Docker         </span><span class="w"> </span><span class="c"># 容器技术</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Docker Compose </span><span class="w"> </span><span class="c"># 编排工具</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 监控体系</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Prometheus     </span><span class="w"> </span><span class="c"># 指标收集</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Grafana        </span><span class="w"> </span><span class="c"># 可视化面板</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Nginx          </span><span class="w"> </span><span class="c"># 反向代理</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 数据库管理</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Alembic        </span><span class="w"> </span><span class="c"># 数据库迁移</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">SQLAlchemy     </span><span class="w"> </span><span class="c"># ORM框架</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="-快速开始">🚀 快速开始</h2>
+<h3 id="环境要求">环境要求</h3>
+<ul>
+<li>Python 3.11+</li>
+<li>Node.js 16+</li>
+<li>Docker &amp; Docker Compose</li>
+<li>8GB+ RAM推荐</li>
+</ul>
+<h3 id="一键启动">一键启动</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 克隆项目</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> Financial-Real-Time-Stream-Processing-Pipeline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 环境配置</span>
+</span></span><span class="line"><span class="cl">cp .env.template .env
+</span></span><span class="line"><span class="cl"><span class="c1"># 编辑 .env 文件配置数据库和API密钥</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 快速启动（推荐）</span>
+</span></span><span class="line"><span class="cl">python quick_start.py --mode all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者分步启动</span>
+</span></span><span class="line"><span class="cl">python scripts/start_docker.py      <span class="c1"># 启动基础设施</span>
+</span></span><span class="line"><span class="cl">python scripts/start_backend.py     <span class="c1"># 启动后端服务</span>
+</span></span><span class="line"><span class="cl">python scripts/start_frontend.py    <span class="c1"># 启动前端服务</span>
+</span></span></code></pre></div><h3 id="docker生产部署">Docker生产部署</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 生产环境部署</span>
+</span></span><span class="line"><span class="cl">docker-compose -f docker-compose.production.yml up -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 国内用户加速</span>
+</span></span><span class="line"><span class="cl">docker-compose -f docker-compose.cn-mirror.yml up -d
+</span></span></code></pre></div><hr>
+<h2 id="-api文档">📡 API文档</h2>
+<h3 id="rest-api端点">REST API端点</h3>
+<h4 id="系统监控">系统监控</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">GET /api/v2/system/health      # 健康检查
+</span></span></span><span class="line"><span class="cl"><span class="err">GET /api/v2/system/status      # 系统状态
+</span></span></span><span class="line"><span class="cl"><span class="err">GET /api/v2/system/metrics     # 系统指标
+</span></span></span></code></pre></div><h4 id="ai预测服务">AI预测服务</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">POST /api/v2/ai/predict        # 实时预测
+</span></span></span><span class="line"><span class="cl"><span class="err">GET  /api/v2/ai/models         # 模型列表
+</span></span></span><span class="line"><span class="cl"><span class="err">POST /api/v2/ai/train          # 模型训练
+</span></span></span></code></pre></div><h4 id="数据服务">数据服务</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">GET  /api/v2/data/stocks       # 股票数据
+</span></span></span><span class="line"><span class="cl"><span class="err">GET  /api/v2/data/realtime     # 实时行情
+</span></span></span><span class="line"><span class="cl"><span class="err">POST /api/v2/data/collect      # 数据采集
+</span></span></span></code></pre></div><h3 id="websocket端点">WebSocket端点</h3>
+<h4 id="实时数据流">实时数据流</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 连接实时数据流
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8000/ws/realtime&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 消息格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;stock_price&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;data&#34;</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;symbol&#34;</span><span class="o">:</span> <span class="s2">&#34;AAPL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;price&#34;</span><span class="o">:</span> <span class="mf">150.25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;change&#34;</span><span class="o">:</span> <span class="mf">1.25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;volume&#34;</span><span class="o">:</span> <span class="mi">1000000</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;timestamp&#34;</span><span class="o">:</span> <span class="s2">&#34;2024-01-01T12:00:00Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;version&#34;</span><span class="o">:</span> <span class="s2">&#34;1.0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="内部广播api">内部广播API</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 向所有WebSocket客户端广播消息</span>
+</span></span><span class="line"><span class="cl">curl -X POST http://localhost:8000/api/internal/ws-broadcast <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;Authorization: Bearer &lt;internal_token&gt;&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s1">&#39;{&#34;type&#34;: &#34;alert&#34;, &#34;data&#34;: {&#34;message&#34;: &#34;系统维护通知&#34;}}&#39;</span>
+</span></span></code></pre></div><hr>
+<h2 id="-数据流架构">📊 数据流架构</h2>
+<h3 id="数据采集策略">数据采集策略</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">外部API数据源 (优先级1)
+</span></span><span class="line"><span class="cl">├── yfinance API        # 美股数据
+</span></span><span class="line"><span class="cl">├── akshare API        # A股数据
+</span></span><span class="line"><span class="cl">└── 自定义API          # 其他金融数据
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">↓ 故障转移机制
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">历史训练数据 (优先级2)
+</span></span><span class="line"><span class="cl">└── RESSET数据集       # 仅当所有API失效时使用
+</span></span></code></pre></div><h3 id="数据处理管道">数据处理管道</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">原始数据 → 清洗过滤 → 特征工程 → 模型预测 → 结果推送
+</span></span><span class="line"><span class="cl">    ↓         ↓         ↓         ↓         ↓
+</span></span><span class="line"><span class="cl">  验证格式   去噪异常   技术指标   AI推理   WebSocket
+</span></span></code></pre></div><hr>
+<h2 id="-配置指南">🔧 配置指南</h2>
+<h3 id="环境变量配置">环境变量配置</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 数据库配置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_URL</span><span class="o">=</span>postgresql://user:pass@localhost:5432/financial_db
+</span></span><span class="line"><span class="cl"><span class="nv">REDIS_URL</span><span class="o">=</span>redis://localhost:6379
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># API密钥</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ALPHA_VANTAGE_API_KEY</span><span class="o">=</span>your_api_key
+</span></span><span class="line"><span class="cl"><span class="nv">POLYGON_API_KEY</span><span class="o">=</span>your_polygon_key
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 服务配置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">API_SERVICE_PORT</span><span class="o">=</span><span class="m">8000</span>
+</span></span><span class="line"><span class="cl"><span class="nv">AI_SERVICE_PORT</span><span class="o">=</span><span class="m">8002</span>
+</span></span><span class="line"><span class="cl"><span class="nv">STREAMING_SERVICE_PORT</span><span class="o">=</span><span class="m">8004</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安全配置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">JWT_SECRET_KEY</span><span class="o">=</span>your-secret-key
+</span></span><span class="line"><span class="cl"><span class="nv">INTERNAL_API_TOKEN</span><span class="o">=</span>your-internal-token
+</span></span></code></pre></div><h3 id="模型配置">模型配置</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ml_training/config.py</span>
+</span></span><span class="line"><span class="cl"><span class="n">MODEL_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;prediction_horizon&#34;</span><span class="p">:</span> <span class="s2">&#34;1h&#34;</span><span class="p">,</span>      <span class="c1"># 预测时间窗口</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;feature_window&#34;</span><span class="p">:</span> <span class="s2">&#34;24h&#34;</span><span class="p">,</span>         <span class="c1"># 特征时间窗口</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;retrain_interval&#34;</span><span class="p">:</span> <span class="s2">&#34;7d&#34;</span><span class="p">,</span>        <span class="c1"># 重训练间隔</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;confidence_threshold&#34;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>     <span class="c1"># 置信度阈值</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="-监控面板">📈 监控面板</h2>
+<h3 id="grafana仪表盘">Grafana仪表盘</h3>
+<p>访问 <code>http://localhost:3001</code> 查看系统监控面板：</p>
+<h4 id="系统性能面板">系统性能面板</h4>
+<ul>
+<li>CPU使用率和内存占用</li>
+<li>请求QPS和响应时间</li>
+<li>数据库连接池状态</li>
+<li>WebSocket连接数量</li>
+</ul>
+<h4 id="业务指标面板">业务指标面板</h4>
+<ul>
+<li>实时预测准确率</li>
+<li>数据源健康状态</li>
+<li>交易信号生成频率</li>
+<li>风险指标监控</li>
+</ul>
+<h4 id="告警规则">告警规则</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 高延迟告警</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">alert</span><span class="p">:</span><span class="w"> </span><span class="l">HighAPILatency</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">expr</span><span class="p">:</span><span class="w"> </span><span class="l">http_request_duration_seconds{quantile=&#34;0.95&#34;} &gt; 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">5m</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 预测准确率告警</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">alert</span><span class="p">:</span><span class="w"> </span><span class="l">LowPredictionAccuracy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">expr</span><span class="p">:</span><span class="w"> </span><span class="l">prediction_accuracy &lt; 0.6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">10m</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="-测试与质量保证">🧪 测试与质量保证</h2>
+<h3 id="测试覆盖">测试覆盖</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 运行完整测试套件</span>
+</span></span><span class="line"><span class="cl">python test_complete_system.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 单元测试</span>
+</span></span><span class="line"><span class="cl">pytest tests/unit/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 集成测试</span>
+</span></span><span class="line"><span class="cl">pytest tests/integration/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 性能测试</span>
+</span></span><span class="line"><span class="cl">python tests/performance/load_test.py
+</span></span></code></pre></div><h3 id="代码质量">代码质量</h3>
+<ul>
+<li><strong>类型检查</strong>: mypy静态类型检查</li>
+<li><strong>代码规范</strong>: black + flake8代码格式化</li>
+<li><strong>安全扫描</strong>: bandit安全漏洞检测</li>
+<li><strong>测试覆盖</strong>: &gt;85%代码覆盖率</li>
+</ul>
+<hr>
+<h2 id="-故障排除">🚨 故障排除</h2>
+<h3 id="常见问题">常见问题</h3>
+<h4 id="1-websocket连接失败">1. WebSocket连接失败</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查服务状态</span>
+</span></span><span class="line"><span class="cl">curl http://localhost:8004/health
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看服务日志</span>
+</span></span><span class="line"><span class="cl">docker logs financial-streaming-service
+</span></span></code></pre></div><h4 id="2-ai预测服务异常">2. AI预测服务异常</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 验证模型文件</span>
+</span></span><span class="line"><span class="cl">ls -la ml_training/models/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新训练模型</span>
+</span></span><span class="line"><span class="cl">python ml_training/train_models.py
+</span></span></code></pre></div><h4 id="3-数据采集中断">3. 数据采集中断</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查API配额</span>
+</span></span><span class="line"><span class="cl">python tools/check_api_limits.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 切换数据源</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FALLBACK_DATA_SOURCE</span><span class="o">=</span><span class="nb">true</span>
+</span></span></code></pre></div><h3 id="性能优化建议">性能优化建议</h3>
+<ul>
+<li><strong>数据库</strong>: 为频繁查询的字段添加索引</li>
+<li><strong>缓存</strong>: 增加Redis内存分配</li>
+<li><strong>并发</strong>: 调整uvicorn workers数量</li>
+<li><strong>网络</strong>: 使用CDN加速静态资源</li>
+</ul>
+<hr>
+<h2 id="-部署策略">🔄 部署策略</h2>
+<h3 id="开发环境">开发环境</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 本地开发</span>
+</span></span><span class="line"><span class="cl">python scripts/start_system.py --env development
+</span></span></code></pre></div><h3 id="生产环境">生产环境</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 生产部署</span>
+</span></span><span class="line"><span class="cl">docker-compose -f docker-compose.production.yml up -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 健康检查</span>
+</span></span><span class="line"><span class="cl">./scripts/health_check.sh
+</span></span></code></pre></div><h3 id="扩展性考虑">扩展性考虑</h3>
+<ul>
+<li><strong>水平扩展</strong>: 支持多实例负载均衡</li>
+<li><strong>垂直扩展</strong>: 支持GPU加速AI推理</li>
+<li><strong>存储扩展</strong>: 支持分布式存储方案</li>
+<li><strong>跨区域</strong>: 支持多区域部署</li>
+</ul>
+<hr>
+<h2 id="-项目亮点">📝 项目亮点</h2>
+<h3 id="-技术创新">🎯 技术创新</h3>
+<ol>
+<li><strong>实时AI预测</strong>: 毫秒级模型推理响应</li>
+<li><strong>多源数据融合</strong>: 智能数据源切换和容错</li>
+<li><strong>微服务架构</strong>: 高内聚低耦合的系统设计</li>
+<li><strong>全栈可观测性</strong>: 完整的监控和告警体系</li>
+</ol>
+<h3 id="-商业价值">💼 商业价值</h3>
+<ol>
+<li><strong>真实数据驱动</strong>: 拒绝模拟，坚持真实市场数据</li>
+<li><strong>企业级可靠性</strong>: 99.9%可用性保证</li>
+<li><strong>可扩展架构</strong>: 支持百万级并发用户</li>
+<li><strong>合规性设计</strong>: 满足金融行业监管要求</li>
+</ol>
+<h3 id="-最佳实践">🏆 最佳实践</h3>
+<ol>
+<li><strong>代码质量</strong>: 完整的测试覆盖和代码规范</li>
+<li><strong>安全性</strong>: 端到端加密和安全认证</li>
+<li><strong>性能优化</strong>: 多级缓存和异步处理</li>
+<li><strong>运维友好</strong>: 容器化部署和自动化运维</li>
+</ol>
+<hr>
+<h2 id="-联系方式">📞 联系方式</h2>
+<ul>
+<li><strong>项目作者</strong>: miaowumiaomiaowu</li>
+<li><strong>GitHub</strong>: <a href="https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline" target="_blank" rel="noopener">Financial-Real-Time-Stream-Processing-Pipeline</a></li>
+<li><strong>技术栈</strong>: Python, React, TypeScript, Docker</li>
+<li><strong>许可证</strong>: 私有项目</li>
+</ul>
+<hr>
+<h2 id="-致谢">🎉 致谢</h2>
+<p>感谢所有为这个项目贡献代码和想法的开发者。这个项目展示了现代金融科技的技术深度和工程品质，是全栈开发和AI应用的优秀实践案例。</p>
+<blockquote>
+<p>💡 <strong>提示</strong>: 这是一个真实的生产级金融系统，不是演示项目。所有功能都经过严格测试，可直接用于实际交易环境。</p></blockquote>
+
+      </div>
+
+      <div class="mt-16"></div>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        
+        <div class="max-w-prose print:hidden">
+  
+  
+
+  
+
+  
+<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ffinancial-real-time-stream-processing-pipeline%2Ffinancial-real-time-stream-processing-pipeline-documentation%2F&amp;text="
+    title="X"
+    aria-label="X"
+    id="share-link-x"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ffinancial-real-time-stream-processing-pipeline%2Ffinancial-real-time-stream-processing-pipeline-documentation%2F&amp;t="
+    title="Facebook"
+    aria-label="Facebook"
+    id="share-link-facebook"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="mailto:?subject=&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ffinancial-real-time-stream-processing-pipeline%2Ffinancial-real-time-stream-processing-pipeline-documentation%2F"
+    title="Email"
+    aria-label="Email"
+    id="share-link-email"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ffinancial-real-time-stream-processing-pipeline%2Ffinancial-real-time-stream-processing-pipeline-documentation%2F&amp;title="
+    title="LinkedIn"
+    aria-label="LinkedIn"
+    id="share-link-linkedin"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="whatsapp://send?text=%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ffinancial-real-time-stream-processing-pipeline%2Ffinancial-real-time-stream-processing-pipeline-documentation%2F"
+    title="WhatsApp"
+    aria-label="WhatsApp"
+    id="share-link-whatsapp"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+  </a>
+  
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+
+<div class="flex pt-12 pb-4">
+  
+    
+    
+    
+    <img
+      class="mr-4 h-24 w-24 rounded-full"
+      srcset="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp 96w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_550a8b5752d1ef53.webp 192w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_1fe548720015905c.webp 288w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_b374a8889da59928.webp 384w"
+      sizes="96px"
+      src="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp"
+      width="96"
+      height="96"
+      alt="韩嘉仪"
+      loading="lazy"
+      />
+  
+  <div class="place-self-center">
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Authors
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      <span class="inline-block">
+        <a href="http://localhost:1313/" class="no-underline">
+        韩嘉仪
+        </a>
+      </span><span class="text-sm font-normal text-gray-600 dark:text-gray-400 ml-1 inline-block">(she/her)</span></div>
+
+    
+    <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
+    22级 计算机科学与技术专业（徐特立英才班）学生
+    </div>
+    
+
+
+    
+
+    <div class="text-2xl sm:text-lg pt-1">
+
+      
+<div class="flex flex-wrap text-neutral-500 dark:text-neutral-300">
+  
+    
+    
+    
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="mailto:1285622496@qq.com"
+      
+      aria-label="At-Symbol"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://github.com/miaowumiaomiaowu"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Brands/Github"
+    ><svg style="height: 1em;" fill="currentColor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg></a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/project/cuddle-cat/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            ></span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Jan 1, 0001
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/project/health-platform/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            ></span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Jan 1, 0001
+              
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+</div>
+
+      </div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+<div id="hb-notification-container" class="fixed top-20 right-4 z-[9999] pointer-events-none" aria-live="polite" aria-atomic="true"></div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

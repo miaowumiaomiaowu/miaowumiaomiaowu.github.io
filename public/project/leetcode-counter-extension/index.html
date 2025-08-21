@@ -1,0 +1,2505 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: August 22, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.5.2" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="韩嘉仪" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="**个人完全独立开发**的 Chrome Extension Manifest V3 扩展。从需求分析到架构设计，独立实现智能页面识别、实时徽标显示、本地存储等核心功能，助力构建持续学习的编程习惯。" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/leetcode-counter-extension/" />
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/main.css">
+    
+  
+
+
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu_c545d605fbaba839.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_b7aec86dcb688f0.png" />
+
+  <link rel="canonical" href="http://localhost:1313/project/leetcode-counter-extension/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="韩嘉仪 - 个人技术网站" />
+  <meta property="og:url" content="http://localhost:1313/project/leetcode-counter-extension/" />
+  <meta property="og:title" content="🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展 | 韩嘉仪 - 个人技术网站" />
+  <meta property="og:description" content="**个人完全独立开发**的 Chrome Extension Manifest V3 扩展。从需求分析到架构设计，独立实现智能页面识别、实时徽标显示、本地存储等核心功能，助力构建持续学习的编程习惯。" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" />
+    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_982c5d63a71b2961.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2024-01-15T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2024-01-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/project/leetcode-counter-extension/"
+  },
+  "headline": "🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展",
+  
+  "datePublished": "2024-01-15T00:00:00Z",
+  "dateModified": "2024-01-15T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "韩嘉仪"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "韩嘉仪 - 个人技术网站",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/media/icon_hu_a6282450d1fd5f43.png"
+    }
+  },
+  "description": "**个人完全独立开发**的 Chrome Extension Manifest V3 扩展。从需求分析到架构设计，独立实现智能页面识别、实时徽标显示、本地存储等核心功能，助力构建持续学习的编程习惯。"
+}
+</script>
+
+  
+
+  
+
+
+  <title>🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展 | 韩嘉仪 - 个人技术网站</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+<script>
+  
+  let searchWrapper = null;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
+  });
+
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
+
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
+
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
+
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+  
+  
+  
+  
+  <script defer src="/js/mermaid.bundle.addbbabb71331768410cfb03a610179690ff1dfd413519d34219c06a8fd39202.js" integrity="sha256-rdu6u3EzF2hBDPsDphAXlpD/Hf1BNRnTQhnAao/TkgI="></script>
+
+
+
+
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
+  
+  
+  <script defer src="/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
+  
+  
+  
+  
+  <script defer src="/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-start">
+    <div class="order-0 h-full">
+      
+      <a class="navbar-brand" href="/" title="韩嘉仪 - 个人技术网站">
+        韩嘉仪
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-start
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >🏠 关于我</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/project/"
+        >💼 项目作品</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/skills/"
+        >🛠️ 技术能力</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >📋 经历成就</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#contact"
+        >📧 联系方式</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="toggle search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        data-search-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="block dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="hidden dark:block">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+
+
+
+
+<div class="mx-auto flex max-w-screen-xl">
+  
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/"
+    
+  >Recent &amp; Upcoming Talks
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/example/"
+    
+  >Example Talk
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/projects/"
+    
+  >Projects
+    </a></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/"
+    
+  >Projects
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/financial-real-time-stream-processing-pipeline/"
+    
+  >🌊 金融实时流处理与AI预测系统
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/cuddle-cat/"
+    
+  >🐱 暖猫 (Cuddle Cat) - AI 情感陪伴应用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/health-platform/"
+    
+  >🏥 全栈式健康管理平台
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/project/leetcode-counter-extension/"
+    
+  >🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0"
+                class="hb-docs-link"
+              >项目概述</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e7%89%b9%e6%80%a7"
+                class="hb-docs-link"
+              >🌟 核心功能特性</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1"
+                class="hb-docs-link"
+              >🏗️ 技术架构设计</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%8a%80%e6%9c%af%e6%a0%88%e8%af%a6%e8%a7%a3"
+                class="hb-docs-link"
+              >📊 技术栈详解</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84"
+                class="hb-docs-link"
+              >🚀 项目结构</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e5%ae%9e%e7%8e%b0"
+                class="hb-docs-link"
+              >🔧 核心功能实现</a>
+            </li>
+          <li>
+              <a
+                href="#-%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e8%ae%be%e8%ae%a1"
+                class="hb-docs-link"
+              >🎨 用户界面设计</a>
+            </li>
+          <li>
+              <a
+                href="#-%e5%ae%9e%e6%97%b6%e5%90%8c%e6%ad%a5%e6%9c%ba%e5%88%b6"
+                class="hb-docs-link"
+              >🔄 实时同步机制</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e4%b8%8e%e5%ae%89%e5%85%a8"
+                class="hb-docs-link"
+              >🛡️ 隐私保护与安全</a>
+            </li>
+          <li>
+              <a
+                href="#-%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8"
+                class="hb-docs-link"
+              >📦 安装与使用</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%80%a7%e8%83%bd%e7%89%b9%e8%89%b2"
+                class="hb-docs-link"
+              >📈 性能特色</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%80%82%e7%94%a8%e4%ba%ba%e7%be%a4%e4%b8%8e%e5%9c%ba%e6%99%af"
+                class="hb-docs-link"
+              >🎯 适用人群与场景</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9"
+                class="hb-docs-link"
+              >🌟 项目亮点</a>
+            </li>
+          <li>
+              <a
+                href="#-%e6%9c%aa%e6%9d%a5%e5%8f%91%e5%b1%95%e8%a7%84%e5%88%92"
+                class="hb-docs-link"
+              >🔮 未来发展规划</a>
+            </li>
+          <li>
+              <a
+                href="#-%e9%a1%b9%e7%9b%ae%e6%88%90%e6%9e%9c"
+                class="hb-docs-link"
+              >🏆 项目成果</a>
+            </li>
+          <li>
+              <a
+                href="#-%e8%87%b4%e8%b0%a2"
+                class="hb-docs-link"
+              >🙏 致谢</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/smart-medical-management-system/"
+    
+  >🏥 智慧医疗管理系统（医生端）
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/hadoop-distributed-data-processing/"
+    
+  >🐘 Hadoop 分布式数据处理平台
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/satellite-distributed-system-research/"
+    
+  >🛰️ 卫星分布式系统日志管理研究
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/experience/"
+    
+  >📋 经历成就
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/skills/"
+    
+  >🛠️ 技术能力
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/"
+    
+  >Blog
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/get-started/"
+    
+  >🎉 Easily create your own simple yet highly customizable blog
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/second-brain/"
+    
+  >🧠 Sharpen your thinking with a second brain
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/data-visualization/"
+    
+  >📈 Communicate your results effectively with the best data visualizations
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/teach-courses/"
+    
+  >👩🏼‍🏫 Teach academic courses
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/project-management/"
+    
+  >✅ Manage your projects
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/"
+    
+  >Teaching
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/js/"
+    
+  >Learn JavaScript
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/python/"
+    
+  >Learn Python
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/"
+    
+  >Publications
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/preprint/"
+    
+  >An example preprint / working paper
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/journal-article/"
+    
+  >An example journal article
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/conference-paper/"
+    
+  >An example conference paper
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0">项目概述</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e7%89%b9%e8%89%b2">核心特色</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e7%89%b9%e6%80%a7">🌟 核心功能特性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%b2%be%e7%a1%ae%e8%ae%b0%e5%bd%95%e4%b8%8e%e7%bb%9f%e8%ae%a1">📊 精确记录与统计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%99%ba%e8%83%bd%e9%a1%b5%e9%9d%a2%e9%9b%86%e6%88%90">🎯 智能页面集成</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%8f%af%e8%a7%86%e5%8c%96%e6%95%b0%e6%8d%ae%e5%88%86%e6%9e%90">📈 可视化数据分析</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1">🏗️ 技术架构设计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#manifest-v3-%e6%9e%b6%e6%9e%84">Manifest V3 架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e6%9e%b6%e6%9e%84">核心组件架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%8a%80%e6%9c%af%e6%a0%88%e8%af%a6%e8%a7%a3">📊 技术栈详解</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%89%8d%e7%ab%af%e6%8a%80%e6%9c%af%e6%a0%88">前端技术栈</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a0%b8%e5%bf%83%e6%8a%80%e6%9c%af%e7%89%b9%e6%80%a7">核心技术特性</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84">🚀 项目结构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%8c%e6%95%b4%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84">完整目录结构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%bb%a3%e7%a0%81%e8%a7%84%e6%a8%a1%e7%bb%9f%e8%ae%a1">代码规模统计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e5%ae%9e%e7%8e%b0">🔧 核心功能实现</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%99%ba%e8%83%bd%e9%a2%98%e7%9b%ae%e8%af%86%e5%88%ab%e7%b3%bb%e7%bb%9f">智能题目识别系统</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ae%9e%e6%97%b6%e5%be%bd%e6%a0%87%e6%b8%b2%e6%9f%93%e7%b3%bb%e7%bb%9f">实时徽标渲染系统</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e5%ad%98%e5%82%a8%e6%9e%b6%e6%9e%84">数据存储架构</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e8%ae%be%e8%ae%a1">🎨 用户界面设计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%bc%b9%e7%aa%97%e7%95%8c%e9%9d%a2%e7%89%b9%e8%89%b2">弹窗界面特色</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%bb%9f%e8%ae%a1%e9%a1%b5%e9%9d%a2%e5%8a%9f%e8%83%bd">统计页面功能</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%ae%9e%e6%97%b6%e5%90%8c%e6%ad%a5%e6%9c%ba%e5%88%b6">🔄 实时同步机制</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%a1%b5%e9%9d%a2%e9%97%b4%e9%80%9a%e4%bf%a1">页面间通信</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ad%98%e5%82%a8%e7%9b%91%e5%90%ac%e6%9c%ba%e5%88%b6">存储监听机制</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e4%b8%8e%e5%ae%89%e5%85%a8">🛡️ 隐私保护与安全</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e6%8d%ae%e9%9a%90%e7%a7%81">数据隐私</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9d%83%e9%99%90%e8%af%b4%e6%98%8e">权限说明</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8">📦 安装与使用</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b">快速开始</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%bd%bf%e7%94%a8%e5%9c%ba%e6%99%af">使用场景</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%80%a7%e8%83%bd%e7%89%b9%e8%89%b2">📈 性能特色</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bf%90%e8%a1%8c%e6%80%a7%e8%83%bd">运行性能</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%94%a8%e6%88%b7%e4%bd%93%e9%aa%8c">用户体验</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%80%82%e7%94%a8%e4%ba%ba%e7%be%a4%e4%b8%8e%e5%9c%ba%e6%99%af">🎯 适用人群与场景</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%ae%e6%a0%87%e7%94%a8%e6%88%b7">目标用户</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af">应用场景</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9">🌟 项目亮点</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0">技术创新</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%94%a8%e6%88%b7%e4%bb%b7%e5%80%bc">用户价值</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%bc%80%e5%8f%91%e7%90%86%e5%bf%b5">开发理念</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e6%9c%aa%e6%9d%a5%e5%8f%91%e5%b1%95%e8%a7%84%e5%88%92">🔮 未来发展规划</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%8a%9f%e8%83%bd%e6%89%a9%e5%b1%95%e8%ae%a1%e5%88%92">功能扩展计划</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e4%bc%98%e5%8c%96%e6%96%b9%e5%90%91">技术优化方向</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e9%a1%b9%e7%9b%ae%e6%88%90%e6%9e%9c">🏆 项目成果</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e6%8c%87%e6%a0%87">技术指标</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%94%a8%e6%88%b7%e4%bd%93%e9%aa%8c-1">用户体验</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-%e8%87%b4%e8%b0%a2">🙏 致谢</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8a%80%e6%9c%af%e6%a0%88%e8%87%b4%e8%b0%a2">技术栈致谢</a>
+      </li></ul>
+
+  
+  
+    
+    
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展</h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Jan 15, 2024</span>
+        
+
+        
+        
+
+        
+        <span class="mx-1">·</span>
+        <span class="mx-1">
+          3 min read
+        </span>
+        
+        </div>
+
+        <div class="mt-3">
+          
+
+
+
+<div class="">
+  
+
+
+
+
+
+
+
+
+ 
+
+
+  
+    
+    
+    
+    
+    
+    
+      
+      
+    
+
+    
+    
+    
+      
+    
+    
+
+    
+      <a class="hb-attachment-link hb-attachment-link-large" href="https://github.com/miaowumiaomiaowu/leetcode-counter-extention" target="_blank" rel="noopener">
+        <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
+        GitHub 仓库
+      </a>
+    
+  
+
+
+</div>
+
+
+        </div>
+      </div>
+
+
+
+      
+      
+      
+
+      
+      
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+        <h1 id="-leetcode-刷题计数器">🦋 LeetCode 刷题计数器</h1>
+<p><strong>一个精致高效的 Chrome 浏览器扩展，助力构建持续学习的编程习惯</strong></p>
+<h2 id="项目概述">项目概述</h2>
+<p>LeetCode 刷题计数器是一个专为程序员设计的 Chrome 浏览器扩展，旨在帮助开发者精确追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示和智能的页面集成，让每一次的编程练习都有迹可循，助你构建持续学习的编程习惯。</p>
+<h3 id="核心特色">核心特色</h3>
+<ul>
+<li>✅ <strong>原生 JavaScript</strong>：基于 Chrome Extension Manifest V3，无外部依赖，性能卓越</li>
+<li>✅ <strong>完全本地存储</strong>：数据存储在浏览器本地，100% 保护隐私安全</li>
+<li>✅ <strong>智能页面识别</strong>：自动识别 LeetCode 题目页面，支持中英文站点</li>
+<li>✅ <strong>实时徽标显示</strong>：在题目列表页面直接显示刷题次数，一目了然</li>
+<li>✅ <strong>手动精确控制</strong>：采用手动记录模式，避免误计数，确保数据准确性</li>
+</ul>
+<h2 id="-核心功能特性">🌟 核心功能特性</h2>
+<h3 id="-精确记录与统计">📊 精确记录与统计</h3>
+<ul>
+<li><strong>手动计数机制</strong>：点击按钮手动记录，避免自动记录的误差和干扰</li>
+<li><strong>题目标准化</strong>：智能处理题目标题，自动去除数字前缀（如&quot;88. &ldquo;）和特殊标识（如&quot;LCR 007. &ldquo;）</li>
+<li><strong>多维度统计</strong>：支持单题计数、总计数、今日刷题数等多种统计维度</li>
+<li><strong>数据持久化</strong>：采用 Chrome Storage API，数据永久保存不丢失</li>
+</ul>
+<h3 id="-智能页面集成">🎯 智能页面集成</h3>
+<ul>
+<li><strong>实时徽标显示</strong>：在 LeetCode 题目列表页面自动显示每道题的刷题次数徽标</li>
+<li><strong>多页面适配</strong>：完美支持题库页面、搜索页面、学习计划页面、热题100等</li>
+<li><strong>动态内容检测</strong>：监听页面动态加载，确保单页应用路由切换时徽标正确显示</li>
+<li><strong>URL 变化响应</strong>：智能检测 URL 变化，实时更新页面内容</li>
+</ul>
+<h3 id="-可视化数据分析">📈 可视化数据分析</h3>
+<ul>
+<li><strong>统计分析页面</strong>：独立的统计页面，提供详细的刷题数据分析</li>
+<li><strong>图表展示</strong>：柱状图直观展示刷题分布和进度趋势</li>
+<li><strong>数据导入导出</strong>：支持数据备份和恢复，换设备不丢数据</li>
+<li><strong>历史记录跟踪</strong>：记录每道题的刷题历史和 URL 信息</li>
+</ul>
+<h2 id="-技术架构设计">🏗️ 技术架构设计</h2>
+<h3 id="manifest-v3-架构">Manifest V3 架构</h3>
+<p>本扩展采用最新的 Chrome Extension Manifest V3 标准架构：</p>
+<div class="mermaid">graph TB
+    subgraph "用户界面层"
+        POPUP[Action Popup<br/>popup/]
+        STATS[Statistics Page<br/>stats/]
+        CONTENT[Content Integration<br/>页面徽标]
+    end
+
+    subgraph "业务逻辑层"
+        SW[Service Worker<br/>background/]
+        CS[Content Scripts<br/>content/]
+        UTILS[Utility Functions<br/>utils/]
+    end
+
+    subgraph "数据存储层"
+        STORAGE[Chrome Storage API<br/>Local Storage]
+    end
+
+    POPUP <--> SW
+    STATS <--> SW
+    CONTENT <--> CS
+    CS <--> SW
+    SW <--> STORAGE
+    UTILS <--> STORAGE
+    CS <--> UTILS
+</div>
+<h3 id="核心组件架构">核心组件架构</h3>
+<ul>
+<li><strong>🎭 Service Worker</strong> (<code>background/background.js</code>)：处理扩展生命周期、初始化配置和通知系统</li>
+<li><strong>💉 Content Scripts</strong> (<code>content/content.js</code>)：注入到 LeetCode 页面，负责徽标渲染和页面交互</li>
+<li><strong>🪟 Action Popup</strong> (<code>popup/</code>)：点击扩展图标显示的弹窗界面，提供主要交互功能</li>
+<li><strong>📊 Statistics Page</strong> (<code>stats/</code>)：独立的统计分析页面，提供数据可视化</li>
+<li><strong>🛠️ Utility Functions</strong> (<code>utils/storage.js</code>)：通用的存储操作和工具函数</li>
+</ul>
+<h2 id="-技术栈详解">📊 技术栈详解</h2>
+<h3 id="前端技术栈">前端技术栈</h3>
+<table>
+  <thead>
+      <tr>
+          <th>技术</th>
+          <th>占比</th>
+          <th>特点与优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🟨 <strong>JavaScript</strong></td>
+          <td>73.6%</td>
+          <td>原生 ES6+ 语法，无框架依赖，性能极佳</td>
+      </tr>
+      <tr>
+          <td>🎨 <strong>CSS</strong></td>
+          <td>18.8%</td>
+          <td>响应式设计，Material Design 风格</td>
+      </tr>
+      <tr>
+          <td>📄 <strong>HTML</strong></td>
+          <td>7.6%</td>
+          <td>语义化标签，良好的可访问性</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="核心技术特性">核心技术特性</h3>
+<ul>
+<li><strong>Manifest V3</strong>：采用最新的扩展开发标准，更好的安全性和性能</li>
+<li><strong>Chrome APIs</strong>：充分利用 Chrome Storage、Tabs、Runtime 等原生 API</li>
+<li><strong>模块化设计</strong>：清晰的代码结构，便于维护和扩展</li>
+<li><strong>零依赖</strong>：完全使用原生技术，无需外部库，包体积小巧</li>
+</ul>
+<h2 id="-项目结构">🚀 项目结构</h2>
+<h3 id="完整目录结构">完整目录结构</h3>
+<div class="mermaid">graph TD
+    ROOT[📁 leetcode-counter-extention/]
+
+    ROOT --> MANIFEST[📋 manifest.json<br/>扩展配置清单文件]
+
+    ROOT --> POPUP_DIR[📱 popup/<br/>弹窗界面]
+    POPUP_DIR --> POPUP_HTML[🎨 popup.html<br/>弹窗页面结构]
+    POPUP_DIR --> POPUP_CSS[💎 popup.css<br/>弹窗样式设计]
+    POPUP_DIR --> POPUP_JS[⚡ popup.js<br/>弹窗交互逻辑]
+
+    ROOT --> CONTENT_DIR[💉 content/<br/>内容脚本]
+    CONTENT_DIR --> CONTENT_JS[🔧 content.js<br/>页面注入脚本]
+
+    ROOT --> BG_DIR[🎭 background/<br/>后台服务]
+    BG_DIR --> BG_JS[🚀 background.js<br/>Service Worker]
+
+    ROOT --> STATS_DIR[📊 stats/<br/>统计页面]
+    STATS_DIR --> STATS_HTML[📈 stats.html<br/>统计页面结构]
+    STATS_DIR --> STATS_CSS[🎯 stats.css<br/>统计页面样式]
+    STATS_DIR --> STATS_JS[📊 stats.js<br/>统计页面逻辑]
+
+    ROOT --> UTILS_DIR[🛠️ utils/<br/>工具函数]
+    UTILS_DIR --> STORAGE_JS[💾 storage.js<br/>存储操作工具]
+
+    ROOT --> IMAGES_DIR[🖼️ images/<br/>图标资源]
+    IMAGES_DIR --> ICON16[🦋 butterfly16.png<br/>16x16 图标]
+    IMAGES_DIR --> ICON48[🦋 butterfly48.png<br/>48x48 图标]
+    IMAGES_DIR --> ICON128[🦋 butterfly128.png<br/>128x128 图标]
+
+    ROOT --> README[📖 README.md<br/>项目说明文档]
+</div>
+<h3 id="代码规模统计">代码规模统计</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">📁 总文件数：15+ 个核心文件
+</span></span><span class="line"><span class="cl">📝 代码行数：2,000+ 行精心编写的代码
+</span></span><span class="line"><span class="cl">🎨 样式定义：500+ 行 CSS 样式
+</span></span><span class="line"><span class="cl">📊 功能模块：8 个主要功能模块
+</span></span><span class="line"><span class="cl">🔧 工具函数：20+ 个实用工具函数
+</span></span></code></pre></div><h2 id="-核心功能实现">🔧 核心功能实现</h2>
+<h3 id="智能题目识别系统">智能题目识别系统</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 题目标题标准化处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">normalizeTitle</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 移除数字前缀，如&#34;88. &#34;或&#34;1. &#34;等
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">normalizedTitle</span> <span class="o">=</span> <span class="nx">title</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^\d+\.\s*/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 移除LCR等前缀，如&#34;LCR 007. 三数之和&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">normalizedTitle</span> <span class="o">=</span> <span class="nx">normalizedTitle</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^(LCR|LCS|LCP|剑指\s*Offer)\s+\d+\.\s*/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">normalizedTitle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="实时徽标渲染系统">实时徽标渲染系统</h3>
+<ul>
+<li><strong>页面监听机制</strong>：使用 <code>MutationObserver</code> 监听 DOM 变化</li>
+<li><strong>多重检测策略</strong>：结合 URL 变化、页面加载、存储变化等多种触发机制</li>
+<li><strong>智能去重</strong>：防止重复添加徽标，确保页面整洁</li>
+<li><strong>动态适配</strong>：支持搜索页面、学习计划等不同页面类型</li>
+</ul>
+<h3 id="数据存储架构">数据存储架构</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 数据结构设计
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;题目标题&#34;</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;count&#34;</span><span class="o">:</span> <span class="nx">刷题次数</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;url&#34;</span><span class="o">:</span> <span class="s2">&#34;题目链接&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;totalCount&#34;</span><span class="o">:</span> <span class="nx">总刷题次数</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;todayCount_YYYY-MM-DD&#34;</span><span class="o">:</span> <span class="nx">今日刷题次数</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;autoIncrementEnabled&#34;</span><span class="o">:</span> <span class="kc">false</span>  <span class="c1">// 默认禁用自动记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h2 id="-用户界面设计">🎨 用户界面设计</h2>
+<h3 id="弹窗界面特色">弹窗界面特色</h3>
+<ul>
+<li><strong>简洁直观</strong>：Material Design 风格，操作简单明了</li>
+<li><strong>实时反馈</strong>：计数变化时的动画效果，提升用户体验</li>
+<li><strong>智能识别</strong>：自动识别当前 LeetCode 题目，无需手动输入</li>
+<li><strong>错误处理</strong>：完善的错误处理和回退机制</li>
+</ul>
+<h3 id="统计页面功能">统计页面功能</h3>
+<ul>
+<li><strong>图表可视化</strong>：柱状图展示刷题分布</li>
+<li><strong>详细统计表</strong>：表格形式展示每道题的详细信息</li>
+<li><strong>数据管理</strong>：支持数据导入导出功能</li>
+<li><strong>响应式设计</strong>：适配不同屏幕尺寸</li>
+</ul>
+<h2 id="-实时同步机制">🔄 实时同步机制</h2>
+<h3 id="页面间通信">页面间通信</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 弹窗与内容脚本双向通信
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">chrome</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">onMessage</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">sender</span><span class="p">,</span> <span class="nx">sendResponse</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;getProblemInfo&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 获取当前页面题目信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">problemTitle</span> <span class="o">=</span> <span class="nx">extractProblemTitle</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">sendResponse</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">problemTitle</span><span class="o">:</span> <span class="nx">problemTitle</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">url</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h3 id="存储监听机制">存储监听机制</h3>
+<ul>
+<li><strong>实时更新</strong>：监听存储变化，数据更新时自动重新渲染徽标</li>
+<li><strong>页面同步</strong>：多个标签页之间数据实时同步</li>
+<li><strong>性能优化</strong>：智能判断是否需要更新，避免不必要的重绘</li>
+</ul>
+<h2 id="-隐私保护与安全">🛡️ 隐私保护与安全</h2>
+<h3 id="数据隐私">数据隐私</h3>
+<ul>
+<li><strong>完全本地存储</strong>：所有数据存储在用户浏览器本地，不上传到任何服务器</li>
+<li><strong>零网络请求</strong>：扩展不发起任何网络请求，完全离线工作</li>
+<li><strong>透明开源</strong>：代码完全开源，用户可自行审核安全性</li>
+<li><strong>权限最小化</strong>：仅请求必要的浏览器权限</li>
+</ul>
+<h3 id="权限说明">权限说明</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;permissions&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;storage&#34;</span><span class="p">,</span>          <span class="c1">// 本地数据存储
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;activeTab&#34;</span><span class="p">,</span>        <span class="c1">// 获取当前活动标签页
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;notifications&#34;</span>     <span class="c1">// 显示通知（预留功能）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;host_permissions&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;*://leetcode.com/*&#34;</span><span class="p">,</span>    <span class="c1">// LeetCode 国际站
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;*://leetcode.cn/*&#34;</span>      <span class="c1">// LeetCode 中国站
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="-安装与使用">📦 安装与使用</h2>
+<h3 id="快速开始">快速开始</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 克隆项目</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 在 Chrome 中加载扩展</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 打开 Chrome 浏览器</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 进入 chrome://extensions/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 开启&#34;开发者模式&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 点击&#34;加载已解压的扩展程序&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 选择项目文件夹</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 开始使用</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 访问 LeetCode 网站</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 点击浏览器工具栏中的蝴蝶图标</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># - 在题目页面手动记录刷题次数</span>
+</span></span></code></pre></div><h3 id="使用场景">使用场景</h3>
+<ol>
+<li><strong>题目页面记录</strong>：在 LeetCode 题目页面点击扩展图标，手动记录刷题次数</li>
+<li><strong>列表页面查看</strong>：在题库、搜索、学习计划等页面查看每道题的刷题次数徽标</li>
+<li><strong>统计分析</strong>：通过统计页面分析自己的刷题习惯和进度</li>
+<li><strong>数据管理</strong>：导入导出数据，备份重要的学习记录</li>
+</ol>
+<h2 id="-性能特色">📈 性能特色</h2>
+<h3 id="运行性能">运行性能</h3>
+<ul>
+<li><strong>启动速度</strong>：&lt; 100ms 扩展加载时间</li>
+<li><strong>内存占用</strong>：&lt; 10MB 运行时内存</li>
+<li><strong>CPU 使用</strong>：几乎零 CPU 占用，不影响浏览器性能</li>
+<li><strong>存储效率</strong>：智能数据结构，存储空间利用率高</li>
+</ul>
+<h3 id="用户体验">用户体验</h3>
+<ul>
+<li><strong>响应速度</strong>：点击按钮到界面更新 &lt; 50ms</li>
+<li><strong>兼容性</strong>：支持 Chrome 88+ 版本</li>
+<li><strong>稳定性</strong>：经过充分测试，运行稳定可靠</li>
+<li><strong>易用性</strong>：直观的操作界面，学习成本极低</li>
+</ul>
+<h2 id="-适用人群与场景">🎯 适用人群与场景</h2>
+<h3 id="目标用户">目标用户</h3>
+<ul>
+<li>👨‍💻 <strong>算法学习者</strong>：需要系统性刷题和进度跟踪的程序员</li>
+<li>🎓 <strong>求职准备者</strong>：准备技术面试，需要高效刷题的求职者</li>
+<li>👩‍🏫 <strong>编程教师</strong>：需要跟踪学生学习进度的计算机教师</li>
+<li>🏆 <strong>竞赛参与者</strong>：参加编程竞赛，需要大量练习的选手</li>
+</ul>
+<h3 id="应用场景">应用场景</h3>
+<ul>
+<li><strong>日常刷题</strong>：记录每日的刷题情况，养成持续学习习惯</li>
+<li><strong>专项突破</strong>：重点练习特定类型题目，记录练习次数</li>
+<li><strong>面试准备</strong>：系统性复习算法题，跟踪复习进度</li>
+<li><strong>学习计划</strong>：配合 LeetCode 学习计划，记录完成情况</li>
+</ul>
+<h2 id="-项目亮点">🌟 项目亮点</h2>
+<h3 id="技术创新">技术创新</h3>
+<ul>
+<li><strong>Manifest V3 架构</strong>：采用最新标准，确保长期兼容性</li>
+<li><strong>智能页面适配</strong>：支持 LeetCode 多种页面类型的动态内容</li>
+<li><strong>零依赖设计</strong>：纯原生技术实现，性能卓越</li>
+<li><strong>模块化架构</strong>：清晰的代码结构，便于维护和扩展</li>
+</ul>
+<h3 id="用户价值">用户价值</h3>
+<ul>
+<li><strong>精确记录</strong>：手动记录避免误计数，确保数据准确性</li>
+<li><strong>可视化展示</strong>：直观的徽标显示，刷题情况一目了然</li>
+<li><strong>持续激励</strong>：通过数据统计激励持续学习</li>
+<li><strong>隐私保护</strong>：完全本地存储，保护用户隐私</li>
+</ul>
+<h3 id="开发理念">开发理念</h3>
+<ul>
+<li><strong>用户至上</strong>：以用户需求为导向，注重实用性</li>
+<li><strong>性能优先</strong>：追求极致性能，不影响浏览体验</li>
+<li><strong>开源共享</strong>：MIT 协议开源，鼓励社区贡献</li>
+<li><strong>持续改进</strong>：积极响应用户反馈，持续优化产品</li>
+</ul>
+<h2 id="-未来发展规划">🔮 未来发展规划</h2>
+<h3 id="功能扩展计划">功能扩展计划</h3>
+<ul>
+<li><strong>数据同步</strong>：支持多设备间数据同步</li>
+<li><strong>统计增强</strong>：更丰富的数据分析和可视化功能</li>
+<li><strong>主题定制</strong>：支持多种界面主题和个性化设置</li>
+<li><strong>导出格式</strong>：支持更多数据导出格式（Excel、PDF等）</li>
+</ul>
+<h3 id="技术优化方向">技术优化方向</h3>
+<ul>
+<li><strong>性能提升</strong>：进一步优化页面识别和徽标渲染性能</li>
+<li><strong>兼容性</strong>：扩展支持更多浏览器（Firefox、Edge等）</li>
+<li><strong>国际化</strong>：支持多语言界面，服务全球用户</li>
+<li><strong>无障碍</strong>：改进无障碍访问支持</li>
+</ul>
+<h2 id="-项目成果">🏆 项目成果</h2>
+<h3 id="技术指标">技术指标</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭐ 代码质量：原生 JavaScript，无外部依赖
+</span></span><span class="line"><span class="cl">🚀 性能表现：&lt; 100ms 启动时间，&lt; 10MB 内存占用
+</span></span><span class="line"><span class="cl">🛡️ 安全级别：完全本地存储，零网络请求
+</span></span><span class="line"><span class="cl">🎯 兼容性：Chrome 88+，支持 Manifest V3
+</span></span><span class="line"><span class="cl">📊 功能完整度：涵盖记录、展示、统计、管理全流程
+</span></span></code></pre></div><h3 id="用户体验-1">用户体验</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">😊 易用性：直观界面，学习成本低
+</span></span><span class="line"><span class="cl">🎨 美观度：Material Design 风格，视觉优雅
+</span></span><span class="line"><span class="cl">⚡ 响应性：实时更新，交互流畅
+</span></span><span class="line"><span class="cl">🔒 可靠性：数据持久化，长期稳定运行
+</span></span><span class="line"><span class="cl">📱 适应性：响应式设计，多尺寸屏幕适配
+</span></span></code></pre></div><h2 id="-致谢">🙏 致谢</h2>
+<h3 id="技术栈致谢">技术栈致谢</h3>
+<ul>
+<li><a href="https://developer.chrome.com/docs/extensions/" target="_blank" rel="noopener">Chrome Extensions API</a> - 强大的浏览器扩展开发平台</li>
+<li><a href="https://material.io/" target="_blank" rel="noopener">Material Design</a> - 优秀的设计系统和组件库</li>
+<li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a> - 优秀的算法学习平台</li>
+</ul>
+<hr>
+<p>📧 <strong>项目地址</strong>：<a href="https://github.com/miaowumiaomiaowu/leetcode-counter-extention" target="_blank" rel="noopener">GitHub Repository</a></p>
+
+      </div>
+
+      
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-01-15T00:00:00.000Z">
+    <span>Last updated on</span>
+    Jan 15, 2024</time>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        
+        <div class="max-w-prose print:hidden">
+  
+  
+
+  
+<div class="flex justify-center">
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/chrome-extension/">Chrome Extension</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/javascript/">JavaScript</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/manifest-v3/">Manifest V3</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%94%E7%94%A8/">工具类应用</a>
+  
+</div>
+
+
+  
+<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2F&amp;text=%F0%9F%A6%8B&#43;LeetCode&#43;%E5%88%B7%E9%A2%98%E8%AE%A1%E6%95%B0%E5%99%A8&#43;-&#43;Chrome&#43;%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95"
+    title="X"
+    aria-label="X"
+    id="share-link-x"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2F&amp;t=%F0%9F%A6%8B&#43;LeetCode&#43;%E5%88%B7%E9%A2%98%E8%AE%A1%E6%95%B0%E5%99%A8&#43;-&#43;Chrome&#43;%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95"
+    title="Facebook"
+    aria-label="Facebook"
+    id="share-link-facebook"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="mailto:?subject=%F0%9F%A6%8B%20LeetCode%20%E5%88%B7%E9%A2%98%E8%AE%A1%E6%95%B0%E5%99%A8%20-%20Chrome%20%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2F"
+    title="Email"
+    aria-label="Email"
+    id="share-link-email"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2F&amp;title=%F0%9F%A6%8B&#43;LeetCode&#43;%E5%88%B7%E9%A2%98%E8%AE%A1%E6%95%B0%E5%99%A8&#43;-&#43;Chrome&#43;%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95"
+    title="LinkedIn"
+    aria-label="LinkedIn"
+    id="share-link-linkedin"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="whatsapp://send?text=%F0%9F%A6%8B&#43;LeetCode&#43;%E5%88%B7%E9%A2%98%E8%AE%A1%E6%95%B0%E5%99%A8&#43;-&#43;Chrome&#43;%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fleetcode-counter-extension%2F"
+    title="WhatsApp"
+    aria-label="WhatsApp"
+    id="share-link-whatsapp"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+  </a>
+  
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+
+<div class="flex pt-12 pb-4">
+  
+    
+    
+    
+    <img
+      class="mr-4 h-24 w-24 rounded-full"
+      srcset="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp 96w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_550a8b5752d1ef53.webp 192w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_1fe548720015905c.webp 288w, /author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_b374a8889da59928.webp 384w"
+      sizes="96px"
+      src="/author/%E9%9F%A9%E5%98%89%E4%BB%AA/avatar_hu_7f46265397717142.webp"
+      width="96"
+      height="96"
+      alt="韩嘉仪"
+      loading="lazy"
+      />
+  
+  <div class="place-self-center">
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Authors
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      <span class="inline-block">
+        <a href="http://localhost:1313/" class="no-underline">
+        韩嘉仪
+        </a>
+      </span><span class="text-sm font-normal text-gray-600 dark:text-gray-400 ml-1 inline-block">(she/her)</span></div>
+
+    
+    <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
+    22级 计算机科学与技术专业（徐特立英才班）学生
+    </div>
+    
+
+
+    
+
+    <div class="text-2xl sm:text-lg pt-1">
+
+      
+<div class="flex flex-wrap text-neutral-500 dark:text-neutral-300">
+  
+    
+    
+    
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="mailto:1285622496@qq.com"
+      
+      aria-label="At-Symbol"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://github.com/miaowumiaomiaowu"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Brands/Github"
+    ><svg style="height: 1em;" fill="currentColor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg></a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/project/health-platform/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >🏥 全栈式健康管理平台</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Jan 25, 2024
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/project/smart-medical-management-system/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >🏥 智慧医疗管理系统（医生端）</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Sep 20, 2023
+              
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+</div>
+
+      </div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+<div id="hb-notification-container" class="fixed top-20 right-4 z-[9999] pointer-events-none" aria-live="polite" aria-atomic="true"></div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

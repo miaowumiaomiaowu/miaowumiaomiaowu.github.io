@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具类应用 | 韩嘉仪 - 个人技术网站</title>
+    <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%94%E7%94%A8/</link>
+      <atom:link href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <description>工具类应用</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_982c5d63a71b2961.png</url>
+      <title>工具类应用</title>
+      <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%94%E7%94%A8/</link>
+    </image>
+    
+    <item>
+      <title>🦋 LeetCode 刷题计数器 - Chrome 浏览器扩展</title>
+      <link>http://localhost:1313/project/leetcode-counter-extension/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/leetcode-counter-extension/</guid>
+      <description>&lt;h1 id=&#34;-leetcode-刷题计数器&#34;&gt;🦋 LeetCode 刷题计数器&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;一个精致高效的 Chrome 浏览器扩展，助力构建持续学习的编程习惯&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;项目概述&#34;&gt;项目概述&lt;/h2&gt;
+&lt;p&gt;LeetCode 刷题计数器是一个专为程序员设计的 Chrome 浏览器扩展，旨在帮助开发者精确追踪和统计在 LeetCode 上的刷题记录。通过直观的可视化数据展示和智能的页面集成，让每一次的编程练习都有迹可循，助你构建持续学习的编程习惯。&lt;/p&gt;
+&lt;h3 id=&#34;核心特色&#34;&gt;核心特色&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;原生 JavaScript&lt;/strong&gt;：基于 Chrome Extension Manifest V3，无外部依赖，性能卓越&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;完全本地存储&lt;/strong&gt;：数据存储在浏览器本地，100% 保护隐私安全&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;智能页面识别&lt;/strong&gt;：自动识别 LeetCode 题目页面，支持中英文站点&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;实时徽标显示&lt;/strong&gt;：在题目列表页面直接显示刷题次数，一目了然&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;手动精确控制&lt;/strong&gt;：采用手动记录模式，避免误计数，确保数据准确性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-核心功能特性&#34;&gt;🌟 核心功能特性&lt;/h2&gt;
+&lt;h3 id=&#34;-精确记录与统计&#34;&gt;📊 精确记录与统计&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;手动计数机制&lt;/strong&gt;：点击按钮手动记录，避免自动记录的误差和干扰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;题目标准化&lt;/strong&gt;：智能处理题目标题，自动去除数字前缀（如&amp;quot;88. &amp;ldquo;）和特殊标识（如&amp;quot;LCR 007. &amp;ldquo;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多维度统计&lt;/strong&gt;：支持单题计数、总计数、今日刷题数等多种统计维度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据持久化&lt;/strong&gt;：采用 Chrome Storage API，数据永久保存不丢失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-智能页面集成&#34;&gt;🎯 智能页面集成&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实时徽标显示&lt;/strong&gt;：在 LeetCode 题目列表页面自动显示每道题的刷题次数徽标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多页面适配&lt;/strong&gt;：完美支持题库页面、搜索页面、学习计划页面、热题100等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态内容检测&lt;/strong&gt;：监听页面动态加载，确保单页应用路由切换时徽标正确显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URL 变化响应&lt;/strong&gt;：智能检测 URL 变化，实时更新页面内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-可视化数据分析&#34;&gt;📈 可视化数据分析&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;统计分析页面&lt;/strong&gt;：独立的统计页面，提供详细的刷题数据分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图表展示&lt;/strong&gt;：柱状图直观展示刷题分布和进度趋势&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据导入导出&lt;/strong&gt;：支持数据备份和恢复，换设备不丢数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;历史记录跟踪&lt;/strong&gt;：记录每道题的刷题历史和 URL 信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-技术架构设计&#34;&gt;🏗️ 技术架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;manifest-v3-架构&#34;&gt;Manifest V3 架构&lt;/h3&gt;
+&lt;p&gt;本扩展采用最新的 Chrome Extension Manifest V3 标准架构：&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph TB
+    subgraph &#34;用户界面层&#34;
+        POPUP[Action Popup&lt;br/&gt;popup/]
+        STATS[Statistics Page&lt;br/&gt;stats/]
+        CONTENT[Content Integration&lt;br/&gt;页面徽标]
+    end
+
+    subgraph &#34;业务逻辑层&#34;
+        SW[Service Worker&lt;br/&gt;background/]
+        CS[Content Scripts&lt;br/&gt;content/]
+        UTILS[Utility Functions&lt;br/&gt;utils/]
+    end
+
+    subgraph &#34;数据存储层&#34;
+        STORAGE[Chrome Storage API&lt;br/&gt;Local Storage]
+    end
+
+    POPUP &lt;--&gt; SW
+    STATS &lt;--&gt; SW
+    CONTENT &lt;--&gt; CS
+    CS &lt;--&gt; SW
+    SW &lt;--&gt; STORAGE
+    UTILS &lt;--&gt; STORAGE
+    CS &lt;--&gt; UTILS
+&lt;/div&gt;
+&lt;h3 id=&#34;核心组件架构&#34;&gt;核心组件架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎭 Service Worker&lt;/strong&gt; (&lt;code&gt;background/background.js&lt;/code&gt;)：处理扩展生命周期、初始化配置和通知系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💉 Content Scripts&lt;/strong&gt; (&lt;code&gt;content/content.js&lt;/code&gt;)：注入到 LeetCode 页面，负责徽标渲染和页面交互&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🪟 Action Popup&lt;/strong&gt; (&lt;code&gt;popup/&lt;/code&gt;)：点击扩展图标显示的弹窗界面，提供主要交互功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📊 Statistics Page&lt;/strong&gt; (&lt;code&gt;stats/&lt;/code&gt;)：独立的统计分析页面，提供数据可视化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🛠️ Utility Functions&lt;/strong&gt; (&lt;code&gt;utils/storage.js&lt;/code&gt;)：通用的存储操作和工具函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-技术栈详解&#34;&gt;📊 技术栈详解&lt;/h2&gt;
+&lt;h3 id=&#34;前端技术栈&#34;&gt;前端技术栈&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;技术&lt;/th&gt;
+          &lt;th&gt;占比&lt;/th&gt;
+          &lt;th&gt;特点与优势&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟨 &lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;73.6%&lt;/td&gt;
+          &lt;td&gt;原生 ES6+ 语法，无框架依赖，性能极佳&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🎨 &lt;strong&gt;CSS&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;18.8%&lt;/td&gt;
+          &lt;td&gt;响应式设计，Material Design 风格&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;📄 &lt;strong&gt;HTML&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;7.6%&lt;/td&gt;
+          &lt;td&gt;语义化标签，良好的可访问性&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;核心技术特性&#34;&gt;核心技术特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manifest V3&lt;/strong&gt;：采用最新的扩展开发标准，更好的安全性和性能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chrome APIs&lt;/strong&gt;：充分利用 Chrome Storage、Tabs、Runtime 等原生 API&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模块化设计&lt;/strong&gt;：清晰的代码结构，便于维护和扩展&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;零依赖&lt;/strong&gt;：完全使用原生技术，无需外部库，包体积小巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-项目结构&#34;&gt;🚀 项目结构&lt;/h2&gt;
+&lt;h3 id=&#34;完整目录结构&#34;&gt;完整目录结构&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph TD
+    ROOT[📁 leetcode-counter-extention/]
+
+    ROOT --&gt; MANIFEST[📋 manifest.json&lt;br/&gt;扩展配置清单文件]
+
+    ROOT --&gt; POPUP_DIR[📱 popup/&lt;br/&gt;弹窗界面]
+    POPUP_DIR --&gt; POPUP_HTML[🎨 popup.html&lt;br/&gt;弹窗页面结构]
+    POPUP_DIR --&gt; POPUP_CSS[💎 popup.css&lt;br/&gt;弹窗样式设计]
+    POPUP_DIR --&gt; POPUP_JS[⚡ popup.js&lt;br/&gt;弹窗交互逻辑]
+
+    ROOT --&gt; CONTENT_DIR[💉 content/&lt;br/&gt;内容脚本]
+    CONTENT_DIR --&gt; CONTENT_JS[🔧 content.js&lt;br/&gt;页面注入脚本]
+
+    ROOT --&gt; BG_DIR[🎭 background/&lt;br/&gt;后台服务]
+    BG_DIR --&gt; BG_JS[🚀 background.js&lt;br/&gt;Service Worker]
+
+    ROOT --&gt; STATS_DIR[📊 stats/&lt;br/&gt;统计页面]
+    STATS_DIR --&gt; STATS_HTML[📈 stats.html&lt;br/&gt;统计页面结构]
+    STATS_DIR --&gt; STATS_CSS[🎯 stats.css&lt;br/&gt;统计页面样式]
+    STATS_DIR --&gt; STATS_JS[📊 stats.js&lt;br/&gt;统计页面逻辑]
+
+    ROOT --&gt; UTILS_DIR[🛠️ utils/&lt;br/&gt;工具函数]
+    UTILS_DIR --&gt; STORAGE_JS[💾 storage.js&lt;br/&gt;存储操作工具]
+
+    ROOT --&gt; IMAGES_DIR[🖼️ images/&lt;br/&gt;图标资源]
+    IMAGES_DIR --&gt; ICON16[🦋 butterfly16.png&lt;br/&gt;16x16 图标]
+    IMAGES_DIR --&gt; ICON48[🦋 butterfly48.png&lt;br/&gt;48x48 图标]
+    IMAGES_DIR --&gt; ICON128[🦋 butterfly128.png&lt;br/&gt;128x128 图标]
+
+    ROOT --&gt; README[📖 README.md&lt;br/&gt;项目说明文档]
+&lt;/div&gt;
+&lt;h3 id=&#34;代码规模统计&#34;&gt;代码规模统计&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📁 总文件数：15+ 个核心文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📝 代码行数：2,000+ 行精心编写的代码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎨 样式定义：500+ 行 CSS 样式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📊 功能模块：8 个主要功能模块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔧 工具函数：20+ 个实用工具函数
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-核心功能实现&#34;&gt;🔧 核心功能实现&lt;/h2&gt;
+&lt;h3 id=&#34;智能题目识别系统&#34;&gt;智能题目识别系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 题目标题标准化处理
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;normalizeTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 移除数字前缀，如&amp;#34;88. &amp;#34;或&amp;#34;1. &amp;#34;等
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;normalizedTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/^\d+\.\s*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 移除LCR等前缀，如&amp;#34;LCR 007. 三数之和&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;normalizedTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;normalizedTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/^(LCR|LCS|LCP|剑指\s*Offer)\s+\d+\.\s*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;normalizedTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;实时徽标渲染系统&#34;&gt;实时徽标渲染系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页面监听机制&lt;/strong&gt;：使用 &lt;code&gt;MutationObserver&lt;/code&gt; 监听 DOM 变化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多重检测策略&lt;/strong&gt;：结合 URL 变化、页面加载、存储变化等多种触发机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能去重&lt;/strong&gt;：防止重复添加徽标，确保页面整洁&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态适配&lt;/strong&gt;：支持搜索页面、学习计划等不同页面类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据存储架构&#34;&gt;数据存储架构&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 数据结构设计
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;题目标题&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;count&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;刷题次数&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;题目链接&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;totalCount&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;总刷题次数&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;todayCount_YYYY-MM-DD&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;今日刷题次数&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;autoIncrementEnabled&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// 默认禁用自动记录
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-用户界面设计&#34;&gt;🎨 用户界面设计&lt;/h2&gt;
+&lt;h3 id=&#34;弹窗界面特色&#34;&gt;弹窗界面特色&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;简洁直观&lt;/strong&gt;：Material Design 风格，操作简单明了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时反馈&lt;/strong&gt;：计数变化时的动画效果，提升用户体验&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能识别&lt;/strong&gt;：自动识别当前 LeetCode 题目，无需手动输入&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;错误处理&lt;/strong&gt;：完善的错误处理和回退机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;统计页面功能&#34;&gt;统计页面功能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;图表可视化&lt;/strong&gt;：柱状图展示刷题分布&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;详细统计表&lt;/strong&gt;：表格形式展示每道题的详细信息&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据管理&lt;/strong&gt;：支持数据导入导出功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;响应式设计&lt;/strong&gt;：适配不同屏幕尺寸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-实时同步机制&#34;&gt;🔄 实时同步机制&lt;/h2&gt;
+&lt;h3 id=&#34;页面间通信&#34;&gt;页面间通信&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 弹窗与内容脚本双向通信
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;chrome&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;runtime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;onMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sendResponse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;getProblemInfo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 获取当前页面题目信息
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;problemTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;extractProblemTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;sendResponse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;problemTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;problemTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;存储监听机制&#34;&gt;存储监听机制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实时更新&lt;/strong&gt;：监听存储变化，数据更新时自动重新渲染徽标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;页面同步&lt;/strong&gt;：多个标签页之间数据实时同步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能优化&lt;/strong&gt;：智能判断是否需要更新，避免不必要的重绘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-隐私保护与安全&#34;&gt;🛡️ 隐私保护与安全&lt;/h2&gt;
+&lt;h3 id=&#34;数据隐私&#34;&gt;数据隐私&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全本地存储&lt;/strong&gt;：所有数据存储在用户浏览器本地，不上传到任何服务器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;零网络请求&lt;/strong&gt;：扩展不发起任何网络请求，完全离线工作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;透明开源&lt;/strong&gt;：代码完全开源，用户可自行审核安全性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限最小化&lt;/strong&gt;：仅请求必要的浏览器权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;权限说明&#34;&gt;权限说明&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;permissions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;storage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;// 本地数据存储
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;activeTab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 获取当前活动标签页
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;notifications&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;// 显示通知（预留功能）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;host_permissions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;*://leetcode.com/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// LeetCode 国际站
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;*://leetcode.cn/*&amp;#34;&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// LeetCode 中国站
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-安装与使用&#34;&gt;📦 安装与使用&lt;/h2&gt;
+&lt;h3 id=&#34;快速开始&#34;&gt;快速开始&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 克隆项目&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/miaowumiaomiaowu/leetcode-counter-extention.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 在 Chrome 中加载扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 打开 Chrome 浏览器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 进入 chrome://extensions/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 开启&amp;#34;开发者模式&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 点击&amp;#34;加载已解压的扩展程序&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 选择项目文件夹&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 开始使用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 访问 LeetCode 网站&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 点击浏览器工具栏中的蝴蝶图标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# - 在题目页面手动记录刷题次数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;使用场景&#34;&gt;使用场景&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;题目页面记录&lt;/strong&gt;：在 LeetCode 题目页面点击扩展图标，手动记录刷题次数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;列表页面查看&lt;/strong&gt;：在题库、搜索、学习计划等页面查看每道题的刷题次数徽标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;统计分析&lt;/strong&gt;：通过统计页面分析自己的刷题习惯和进度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据管理&lt;/strong&gt;：导入导出数据，备份重要的学习记录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-性能特色&#34;&gt;📈 性能特色&lt;/h2&gt;
+&lt;h3 id=&#34;运行性能&#34;&gt;运行性能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;启动速度&lt;/strong&gt;：&amp;lt; 100ms 扩展加载时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存占用&lt;/strong&gt;：&amp;lt; 10MB 运行时内存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU 使用&lt;/strong&gt;：几乎零 CPU 占用，不影响浏览器性能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储效率&lt;/strong&gt;：智能数据结构，存储空间利用率高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;用户体验&#34;&gt;用户体验&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;响应速度&lt;/strong&gt;：点击按钮到界面更新 &amp;lt; 50ms&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兼容性&lt;/strong&gt;：支持 Chrome 88+ 版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;稳定性&lt;/strong&gt;：经过充分测试，运行稳定可靠&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易用性&lt;/strong&gt;：直观的操作界面，学习成本极低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-适用人群与场景&#34;&gt;🎯 适用人群与场景&lt;/h2&gt;
+&lt;h3 id=&#34;目标用户&#34;&gt;目标用户&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;👨‍💻 &lt;strong&gt;算法学习者&lt;/strong&gt;：需要系统性刷题和进度跟踪的程序员&lt;/li&gt;
+&lt;li&gt;🎓 &lt;strong&gt;求职准备者&lt;/strong&gt;：准备技术面试，需要高效刷题的求职者&lt;/li&gt;
+&lt;li&gt;👩‍🏫 &lt;strong&gt;编程教师&lt;/strong&gt;：需要跟踪学生学习进度的计算机教师&lt;/li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;竞赛参与者&lt;/strong&gt;：参加编程竞赛，需要大量练习的选手&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用场景&#34;&gt;应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;日常刷题&lt;/strong&gt;：记录每日的刷题情况，养成持续学习习惯&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;专项突破&lt;/strong&gt;：重点练习特定类型题目，记录练习次数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试准备&lt;/strong&gt;：系统性复习算法题，跟踪复习进度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学习计划&lt;/strong&gt;：配合 LeetCode 学习计划，记录完成情况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-项目亮点&#34;&gt;🌟 项目亮点&lt;/h2&gt;
+&lt;h3 id=&#34;技术创新&#34;&gt;技术创新&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manifest V3 架构&lt;/strong&gt;：采用最新标准，确保长期兼容性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能页面适配&lt;/strong&gt;：支持 LeetCode 多种页面类型的动态内容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;零依赖设计&lt;/strong&gt;：纯原生技术实现，性能卓越&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模块化架构&lt;/strong&gt;：清晰的代码结构，便于维护和扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;用户价值&#34;&gt;用户价值&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;精确记录&lt;/strong&gt;：手动记录避免误计数，确保数据准确性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可视化展示&lt;/strong&gt;：直观的徽标显示，刷题情况一目了然&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持续激励&lt;/strong&gt;：通过数据统计激励持续学习&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私保护&lt;/strong&gt;：完全本地存储，保护用户隐私&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;开发理念&#34;&gt;开发理念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用户至上&lt;/strong&gt;：以用户需求为导向，注重实用性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能优先&lt;/strong&gt;：追求极致性能，不影响浏览体验&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开源共享&lt;/strong&gt;：MIT 协议开源，鼓励社区贡献&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持续改进&lt;/strong&gt;：积极响应用户反馈，持续优化产品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-未来发展规划&#34;&gt;🔮 未来发展规划&lt;/h2&gt;
+&lt;h3 id=&#34;功能扩展计划&#34;&gt;功能扩展计划&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据同步&lt;/strong&gt;：支持多设备间数据同步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;统计增强&lt;/strong&gt;：更丰富的数据分析和可视化功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主题定制&lt;/strong&gt;：支持多种界面主题和个性化设置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;导出格式&lt;/strong&gt;：支持更多数据导出格式（Excel、PDF等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技术优化方向&#34;&gt;技术优化方向&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;性能提升&lt;/strong&gt;：进一步优化页面识别和徽标渲染性能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兼容性&lt;/strong&gt;：扩展支持更多浏览器（Firefox、Edge等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;国际化&lt;/strong&gt;：支持多语言界面，服务全球用户&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无障碍&lt;/strong&gt;：改进无障碍访问支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-项目成果&#34;&gt;🏆 项目成果&lt;/h2&gt;
+&lt;h3 id=&#34;技术指标&#34;&gt;技术指标&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⭐ 代码质量：原生 JavaScript，无外部依赖
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🚀 性能表现：&amp;lt; 100ms 启动时间，&amp;lt; 10MB 内存占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🛡️ 安全级别：完全本地存储，零网络请求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎯 兼容性：Chrome 88+，支持 Manifest V3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📊 功能完整度：涵盖记录、展示、统计、管理全流程
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;用户体验-1&#34;&gt;用户体验&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;😊 易用性：直观界面，学习成本低
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎨 美观度：Material Design 风格，视觉优雅
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⚡ 响应性：实时更新，交互流畅
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔒 可靠性：数据持久化，长期稳定运行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📱 适应性：响应式设计，多尺寸屏幕适配
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-致谢&#34;&gt;🙏 致谢&lt;/h2&gt;
+&lt;h3 id=&#34;技术栈致谢&#34;&gt;技术栈致谢&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+ - 强大的浏览器扩展开发平台&lt;/li&gt;
+&lt;li&gt;
+ - 优秀的设计系统和组件库&lt;/li&gt;
+&lt;li&gt;
+ - 优秀的算法学习平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;📧 &lt;strong&gt;项目地址&lt;/strong&gt;：
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

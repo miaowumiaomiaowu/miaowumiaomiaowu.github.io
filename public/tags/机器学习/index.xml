@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 | 韩嘉仪 - 个人技术网站</title>
+    <link>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <atom:link href="http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <description>机器学习</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_982c5d63a71b2961.png</url>
+      <title>机器学习</title>
+      <link>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    </image>
+    
+    <item>
+      <title>🌊 金融实时流处理与AI预测系统</title>
+      <link>http://localhost:1313/project/financial-real-time-stream-processing-pipeline/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/financial-real-time-stream-processing-pipeline/</guid>
+      <description>&lt;h1 id=&#34;-金融实时流处理与ai预测系统&#34;&gt;🌊 金融实时流处理与AI预测系统&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;企业级金融科技解决方案&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;项目概述&#34;&gt;项目概述&lt;/h2&gt;
+&lt;p&gt;这是一个面向生产环境的&lt;strong&gt;企业级金融实时流处理与AI预测系统&lt;/strong&gt;，专注于提供高可靠、低延迟的金融数据处理和智能预测服务。系统采用现代化微服务架构，集成了多源数据采集、机器学习模型训练、强化学习交易策略、实时流处理和智能预测功能。&lt;/p&gt;
+&lt;h3 id=&#34;技术特色&#34;&gt;技术特色&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;真实数据驱动&lt;/strong&gt;：严格基于真实金融数据，禁止模拟数据&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;生产就绪&lt;/strong&gt;：完整的监控、日志、健康检查体系&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;高性能架构&lt;/strong&gt;：微服务 + 异步处理 + 缓存优化&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;智能故障转移&lt;/strong&gt;：多数据源自动切换，保证服务可用性&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;先进AI算法&lt;/strong&gt;：集成学习 + 强化学习 + 深度学习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-核心功能特性&#34;&gt;🎯 核心功能特性&lt;/h2&gt;
+&lt;h3 id=&#34;-先进的aiml能力&#34;&gt;🤖 先进的AI/ML能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多算法集成预测&lt;/strong&gt;：RandomForest、GradientBoosting、XGBoost、SVM、LinearRegression等5种算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;深度强化学习&lt;/strong&gt;：基于PPO和DQN的智能交易策略，支持连续动作空间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集成学习框架&lt;/strong&gt;：投票集成、堆叠集成、神经网络集成，自适应权重优化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动化训练管道&lt;/strong&gt;：超参数优化、交叉验证、模型版本管理和A/B测试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特征工程引擎&lt;/strong&gt;：技术指标（MA、RSI、MACD、KDJ）、基本面特征、时序特征&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-实时数据处理&#34;&gt;📊 实时数据处理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多源数据集成&lt;/strong&gt;：AkShare、yfinance、Alpha Vantage、Tushare等，智能故障转移&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时流处理&lt;/strong&gt;：基于Kafka的高吞吐量消息队列，毫秒级延迟&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WebSocket推送&lt;/strong&gt;：5种专业频道（enhanced、metrics、pipeline、predictions、alerts）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据质量监控&lt;/strong&gt;：实时数据验证、异常检测、缺失值处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-微服务架构&#34;&gt;🏗️ 微服务架构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API网关&lt;/strong&gt;：FastAPI统一入口，支持HTTP/WebSocket，自动API文档生成&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI服务&lt;/strong&gt;：独立的模型推理服务，支持模型热加载和版本切换&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流处理服务&lt;/strong&gt;：专用的实时数据流处理和WebSocket广播&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风险管理服务&lt;/strong&gt;：实时风险计算、告警和限额管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-生产就绪特性&#34;&gt;🛡️ 生产就绪特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;容器化部署&lt;/strong&gt;：Docker Compose一键部署，支持中国大陆镜像加速&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可观测性&lt;/strong&gt;：Prometheus + Grafana监控，结构化日志，健康检查&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高可用性&lt;/strong&gt;：服务依赖管理、优雅关闭、自动重启策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性&lt;/strong&gt;：JWT认证、API限流、密钥管理、HTTPS支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-系统架构设计&#34;&gt;🏗️ 系统架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;微服务组件架构&#34;&gt;微服务组件架构&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph TB
+    subgraph &#34;前端层&#34;
+        WEB[Web仪表盘&lt;br/&gt;React:3000]
+    end
+
+    subgraph &#34;API层&#34;
+        API[API网关&lt;br/&gt;FastAPI:8000]
+    end
+
+    subgraph &#34;服务层&#34;
+        AI[AI服务&lt;br/&gt;PyTorch:8002]
+        STREAM[流处理服务&lt;br/&gt;WebSocket:8004]
+    end
+
+    subgraph &#34;中间件层&#34;
+        KAFKA[消息队列&lt;br/&gt;Kafka:9092]
+        MONITOR[监控系统&lt;br/&gt;Prometheus:9090]
+    end
+
+    subgraph &#34;数据层&#34;
+        DB[数据存储&lt;br/&gt;PostgreSQL:5432]
+    end
+
+    WEB &lt;--&gt; API
+    API &lt;--&gt; AI
+    API &lt;--&gt; STREAM
+    STREAM &lt;--&gt; KAFKA
+    KAFKA &lt;--&gt; DB
+    MONITOR -.-&gt; API
+    MONITOR -.-&gt; AI
+    MONITOR -.-&gt; STREAM
+&lt;/div&gt;
+&lt;h3 id=&#34;数据流架构&#34;&gt;数据流架构&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;flowchart LR
+    subgraph &#34;外部数据源&#34;
+        AK[AkShare]
+        YF[yfinance]
+        AV[Alpha Vantage]
+        TS[Tushare]
+    end
+
+    subgraph &#34;数据处理&#34;
+        ROUTER[智能数据路由器&lt;br/&gt;故障转移机制&lt;br/&gt;数据验证&lt;br/&gt;质量控制]
+        FE[特征工程引擎&lt;br/&gt;技术指标&lt;br/&gt;基本面分析&lt;br/&gt;时序特征&lt;br/&gt;实时计算]
+    end
+
+    subgraph &#34;AI预测&#34;
+        ML[集成学习&lt;br/&gt;强化学习&lt;br/&gt;模型融合&lt;br/&gt;预测输出]
+    end
+
+    subgraph &#34;实时推送&#34;
+        WS[WebSocket]
+        REST[REST API]
+        ALERT[监控告警]
+        UI[前端展示]
+    end
+
+    AK --&gt; ROUTER
+    YF --&gt; ROUTER
+    AV --&gt; ROUTER
+    TS --&gt; ROUTER
+
+    ROUTER --&gt; FE
+    FE --&gt; ML
+
+    ML --&gt; WS
+    ML --&gt; REST
+    ML --&gt; ALERT
+    ML --&gt; UI
+&lt;/div&gt;
+&lt;h2 id=&#34;-数据源与集成策略&#34;&gt;📊 数据源与集成策略&lt;/h2&gt;
+&lt;h3 id=&#34;支持的数据源&#34;&gt;支持的数据源&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;数据源&lt;/th&gt;
+          &lt;th&gt;优先级&lt;/th&gt;
+          &lt;th&gt;覆盖市场&lt;/th&gt;
+          &lt;th&gt;特点&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🇨🇳 AkShare&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;A股&lt;/td&gt;
+          &lt;td&gt;免费，实时性好，中国大陆友好&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🌍 yfinance&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;全球&lt;/td&gt;
+          &lt;td&gt;免费，覆盖面广，稳定性高&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;💼 Alpha Vantage&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;美股为主&lt;/td&gt;
+          &lt;td&gt;需要API Key，数据质量高&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;📈 Tushare&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;A股&lt;/td&gt;
+          &lt;td&gt;需要积分，专业数据&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🏛️ RESSET&lt;/td&gt;
+          &lt;td&gt;备用&lt;/td&gt;
+          &lt;td&gt;A股&lt;/td&gt;
+          &lt;td&gt;历史数据，训练专用&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;智能数据路由系统&#34;&gt;智能数据路由系统&lt;/h3&gt;
+&lt;p&gt;实现了基于优先级的多数据源智能路由，支持实时故障检测和自动切换：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SmartDataRouter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;providers&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;akshare&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;priority&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;timeout&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;yfinance&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;priority&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;timeout&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;alpha_vantage&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;priority&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;timeout&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_data_with_fallback&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;provider_name&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;sorted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;providers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keys&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                  &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;providers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;priority&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fetch_from_provider&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;provider_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;validate_data_quality&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;logger&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;warning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Provider &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;provider_name&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; failed: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# 最后回退到RESSET历史数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resset_fallback&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-aiml核心技术&#34;&gt;🧠 AI/ML核心技术&lt;/h2&gt;
+&lt;h3 id=&#34;机器学习算法栈&#34;&gt;机器学习算法栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传统机器学习&lt;/strong&gt;：RandomForest、GradientBoosting、XGBoost、SVM、LinearRegression&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;深度学习&lt;/strong&gt;：LSTM、Transformer、CNN-LSTM混合模型&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;强化学习&lt;/strong&gt;：PPO（连续动作）、DQN（离散动作）、多智能体系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集成方法&lt;/strong&gt;：投票集成、堆叠集成、贝叶斯模型平均&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;强化学习交易策略&#34;&gt;强化学习交易策略&lt;/h3&gt;
+&lt;p&gt;基于PPO算法实现的连续动作空间交易策略：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;PPOTradingAgent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state_dim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;action_dim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;policy_net&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_build_policy_network&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value_net&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_build_value_network&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;select_action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;no_grad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;action_probs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;policy_net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;action_dist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distributions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Categorical&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action_probs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;action_dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 0: 持有, 1: 买入, 2: 卖出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;实时特征工程引擎&#34;&gt;实时特征工程引擎&lt;/h3&gt;
+&lt;p&gt;支持20+种技术指标的实时计算：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 技术指标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;移动平均线&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SMA&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EMA&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WMA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;动量指标&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RSI&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MACD&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KDJ&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Williams&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;波动率&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bollinger&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bands&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ATR&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;标准差&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;成交量&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OBV&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VWAP&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;成交量比率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 基本面特征&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;财务比率&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PE&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PB&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ROE&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ROA&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;负债率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;盈利能力&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EPS&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;营收增长率&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;毛利率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;现金流&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;经营现金流&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;自由现金流&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 市场微观结构&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;订单簿特征&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;买卖价差&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;深度&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;不平衡度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;高频特征&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;价格跳跃&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;成交频率&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;波动聚集&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-部署与运维&#34;&gt;🚀 部署与运维&lt;/h2&gt;
+&lt;h3 id=&#34;快速部署&#34;&gt;快速部署&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 克隆项目&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/miaowumiaomiaowu/Financial-Real-Time-Stream-Processing-Pipeline.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Financial-Real-Time-Stream-Processing-Pipeline
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 配置环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 编辑.env文件，配置API密钥&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动所有服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -f docker-compose.production.yml up -d --build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 中国大陆用户可使用镜像加速&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -f docker-compose.production.yml -f docker-compose.cn-mirror.yml up -d --build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;服务访问点&#34;&gt;服务访问点&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;服务&lt;/th&gt;
+          &lt;th&gt;地址&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🔌 API文档&lt;/td&gt;
+          &lt;td&gt;http://localhost:8000/docs&lt;/td&gt;
+          &lt;td&gt;SwaggerUI交互式API文档&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;📊 Web仪表盘&lt;/td&gt;
+          &lt;td&gt;http://localhost/&lt;/td&gt;
+          &lt;td&gt;React实时监控面板&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;📈 Grafana&lt;/td&gt;
+          &lt;td&gt;http://localhost:3001&lt;/td&gt;
+          &lt;td&gt;系统监控仪表盘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🔍 Prometheus&lt;/td&gt;
+          &lt;td&gt;http://localhost:9090&lt;/td&gt;
+          &lt;td&gt;指标收集和查询&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🤖 AI服务&lt;/td&gt;
+          &lt;td&gt;http://localhost:8002&lt;/td&gt;
+          &lt;td&gt;独立的AI预测服务&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;📡 流处理服务&lt;/td&gt;
+          &lt;td&gt;http://localhost:8004&lt;/td&gt;
+          &lt;td&gt;WebSocket和指标端点&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;生产环境配置&#34;&gt;生产环境配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# docker-compose.production.yml 关键配置&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;api-service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;resources&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;limits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;2G&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cpus&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;1.0&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;MODEL_STORAGE_PATH=/app/ml_training/models/real_data&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;EXTERNAL_TIMEOUT_MS=7000&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;DEBUG_PRED=true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ai-service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;resources&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;limits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;4G&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cpus&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;2.0&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;TORCH_NUM_THREADS=4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;MODEL_CACHE_SIZE=1000&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-api接口设计&#34;&gt;🔌 API接口设计&lt;/h2&gt;
+&lt;h3 id=&#34;核心rest-api&#34;&gt;核心REST API&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 系统健康检查&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /health
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/system/health
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 股票数据查询&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/stocks/quotes?symbols&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000001,600000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/stocks/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;symbol&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/historical?period&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# AI预测服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/ai/predictions?symbols&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000001&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ensemble
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/ai/models/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;model_name&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 系统监控&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/system/status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /api/v2/system/metrics
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /metrics  &lt;span class=&#34;c1&#34;&gt;# Prometheus格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;websocket实时频道&#34;&gt;WebSocket实时频道&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 增强实时流（推荐）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ws&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//localhost:8000/ws/enhanced
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 专用频道
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ws&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//localhost:8000/ws/stream-metrics    // 仅系统指标
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ws&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//localhost:8000/ws/pipeline-status   // 仅管线状态
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ws&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//localhost:8000/ws/ai-predictions    // 仅AI预测
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ws&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//localhost:8000/ws/risk-alerts       // 仅风险告警
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-性能指标与扩展能力&#34;&gt;📈 性能指标与扩展能力&lt;/h2&gt;
+&lt;h3 id=&#34;关键性能指标&#34;&gt;关键性能指标&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API响应时间&lt;/strong&gt;：&amp;lt; 100ms (P95)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WebSocket延迟&lt;/strong&gt;：&amp;lt; 50ms&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据处理吞吐量&lt;/strong&gt;：10,000+ 消息/秒&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型推理速度&lt;/strong&gt;：&amp;lt; 10ms 单次预测&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统可用性&lt;/strong&gt;：99.9%+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;业务指标&#34;&gt;业务指标&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据源可用性&lt;/strong&gt;：99.5%+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型预测准确率&lt;/strong&gt;：R² &amp;gt; 0.02 (金融预测基准)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API成功率&lt;/strong&gt;：99.9%+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WebSocket连接稳定性&lt;/strong&gt;：&amp;lt; 1% 断线率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;扩展能力&#34;&gt;扩展能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;水平扩展&lt;/strong&gt;：支持多实例部署，负载均衡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储扩展&lt;/strong&gt;：支持分布式数据库，数据分片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算扩展&lt;/strong&gt;：支持GPU加速，分布式训练&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地域扩展&lt;/strong&gt;：支持多区域部署，CDN加速&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-安全与合规&#34;&gt;🛡️ 安全与合规&lt;/h2&gt;
+&lt;h3 id=&#34;安全特性&#34;&gt;安全特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;身份认证&lt;/strong&gt;：JWT Token，API Key管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;访问控制&lt;/strong&gt;：基于角色的权限管理（RBAC）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据加密&lt;/strong&gt;：传输加密（TLS 1.3），存储加密&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;审计日志&lt;/strong&gt;：完整的操作审计，合规报告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据隐私&#34;&gt;数据隐私&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据脱敏&lt;/strong&gt;：敏感信息自动脱敏处理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;访问日志&lt;/strong&gt;：详细的数据访问记录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据保留&lt;/strong&gt;：可配置的数据保留策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GDPR合规&lt;/strong&gt;：支持数据删除和导出请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-项目规模统计&#34;&gt;🚀 项目规模统计&lt;/h2&gt;
+&lt;h3 id=&#34;代码规模&#34;&gt;代码规模&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📁 总文件数：500+ 个文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📝 代码行数：50,000+ 行 Python/TypeScript代码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🧪 测试覆盖：90%+ 单元测试覆盖率
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📦 Docker镜像：6 个微服务镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔧 配置文件：20+ 个环境配置
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;模型能力&#34;&gt;模型能力&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🤖 训练模型：184 个已训练模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📈 支持股票：26 个主要A股标的
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎯 预测算法：5 种机器学习算法
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🧠 RL智能体：PPO + DQN 双算法
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⚡ 推理速度：&amp;lt; 10ms 单次预测
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;数据处理能力&#34;&gt;数据处理能力&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📊 数据源：4 个主要金融数据源
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔄 实时处理：10,000+ 消息/秒
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💾 存储容量：支持TB级历史数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🌐 WebSocket：5 个专业推送频道
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📡 API端点：50+ 个RESTful接口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-技术创新亮点&#34;&gt;🎓 技术创新亮点&lt;/h2&gt;
+&lt;h3 id=&#34;1-智能数据路由系统&#34;&gt;1. 智能数据路由系统&lt;/h3&gt;
+&lt;p&gt;实现了基于优先级的多数据源智能路由，具备实时故障检测和自动切换能力，确保数据获取的高可用性。&lt;/p&gt;
+&lt;h3 id=&#34;2-强化学习交易策略&#34;&gt;2. 强化学习交易策略&lt;/h3&gt;
+&lt;p&gt;基于PPO算法实现的连续动作空间交易策略，支持动态仓位管理和风险控制。&lt;/p&gt;
+&lt;h3 id=&#34;3-实时特征工程引擎&#34;&gt;3. 实时特征工程引擎&lt;/h3&gt;
+&lt;p&gt;支持20+种技术指标的实时计算，采用滑动窗口优化内存使用，确保低延迟特征生成。&lt;/p&gt;
+&lt;h3 id=&#34;4-微服务架构设计&#34;&gt;4. 微服务架构设计&lt;/h3&gt;
+&lt;p&gt;采用现代化微服务架构，各服务独立部署、独立扩展，提高系统的可维护性和扩展性。&lt;/p&gt;
+&lt;h3 id=&#34;5-生产级监控体系&#34;&gt;5. 生产级监控体系&lt;/h3&gt;
+&lt;p&gt;集成Prometheus + Grafana监控栈，提供全面的系统可观测性。&lt;/p&gt;
+&lt;h2 id=&#34;-适用场景&#34;&gt;🏆 适用场景&lt;/h2&gt;
+&lt;h3 id=&#34;目标用户&#34;&gt;目标用户&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🏦 &lt;strong&gt;量化投资机构&lt;/strong&gt;：提供实时市场数据和AI预测&lt;/li&gt;
+&lt;li&gt;🏢 &lt;strong&gt;金融科技公司&lt;/strong&gt;：作为核心数据和算法引擎&lt;/li&gt;
+&lt;li&gt;🎓 &lt;strong&gt;学术研究&lt;/strong&gt;：金融AI和实时系统研究平台&lt;/li&gt;
+&lt;li&gt;👨‍💻 &lt;strong&gt;个人投资者&lt;/strong&gt;：智能投资决策支持系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;商业价值&#34;&gt;商业价值&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;降本增效&lt;/strong&gt;：自动化数据处理和预测，减少人工成本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风险控制&lt;/strong&gt;：实时风险监控和告警，降低投资风险&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;决策支持&lt;/strong&gt;：基于AI的智能预测，提升投资决策质量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术先进性&lt;/strong&gt;：采用最新的AI技术，保持技术竞争优势&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-未来发展规划&#34;&gt;🔮 未来发展规划&lt;/h2&gt;
+&lt;h3 id=&#34;技术路线图&#34;&gt;技术路线图&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期目标&lt;/strong&gt;：优化模型性能，扩展数据源覆盖&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中期目标&lt;/strong&gt;：引入更多AI算法，支持多市场交易&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期目标&lt;/strong&gt;：构建完整的量化投资生态，支持全球市场&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;功能扩展&#34;&gt;功能扩展&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多市场支持&lt;/strong&gt;：扩展到美股、港股、期货等市场&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;算法优化&lt;/strong&gt;：引入更先进的深度学习和强化学习算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可视化增强&lt;/strong&gt;：丰富监控面板和数据可视化功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;移动端支持&lt;/strong&gt;：开发移动端应用，支持移动办公&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-致谢&#34;&gt;🙏 致谢&lt;/h2&gt;
+&lt;h3 id=&#34;核心技术栈&#34;&gt;核心技术栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+ - 现代化的Python Web框架&lt;/li&gt;
+&lt;li&gt;
+ - 深度学习框架&lt;/li&gt;
+&lt;li&gt;
+ - 机器学习库&lt;/li&gt;
+&lt;li&gt;
+ - 数据分析库&lt;/li&gt;
+&lt;li&gt;
+ - 前端UI框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据源提供商&#34;&gt;数据源提供商&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+ - 优秀的中文金融数据接口&lt;/li&gt;
+&lt;li&gt;
+ - Yahoo Finance数据接口&lt;/li&gt;
+&lt;li&gt;
+ - 专业金融数据API&lt;/li&gt;
+&lt;li&gt;
+ - 中文财经数据接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基础设施&#34;&gt;基础设施&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+ - 容器化平台&lt;/li&gt;
+&lt;li&gt;
+ - 分布式流处理平台&lt;/li&gt;
+&lt;li&gt;
+ - 开源关系数据库&lt;/li&gt;
+&lt;li&gt;
+ - 内存数据库&lt;/li&gt;
+&lt;li&gt;
+ - 监控系统&lt;/li&gt;
+&lt;li&gt;
+ - 可视化平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

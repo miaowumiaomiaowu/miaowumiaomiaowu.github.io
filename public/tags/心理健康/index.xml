@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>心理健康 | 韩嘉仪 - 个人技术网站</title>
+    <link>http://localhost:1313/tags/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7/</link>
+      <atom:link href="http://localhost:1313/tags/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7/index.xml" rel="self" type="application/rss+xml" />
+    <description>心理健康</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 20 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_982c5d63a71b2961.png</url>
+      <title>心理健康</title>
+      <link>http://localhost:1313/tags/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7/</link>
+    </image>
+    
+    <item>
+      <title>🐱 暖猫 (Cuddle Cat) - AI 情感陪伴应用</title>
+      <link>http://localhost:1313/project/cuddle-cat/</link>
+      <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/cuddle-cat/</guid>
+      <description>&lt;h1 id=&#34;-暖猫-cuddle-cat---ai-情感陪伴应用&#34;&gt;🐱 暖猫 (Cuddle Cat) - AI 情感陪伴应用&lt;/h1&gt;
+&lt;h2 id=&#34;项目概述&#34;&gt;项目概述&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;暖猫&lt;/strong&gt; 是一款基于 AI 分析能力的 Flutter 移动应用，专注于&amp;quot;情绪记录 × 温和陪伴 × 轻量建议&amp;quot;的心理健康理念。应用通过可爱的猫咪助手形象，为用户提供温暖的情感支持和个性化的幸福建议。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开发者&lt;/strong&gt;: 韩嘉仪 (Han Jiayi)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术栈&lt;/strong&gt;: Flutter + FastAPI + DeepSeek AI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;项目类型&lt;/strong&gt;: 个人开发的心理健康移动应用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: 
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;核心特性&#34;&gt;核心特性&lt;/h2&gt;
+&lt;h3 id=&#34;-ai-智能功能&#34;&gt;🤖 AI 智能功能&lt;/h3&gt;
+&lt;h4 id=&#34;智能对话与陪伴&#34;&gt;智能对话与陪伴&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个性化回复&lt;/strong&gt;: 基于 DeepSeek 模型的 AI 猫咪助手，能够理解用户情绪状态和个人偏好&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;上下文记忆&lt;/strong&gt;: 记住用户分享的经历、喜好和困扰，提供连续性对话体验&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;情绪感知&lt;/strong&gt;: 实时识别用户心情状态，调整对话风格和建议方向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;个性化建议系统&#34;&gt;个性化建议系统&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;智能礼物推荐&lt;/strong&gt;: 结合心情记录、兴趣偏好推荐适合的幸福清单&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;健康计划定制&lt;/strong&gt;: 根据生活习惯和目标制定个性化幸福提升计划&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;情境感知建议&lt;/strong&gt;: 考虑时间、地点、天气等因素提供贴合当下的温和建议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;情绪分析与洞察&#34;&gt;情绪分析与洞察&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;深度情绪理解&lt;/strong&gt;: 识别基础情绪并分析情绪背后的原因和模式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;趋势预测&lt;/strong&gt;: 基于历史数据预测情绪变化，提前给出关怀提醒&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个人画像构建&lt;/strong&gt;: 持续学习用户情绪特点，构建专属心理健康档案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-核心功能模块&#34;&gt;🌟 核心功能模块&lt;/h3&gt;
+&lt;h4 id=&#34;-沉浸式聊天&#34;&gt;💬 沉浸式聊天&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;温和的猫咪助手对话界面&lt;/li&gt;
+&lt;li&gt;智能记忆系统，记录用户重要信息&lt;/li&gt;
+&lt;li&gt;可解释的建议理由和反馈机制&lt;/li&gt;
+&lt;li&gt;支持离线模式和在线 AI 增强模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-情绪记录与洞察&#34;&gt;📈 情绪记录与洞察&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;快速心情记录和详细情绪标记&lt;/li&gt;
+&lt;li&gt;情绪强度、标签、备注的细粒度记录&lt;/li&gt;
+&lt;li&gt;趋势分析、分布统计、7天完成率追踪&lt;/li&gt;
+&lt;li&gt;积极/消极情绪占比分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-幸福清单与温和建议&#34;&gt;🎯 幸福清单与温和建议&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;基于当前情绪状态生成个性化建议&lt;/li&gt;
+&lt;li&gt;包含预计时长、类别和推荐理由的卡片式展示&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;小步快走&amp;quot;的行动建议，避免强迫性任务&lt;/li&gt;
+&lt;li&gt;用户反馈系统用于优化后续建议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术架构&#34;&gt;技术架构&lt;/h2&gt;
+&lt;h3 id=&#34;前端-flutter&#34;&gt;前端 (Flutter)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;核心依赖&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;Flutter 3.x + Dart 3.6+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;Provider 状态管理&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;主要组件&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;shared_preferences&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;本地数据存储&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;http + dio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;网络请求&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;fl_chart&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;数据可视化图表&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;sqflite&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;本地数据库&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;lottie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;动画效果&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;flutter_local_notifications&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;推送通知&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;后端-fastapi&#34;&gt;后端 (FastAPI)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;主要特性&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FastAPI&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;异步&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Web&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;框架&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SQLite&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;轻量向量索引&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DeepSeek&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;API&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;集成&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;记忆检索和学习优化系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;api-端点&#34;&gt;API 端点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GET /health&lt;/code&gt; - 健康检查&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /chat/reply&lt;/code&gt; - AI 对话回复&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /recommend/gifts&lt;/code&gt; - 幸福清单推荐&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /recommend/wellness-plan&lt;/code&gt; - 健康计划生成&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /memory/upsert&lt;/code&gt; - 记忆存储&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /memory/query&lt;/code&gt; - 记忆查询&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /feedback&lt;/code&gt; - 用户反馈&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GET /analytics/stats&lt;/code&gt; - 数据分析&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POST /analytics/predict-mood&lt;/code&gt; - 情绪预测&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GET /metrics&lt;/code&gt; - 系统指标监控&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;设计系统&#34;&gt;设计系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ArtisticTheme&lt;/strong&gt;: 柔和绿色系配色方案&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;圆角设计&lt;/strong&gt;: 温和友好的界面风格&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;温和动效&lt;/strong&gt;: 舒缓的页面转场和交互动画&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;响应式布局&lt;/strong&gt;: 适配不同屏幕尺寸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目亮点&#34;&gt;项目亮点&lt;/h2&gt;
+&lt;h3 id=&#34;-创新特性&#34;&gt;💡 创新特性&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;情绪感知对话&lt;/strong&gt;: AI 能够根据对话内容调整回复风格和建议方向&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可解释推荐&lt;/strong&gt;: 每个建议都附带推荐理由，增强用户信任感&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渐进式建议&lt;/strong&gt;: 采用&amp;quot;小步快走&amp;quot;理念，避免给用户压力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;双模式运行&lt;/strong&gt;: 支持完全离线使用或在线 AI 增强模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-隐私保护&#34;&gt;🛡️ 隐私保护&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;默认本地存储，不依赖云同步&lt;/li&gt;
+&lt;li&gt;支持完全离线运行模式&lt;/li&gt;
+&lt;li&gt;可选的后端服务通过 HTTPS/TLS 保护&lt;/li&gt;
+&lt;li&gt;API 密钥保护的指标端点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-开发工具&#34;&gt;🔧 开发工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内置开发者工具页面，支持系统信息查看和调试&lt;/li&gt;
+&lt;li&gt;Android 模拟器代理脚本，便于开发调试&lt;/li&gt;
+&lt;li&gt;详细的运行时配置和错误处理机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;快速开始&#34;&gt;快速开始&lt;/h2&gt;
+&lt;h3 id=&#34;环境要求&#34;&gt;环境要求&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Flutter 3.x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Dart 3.6+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Python 3.8+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;后端可选&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;客户端运行&#34;&gt;客户端运行&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 拉取依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flutter pub get
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 运行应用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flutter run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;后端部署-可选&#34;&gt;后端部署 (可选)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 进入后端目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 创建虚拟环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m venv .venv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate  &lt;span class=&#34;c1&#34;&gt;# Windows: .venv\Scripts\activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 安装依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. 启动服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uvicorn app.main:app --reload --port &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;docker-部署&#34;&gt;Docker 部署&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t cuddlecat-ai-service .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 8000:8000 cuddlecat-ai-service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置说明&#34;&gt;配置说明&lt;/h2&gt;
+&lt;h3 id=&#34;环境变量配置&#34;&gt;环境变量配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 复制示例配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 主要配置项:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ENABLE_REMOTE_BACKEND&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;# 启用后端服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SERVER_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://localhost:8000  &lt;span class=&#34;c1&#34;&gt;# 后端地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DEEPSEEK_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;your_api_key     &lt;span class=&#34;c1&#34;&gt;# AI 服务密钥&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;METRICS_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;your_metrics_key  &lt;span class=&#34;c1&#34;&gt;# 指标端点保护&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;项目结构&#34;&gt;项目结构&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cuddle_cat-AI-app/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── lib/                     # Flutter 应用源码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── main.dart           # 应用入口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── screens/            # 页面组件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── widgets/            # UI 组件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── providers/          # 状态管理
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── services/           # 业务服务
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── theme/              # 主题样式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── server/                 # FastAPI 后端
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── app/               # 后端应用代码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── requirements.txt   # Python 依赖
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── Dockerfile         # Docker 配置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── assets/                # 静态资源
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── docs/                  # 项目文档
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── scripts/               # 构建脚本
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;开发理念&#34;&gt;开发理念&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;暖猫&lt;/strong&gt; 的开发遵循以下核心理念：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;温和陪伴&lt;/strong&gt;: 不强迫、不批判，提供温暖的情感支持&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渐进改善&lt;/strong&gt;: 通过小步骤的积极行动促进心理健康&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化体验&lt;/strong&gt;: AI 学习用户偏好，提供定制化建议&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私优先&lt;/strong&gt;: 支持完全离线使用，保护用户隐私&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可持续性&lt;/strong&gt;: 注重长期的心理健康维护而非短期效果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;技术特色&#34;&gt;技术特色&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;混合架构&lt;/strong&gt;: 本地优先 + 可选云端增强&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能学习&lt;/strong&gt;: AI 持续学习用户偏好和反馈&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;情感计算&lt;/strong&gt;: 深度理解和分析用户情绪状态&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可解释 AI&lt;/strong&gt;: 透明的推荐理由和决策过程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渐进式 PWA&lt;/strong&gt;: 支持多平台部署和离线使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;联系方式&lt;/strong&gt;: 
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
