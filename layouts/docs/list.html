@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ $isNotes := strings.HasPrefix .RelPermalink "/notes/" }}
+  {{ if $isNotes }}
+    {{ $all := .RegularPagesRecursive }}
+    {{ $hasContent := .Content }}
+    {{ if and (eq (len (strings.TrimSpace $hasContent)) 0) (gt (len $all) 0) }}
+      {{ $sorted := $all.ByWeight }}
+      {{ if not $sorted }}{{ $sorted = $all }}{{ end }}
+      {{ $first := index (first 1 $sorted) 0 }}
+      {{ if $first }}
+        <p class="text-sm text-gray-500 dark:text-gray-400">正在跳转到子页面：
+          <a class="underline" href="{{ $first.RelPermalink }}">{{ $first.Title }}</a>
+        </p>
+        <script data-notes-inline="redirect">window.location.replace("{{ $first.RelPermalink }}");</script>
+        <noscript><meta http-equiv="refresh" content="0; url={{ $first.RelPermalink }}"></noscript>
+      {{ end }}
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
+  {{ else }}
+    {{ .Render "list" }}
+  {{ end }}
+{{ end }}
+

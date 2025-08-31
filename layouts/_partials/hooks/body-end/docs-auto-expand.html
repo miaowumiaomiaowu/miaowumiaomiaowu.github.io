@@ -1,0 +1,61 @@
+<script>
+  // Docs UX helpers: expand all sidebar nodes and auto-redirect empty section pages
+  // to their first child. Purely client-side and safe (no theme overrides).
+  (function() {
+    function expandAllSidebarLists(root) {
+      if (!root) return;
+      root.querySelectorAll('.hb-sidebar-list li').forEach(function(li){
+        li.classList.add('open');
+      });
+      root.querySelectorAll('[data-hb-sidebar-toggle]').forEach(function(btn){
+        var container = btn.closest('a')?.nextElementSibling;
+        if (container) {
+          container.style.height = 'auto';
+          container.style.overflow = 'visible';
+        }
+      });
+    }
+
+    function isContentEmpty() {
+      // Consider the page empty if the main prose area has no rich elements
+      var prose = document.querySelector('article main.prose, article .prose, main.prose');
+      if (!prose) return true;
+      // If there is any rich content, treat as non-empty
+      if (prose.querySelector('p, ul, ol, blockquote, pre, table, img, video, code, .callout')) return false;
+      var text = (prose.textContent || '').trim();
+      // Treat auto-generated placeholders as empty too
+      if (text === '此处将呈现与 Zotero 一致的分层结构。') return true;
+      if (text.indexOf('此处展示') === 0) return true;
+      // If only heading text remains (e.g., just the title), consider empty
+      return true;
+    }
+
+    function redirectSectionToFirstChild(sidebar){
+      // If current page is a section (folder) with no content body,
+      // redirect to its first child item for a smoother reading experience.
+      var active = sidebar.querySelector('a.sidebar-active-item');
+      if (!active) return;
+      var container = active.nextElementSibling;
+      var hasChildren = container && container.querySelector('.hb-sidebar-list a[href]');
+      if (!hasChildren) return;
+      if (!isContentEmpty()) return;
+      var firstChild = container.querySelector('.hb-sidebar-list a[href]');
+      if (firstChild && firstChild.href) {
+        window.location.replace(firstChild.href);
+      }
+    }
+
+    function onReady(fn){
+      if (document.readyState !== 'loading') fn();
+      else document.addEventListener('DOMContentLoaded', fn);
+    }
+
+    onReady(function(){
+      var sidebar = document.querySelector('.hb-sidebar-container');
+      if (!sidebar) return;
+      expandAllSidebarLists(sidebar);
+      redirectSectionToFirstChild(sidebar);
+    });
+  })();
+</script>
+

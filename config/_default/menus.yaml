@@ -10,6 +10,9 @@ main:
   - name: 💼 项目作品
     url: /project/
     weight: 20
+  - name: 📚 笔记
+    url: /notes/library/
+    weight: 25
   - name: 🛠️ 技术能力
     url: /skills/
     weight: 30

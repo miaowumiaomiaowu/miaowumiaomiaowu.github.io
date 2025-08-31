@@ -4,9 +4,21 @@
   
   
   <url>
+    <loc>http://localhost:1313/notes/library/</loc><lastmod>2025-09-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/weekly/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>http://localhost:1313/event/example/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/event/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/</loc><lastmod>2025-09-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/%E8%AE%BA%E6%96%87/</loc><lastmod>2025-09-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/%E8%AE%BA%E6%96%87/a-review-on-edge-large-language-models-design-execution-and-applications/</loc><lastmod>2025-08-31T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/%E8%AE%BA%E6%96%87/edge-intelligence_paving-the-last-mile-of-artificial-intelligence-with-edge-computing.pdf/</loc><lastmod>2025-08-23T16:14:21+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/projects/</loc><lastmod>2024-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -148,13 +160,31 @@
   <url>
     <loc>http://localhost:1313/project/hadoop-distributed-data-processing/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>http://localhost:1313/notes/library/ai/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/architecture-and-learning-process-in-neural-network/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/artificial-neural-networks-and-its-applications/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/deep-learning-tutorial/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/difference-between-ann-and-bnn/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>http://localhost:1313/tags/hadoop/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/hdfs/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/mapreduce/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/multi-layer-perceptron-learning-in-tensorflow/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/single-layer-perceptron-in-tensorflow/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/types-of-neural-networks/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>http://localhost:1313/tags/vmware/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/what-is-a-neural-network/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</loc><changefreq>weekly</changefreq></url>
   <url>
@@ -167,6 +197,10 @@
     <loc>http://localhost:1313/tags/%E6%95%85%E9%9A%9C%E8%AF%8A%E6%96%AD/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/notes/library/ai/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/%E7%B3%BB%E7%BB%9F%E5%8F%AF%E9%9D%A0%E6%80%A7/</loc><changefreq>weekly</changefreq></url>
   <url>

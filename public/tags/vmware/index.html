@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 22, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 31, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -243,45 +243,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -313,170 +274,6 @@
         
       
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
   
@@ -493,25 +290,12 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
+  
+  
+  
+  
+  
+  
   
   
   
@@ -595,6 +379,245 @@
         
       
     
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -963,6 +986,20 @@
         <a
           class="nav-link "
           
+          href="/notes/library/"
+        >📚 笔记</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
           href="/skills/"
         >🛠️ 技术能力</a
         >
@@ -1240,6 +1277,75 @@
 
 
 
+
+  
+    
+      
+      <script>
+  
+  
+  (function() {
+    function expandAllSidebarLists(root) {
+      if (!root) return;
+      root.querySelectorAll('.hb-sidebar-list li').forEach(function(li){
+        li.classList.add('open');
+      });
+      root.querySelectorAll('[data-hb-sidebar-toggle]').forEach(function(btn){
+        var container = btn.closest('a')?.nextElementSibling;
+        if (container) {
+          container.style.height = 'auto';
+          container.style.overflow = 'visible';
+        }
+      });
+    }
+
+    function isContentEmpty() {
+      
+      var prose = document.querySelector('article main.prose, article .prose, main.prose');
+      if (!prose) return true;
+      
+      if (prose.querySelector('p, ul, ol, blockquote, pre, table, img, video, code, .callout')) return false;
+      var text = (prose.textContent || '').trim();
+      
+      if (text === '此处将呈现与 Zotero 一致的分层结构。') return true;
+      if (text.indexOf('此处展示') === 0) return true;
+      
+      return true;
+    }
+
+    function redirectSectionToFirstChild(sidebar){
+      
+      
+      var active = sidebar.querySelector('a.sidebar-active-item');
+      if (!active) return;
+      var container = active.nextElementSibling;
+      var hasChildren = container && container.querySelector('.hb-sidebar-list a[href]');
+      if (!hasChildren) return;
+      if (!isContentEmpty()) return;
+      var firstChild = container.querySelector('.hb-sidebar-list a[href]');
+      if (firstChild && firstChild.href) {
+        window.location.replace(firstChild.href);
+      }
+    }
+
+    function onReady(fn){
+      if (document.readyState !== 'loading') fn();
+      else document.addEventListener('DOMContentLoaded', fn);
+    }
+
+    onReady(function(){
+      var sidebar = document.querySelector('.hb-sidebar-container');
+      if (!sidebar) return;
+      expandAllSidebarLists(sidebar);
+      redirectSectionToFirstChild(sidebar);
+    });
+  })();
+</script>
+
+
+      
+    
+  
 
 
 

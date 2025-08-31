@@ -1,0 +1,19 @@
+{{ define "main" }}
+  {{/* Layout: notes-redirect for section pages under notes library */}}
+  {{ $all := .RegularPagesRecursive }}
+  {{ if gt (len $all) 0 }}
+    {{ $sorted := $all.ByWeight }}
+    {{ if not $sorted }}{{ $sorted = $all }}{{ end }}
+    {{ $first := index (first 1 $sorted) 0 }}
+    {{ if $first }}
+      <p class="text-sm text-gray-500 dark:text-gray-400">正在跳转到子页面：
+        <a class="underline" href="{{ $first.RelPermalink }}">{{ $first.Title }}</a>
+      </p>
+      <script>window.location.replace("{{ $first.RelPermalink }}");</script>
+      <noscript><meta http-equiv="refresh" content="0; url={{ $first.RelPermalink }}"></noscript>
+    {{ end }}
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+{{ end }}
+

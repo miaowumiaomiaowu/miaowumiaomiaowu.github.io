@@ -1,0 +1,7 @@
+/* Ensure notes docs sidebar fully expanded */
+.hb-sidebar-container [data-hb-sidebar-toggle] + div {
+  height: auto !important;
+  overflow: visible !important;
+}
+.hb-sidebar-list a.hb-sidebar-custom-link{ padding-top: 0.25rem; padding-bottom: 0.25rem; }
+

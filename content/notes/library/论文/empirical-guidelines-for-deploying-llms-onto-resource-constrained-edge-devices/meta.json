@@ -1,0 +1,24 @@
+{
+  "title": "Empirical Guidelines for Deploying LLMs onto Resource-constrained Edge Devices",
+  "authors": [
+    "Ruiyang Qin",
+    "Dancheng Liu",
+    "Chenhui Xu",
+    "Zheyu Yan",
+    "Zhaoxuan Tan",
+    "Zhenge Jia",
+    "Amir Nassereldine",
+    "Jiajie Li",
+    "Meng Jiang",
+    "Ahmed Abbasi",
+    "Jinjun Xiong",
+    "Yiyu Shi"
+  ],
+  "tags": [],
+  "date": "2025-09-30",
+  "zoteroKey": "55927ZY2",
+  "collectionPath": "论文",
+  "slug": "empirical-guidelines-for-deploying-llms-onto-resource-constrained-edge-devices",
+  "pdf": "/notes/pdfs/23KHHD8T.pdf",
+  "updatedAt": "2025-08-31T09:38:20.344Z"
+}

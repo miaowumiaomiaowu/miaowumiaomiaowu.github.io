@@ -1,0 +1,10 @@
+<div class="pdf-embed" style="width:100%;height:80vh">
+  {{- $src := .Get "src" -}}
+  {{- $page := .Get "page" -}}
+  {{- if $page -}}
+    <iframe src="{{$src}}#page={{$page}}" width="100%" height="100%" style="border:none"></iframe>
+  {{- else -}}
+    <iframe src="{{$src}}" width="100%" height="100%" style="border:none"></iframe>
+  {{- end -}}
+</div>
+

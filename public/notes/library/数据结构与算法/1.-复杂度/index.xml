@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1. 复杂度 | 韩嘉仪 - 个人技术网站</title>
+    <link>http://localhost:1313/notes/library/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1.-%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+      <atom:link href="http://localhost:1313/notes/library/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1.-%E5%A4%8D%E6%9D%82%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <description>1. 复杂度</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_982c5d63a71b2961.png</url>
+      <title>1. 复杂度</title>
+      <link>http://localhost:1313/notes/library/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1.-%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+    </image>
+    
+  </channel>
+</rss>

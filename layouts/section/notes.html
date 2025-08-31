@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <!-- NOTES_REDIRECT_MARKER: section/notes.html -->
+  {{/* Notes sections: if no meaningful body and has children, redirect to first leaf page. */}}
+  {{ $all := .RegularPagesRecursive }}
+  {{ $has := strings.TrimSpace .Content }}
+  {{ if and (eq (len $has) 0) (gt (len $all) 0) }}
+    {{ $sorted := $all.ByWeight }}
+    {{ if not $sorted }}{{ $sorted = $all }}{{ end }}
+    {{ $first := index (first 1 $sorted) 0 }}
+    {{ if $first }}
+      <p class="text-sm text-gray-500 dark:text-gray-400">正在跳转到子页面：
+        <a class="underline" href="{{ $first.RelPermalink }}">{{ $first.Title }}</a>
+      </p>
+      <script data-notes-inline="redirect">window.location.replace("{{ $first.RelPermalink }}");</script>
+      <noscript><meta http-equiv="refresh" content="0; url={{ $first.RelPermalink }}"></noscript>
+    {{ else }}
+      <!-- NOTES_REDIRECT_MARKER: no-first-child -->
+    {{ end }}
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+  <script data-notes-inline="expand">
+    document.addEventListener('DOMContentLoaded', function(){
+      var root=document.querySelector('.hb-sidebar-container'); if(!root) return;
+      root.querySelectorAll('.hb-sidebar-list li').forEach(function(li){li.classList.add('open')});
+      root.querySelectorAll('[data-hb-sidebar-toggle]').forEach(function(btn){
+        var a=btn.closest('a'); var c=a && a.nextElementSibling; if(c){c.style.height='auto';c.style.overflow='visible'}
+      });
+    });
+  </script>
+{{ end }}
+

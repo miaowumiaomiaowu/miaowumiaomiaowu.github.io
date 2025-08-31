@@ -1,0 +1,42 @@
+{{/* Shortcode: list-children
+     Lists subsections and regular pages under the current section.
+     Usage: {{< list-children >}}
+*/}}
+
+{{ $subsections := .Page.Sections }}
+{{ $regular := .Page.RegularPages }}
+
+{{ if or (gt (len $subsections) 0) (gt (len $regular) 0) }}
+  <div class="space-y-4">
+    {{ if gt (len $subsections) 0 }}
+      <div>
+        <h2 class="text-lg font-semibold mb-2">子目录</h2>
+        <ul class="list-disc pl-6">
+          {{ range $subsections.ByWeight }}
+            <li>
+              <a class="underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ with .Summary }}<span class="text-gray-500 dark:text-gray-400"> — {{ . }}</span>{{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+
+    {{ if gt (len $regular) 0 }}
+      <div>
+        <h2 class="text-lg font-semibold mb-2">条目</h2>
+        <ul class="list-disc pl-6">
+          {{ range $regular.ByWeight }}
+            <li>
+              <a class="underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ with .Summary }}<span class="text-gray-500 dark:text-gray-400"> — {{ . }}</span>{{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+{{ else }}
+  <p class="text-gray-500 dark:text-gray-400">暂无子内容。</p>
+{{ end }}
+
